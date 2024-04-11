@@ -219,30 +219,30 @@
             </div>
         </div>
     </section>
-    
-    <script>
-        function submitForm() {
-            var formData = new FormData(document.getElementById("contactForm"));
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "send_email.php", true);
-            xhr.onload = function () {
-                if (xhr.status == 200) {
-                    alert("Message sent successfully!");
-                    document.getElementById("contactForm").reset();
-                } else {
-                    alert("Oops! Something went wrong. Please try again later.");
-                }
-            };
-            xhr.onerror = function () {
+    function submitForm() {
+        var formData = new FormData(document.getElementById("contactForm"));
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "send_email.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                alert("Message sent successfully!");
+                document.getElementById("contactForm").reset();
+            } else {
                 alert("Oops! Something went wrong. Please try again later.");
-            };
-            xhr.send(formData);
-        }
-    </script>
+            }
+        };
+        xhr.onerror = function () {
+            alert("Oops! Something went wrong. Please try again later.");
+        };
+        xhr.send(new URLSearchParams(formData).toString());
+    }
+    
     
     <!-- Creating Footer Layout in HTML -->
     <footer class="copyright">
         <p>&copy; 2020, Yourwebsite.com, Allrights reserved</p>
     </footer>
+    
 </body>
 </html>

@@ -189,11 +189,11 @@
         </div>
         <div class="content">
             <div class="formBx">
-                <form id="contactForm">
+                <form action="mailto:shinin_g@outlook.com" method="post">
                     <input type="text" placeholder="Full Name" name="name">
                     <input type="email" placeholder="Email" name="email">
-                    <textarea name="message" rows="6" id="message" placeholder="Your Message"></textarea>
-                    <input style="color: #525252;" type="button" value="Send Message" name="submit" onclick="submitForm()">
+                    <textarea name="message" rows="6" id="" placeholder="Your Message"></textarea>
+                    <input style="color: #525252;" type="submit" value="Send Message" name="submit">
                 </form>
             </div>
             <div class="contactInfo">
@@ -220,26 +220,6 @@
         </div>
     </section>
     
-    <script>
-        function submitForm() {
-            var formData = new FormData(document.getElementById("contactForm"));
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "send_email.php", true);
-            xhr.onload = function () {
-                if (xhr.status == 200) {
-                    alert("Message sent successfully!");
-                    document.getElementById("contactForm").reset();
-                } else {
-                    alert("Oops! Something went wrong. Please try again later.");
-                }
-            };
-            xhr.onerror = function () {
-                alert("Oops! Something went wrong. Please try again later.");
-            };
-            xhr.send(formData);
-        }
-    </script>
-        
     <!-- Creating Footer Layout in HTML -->
     <footer class="copyright">
         <p>&copy; 2020, Yourwebsite.com, Allrights reserved</p>

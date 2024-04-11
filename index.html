@@ -182,67 +182,47 @@
     </section>
 
     <!-- Creating Contact Layout in HTML -->
-    <section class="contact" id="contact">
-        <div class="heading white">
-            <p>Feel free to contact </p>
-            <h2>Get in Touch</h2>
+<section class="contact" id="contact">
+    <div class="heading white">
+        <p>Feel free to contact </p>
+        <h2>Get in Touch</h2>
+    </div>
+    <div class="content">
+        <div class="formBx">
+            <form id="contactForm">
+                <input type="text" placeholder="Full Name" name="name">
+                <input type="email" placeholder="Email" name="email">
+                <textarea name="message" rows="6" id="message" placeholder="Your Message"></textarea>
+                <input style="color: #525252;" type="button" value="Send Message" name="submit" onclick="submitForm()">
+            </form>
         </div>
-        <div class="content">
-            <div class="formBx">
-                <form id="contactForm">
-                    <input type="text" placeholder="Full Name" name="name">
-                    <input type="email" placeholder="Email" name="email">
-                    <textarea name="message" rows="6" id="message" placeholder="Your Message"></textarea>
-                    <input style="color: #525252;" type="button" value="Send Message" name="submit" onclick="submitForm()">
-                </form>
-            </div>
-            <div class="contactInfo">
-                <div class="contactInfoBx">
-                    <div class="boxSocial">
-                        <div class="icon">
-                            <a href="https://www.facebook.com" target="_blank">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="https://www.linkedin.com/" target="_blank">
-                                <i class="fa fa-linkedin-square"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="https://www.instagram.com/?hl=en" target="_blank">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </div>
+        <div class="contactInfo">
+            <div class="contactInfoBx">
+                <div class="boxSocial">
+                    <div class="icon">
+                        <a href="https://www.facebook.com" target="_blank">
+                            <i class="fa fa-facebook-square"></i>
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <i class="fa fa-linkedin-square"></i>
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="https://www.instagram.com/?hl=en" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    function submitForm() {
-        var formData = new FormData(document.getElementById("contactForm"));
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "send_email.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onload = function () {
-            if (xhr.status == 200) {
-                alert("Message sent successfully!");
-                document.getElementById("contactForm").reset();
-            } else {
-                alert("Oops! Something went wrong. Please try again later.");
-            }
-        };
-        xhr.onerror = function () {
-            alert("Oops! Something went wrong. Please try again later.");
-        };
-        xhr.send(new URLSearchParams(formData).toString());
-    }
-    
-    
+    </div>
+</section>
+
     <!-- Creating Footer Layout in HTML -->
     <footer class="copyright">
         <p>&copy; 2020, Yourwebsite.com, Allrights reserved</p>
     </footer>
-    
 </body>
 </html>

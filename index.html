@@ -181,44 +181,77 @@
         </div>
     </section>
 
-    <!-- Creating Contact Layout in HTML -->
-    <section class="contact" id="contact">
-        <div class="heading white">
-            <p>Feel free to contact </p>
-            <h2>Get in Touch</h2>
+  <!-- Import jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Creating Contact Layout in HTML -->
+<section class="contact" id="contact">
+    <div class="heading white">
+        <p>Feel free to contact </p>
+        <h2>Get in Touch</h2>
+    </div>
+    <div class="content">
+        <div class="formBx">
+            <form id="contactForm" method="post">
+                <input type="text" placeholder="Full Name" name="name">
+                <input type="email" placeholder="Email" name="email">
+                <textarea name="message" rows="6" id="message" placeholder="Your Message"></textarea>
+                <input style="color: #525252;" type="submit" value="Send Message" name="submit">
+            </form>
         </div>
-        <div class="content">
-            <div class="formBx">
-                <form action="send_email.php" method="post">
-                    <input type="text" placeholder="Full Name" name="name">
-                    <input type="email" placeholder="Email" name="email">
-                    <textarea name="message" rows="6" id="message" placeholder="Your Message"></textarea>
-                    <input style="color: #525252;" type="submit" value="Send Message" name="submit">
-                </form>
-            </div>
-            <div class="contactInfo">
-                <div class="contactInfoBx">
-                    <div class="boxSocial">
-                        <div class="icon">
-                            <a href="https://www.facebook.com" target="_blank">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="https://www.linkedin.com/" target="_blank">
-                                <i class="fa fa-linkedin-square"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="https://www.instagram.com/?hl=en" target="_blank">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </div>
+        <div class="contactInfo">
+            <div class="contactInfoBx">
+                <div class="boxSocial">
+                    <div class="icon">
+                        <a href="https://www.facebook.com" target="_blank">
+                            <i class="fa fa-facebook-square"></i>
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <i class="fa fa-linkedin-square"></i>
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="https://www.instagram.com/?hl=en" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- JavaScript code to handle form submission -->
+<script>
+$(document).ready(function() {
+    $('#contactForm').submit(function(e) {
+        e.preventDefault(); // Prevent form from submitting normally
+
+        // Serialize the form data
+        var formData = $(this).serialize();
+
+        // Send AJAX request
+        $.ajax({
+            type: 'POST',
+            url: 'https://your-domain.com/send_email.php', // Replace with the URL of your PHP script
+            data: formData,
+            success: function(response) {
+                // Handle success
+                console.log(response); // Log the response from the server
+                alert('Message sent successfully!');
+            },
+            error: function(xhr, status, error) {
+                // Handle errors
+                console.error(xhr.responseText); // Log any errors
+                alert('Oops! Something went wrong. Please try again later.');
+            }
+        });
+    });
+});
+</script>
+
     
     
     <!-- Creating Footer Layout in HTML -->

@@ -182,44 +182,70 @@
     </section>
 
     <!-- Creating Contact Layout in HTML -->
-<section class="contact" id="contact">
-    <div class="heading white">
-        <p>Feel free to contact </p>
-        <h2>Get in Touch</h2>
-    </div>
-    <div class="content">
-        <div class="formBx">
-            <form id="contactForm">
-                <input type="text" placeholder="Full Name" name="name">
-                <input type="email" placeholder="Email" name="email">
-                <textarea name="message" rows="6" id="message" placeholder="Your Message"></textarea>
-                <input style="color: #525252;" type="button" value="Send Message" name="submit" onclick="submitForm()">
-            </form>
+    <section class="contact" id="contact">
+        <div class="heading white">
+            <p>Feel free to contact </p>
+            <h2>Get in Touch</h2>
         </div>
-        <div class="contactInfo">
-            <div class="contactInfoBx">
-                <div class="boxSocial">
-                    <div class="icon">
-                        <a href="https://www.facebook.com" target="_blank">
-                            <i class="fa fa-facebook-square"></i>
-                        </a>
-                    </div>
-                    <div class="icon">
-                        <a href="https://www.linkedin.com/" target="_blank">
-                            <i class="fa fa-linkedin-square"></i>
-                        </a>
-                    </div>
-                    <div class="icon">
-                        <a href="https://www.instagram.com/?hl=en" target="_blank">
-                            <i class="fa fa-instagram"></i>
-                        </a>
+        <div class="content">
+            <div class="formBx">
+                <form id="contactForm">
+                    <input type="text" placeholder="Full Name" name="name">
+                    <input type="email" placeholder="Email" name="email">
+                    <textarea name="message" rows="6" id="" placeholder="Your Message"></textarea>
+                    <input style="color: #525252;" type="submit" value="Send Message" name="submit">
+                </form>
+            </div>
+            <div class="contactInfo">
+                <div class="contactInfoBx">
+                    <div class="boxSocial">
+                        <div class="icon">
+                            <a href="https://www.facebook.com" target="_blank">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                        </div>
+                        <div class="icon">
+                            <a href="https://www.linkedin.com/" target="_blank">
+                                <i class="fa fa-linkedin-square"></i>
+                            </a>
+                        </div>
+                        <div class="icon">
+                            <a href="https://www.instagram.com/?hl=en" target="_blank">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
+    
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            
+            // Get form data
+            var formData = new FormData(this);
+            
+            // Send the form data to a server-side script using fetch API
+            fetch("send_email.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                alert("Message sent successfully!");
+                this.reset(); // Reset the form after successful submission
+            })
+            .catch(error => {
+                console.error("There was a problem with your fetch operation:", error);
+                alert("Oops! Something went wrong. Please try again later.");
+            });
+        });
+    </script>
+    
     <!-- Creating Footer Layout in HTML -->
     <footer class="copyright">
         <p>&copy; 2020, Yourwebsite.com, Allrights reserved</p>

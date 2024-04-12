@@ -223,6 +223,34 @@
     </div>
 </section>
 
+<!-- JavaScript code to handle form submission -->
+<script>
+$(document).ready(function() {
+    $('#contactForm').submit(function(e) {
+        e.preventDefault(); // Prevent form from submitting normally
+
+        // Serialize the form data
+        var formData = $(this).serialize();
+
+        // Send AJAX request
+        $.ajax({
+            type: 'POST',
+            url: 'https://your-domain.com/send_email.php', // Replace with the URL of your PHP script
+            data: formData,
+            success: function(response) {
+                // Handle success
+                console.log(response); // Log the response from the server
+                alert('Message sent successfully!');
+            },
+            error: function(xhr, status, error) {
+                // Handle errors
+                console.error(xhr.responseText); // Log any errors
+                alert('Oops! Something went wrong. Please try again later.');
+            }
+        });
+    });
+});
+</script>
 
     
     

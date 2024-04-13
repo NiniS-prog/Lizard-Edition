@@ -9,35 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script>
-    $(document).ready(function() {
-        $('#contactForm').submit(function(e) {
-            e.preventDefault(); // Prevent form from submitting normally
-    
-            // Serialize the form data
-            var formData = $(this).serialize();
-    
-            // Send AJAX request
-            $.ajax({
-                type: 'POST',
-                url: 'send_email.php', // Path to your PHP script
-                data: formData,
-                success: function(response) {
-                    // Handle success
-                    console.log(response); // Log the response from the server
-                    alert('Message sent successfully!');
-                },
-                error: function(xhr, status, error) {
-                    // Handle errors
-                    console.error(xhr.responseText); // Log any errors
-                    alert('Oops! Something went wrong. Please try again later.');
-                }
-            });
-        });
-    });
-    </script>
-    
-
 </head>
 <body style="background-color: #0F172A; color:#ffffff;">
 

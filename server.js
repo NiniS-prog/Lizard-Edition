@@ -1,7 +1,6 @@
-// server.js
 const express = require('express');
 const bodyParser = require('body-parser');
-const mailgun = require('mailgun-js');
+const nodemailer = require('nodemailer');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -9,29 +8,34 @@ const port = process.env.PORT || 3000;
 // Parse JSON bodies
 app.use(bodyParser.json());
 
-// Initialize Mailgun SDK
-const mg = mailgun({ apiKey: '6355112c59d32a06caf7da5f24192980-19806d14-9f922c7b', domain: ' lizardedition.com' });
+// Create a transporter object using SMTP transport
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'webshinin@gmail.com', // Your Gmail email address
+        pass: '193653Martini1!'   // Your Gmail password or App Password
+    }
+});
 
 // Define a route to handle email sending
 app.post('/send-email', (req, res) => {
-    const { to, subject, text, replyTo } = req.body;
+    const { name, email, message } = req.body;
 
     // Setup email data
     const mailOptions = {
         from: 'webshinin@gmail.com',
-        to,
-        subject,
-        text,
-        'h:Reply-To': replyTo  // Include Reply-To address
+        to: 'webshinin@gmail.com', // Recipient address
+        subject: 'New message from contact form',
+        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
     };
 
     // Send email
-    mg.messages().send(mailOptions, (error, body) => {
+    transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error(error);
             res.status(500).send('Error sending email');
         } else {
-            console.log('Email sent: ' + body);
+            console.log('Email sent:', info.response);
             res.status(200).send('Email sent successfully');
         }
     });

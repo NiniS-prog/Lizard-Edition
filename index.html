@@ -231,5 +231,43 @@
     <footer class="copyright">
         <p>&copy; 2024, ShininPro, Allrights reserved</p>
     </footer>
+
+
+    <script>
+        function validateForm() {
+            var name = document.forms["contactForm"]["name"].value;
+            var email = document.forms["contactForm"]["email"].value;
+            var message = document.forms["contactForm"]["message"].value;
+        
+            if (name == "" || email == "" || message == "") {
+                alert("Please fill out all fields");
+                return false;
+            }
+        
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+        
+            return true;
+        }
+        </script>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var form = document.getElementById("contactForm");
+        form.addEventListener("submit", function(event) {
+            if (validateForm()) {
+                alert("Your message has been successfully sent!");
+            } else {
+                event.preventDefault();
+            }
+        });
+    });
+    </script>
+    
 </body>
 </html>

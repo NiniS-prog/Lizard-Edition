@@ -5,15 +5,15 @@ const nodemailer = require('nodemailer');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Parse JSON bodies
-app.use(bodyParser.json());
+// Parse URL-encoded bodies (as sent by HTML forms)
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Create a transporter object using SMTP transport
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: 'webshinin@gmail.com', // Your Gmail email address
-        pass: '193653Martini1!'   // Your Gmail password or App Password
+        pass: '193653Martini1!'      // Your Gmail password or App Password
     }
 });
 

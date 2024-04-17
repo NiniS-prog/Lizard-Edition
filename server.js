@@ -25,7 +25,7 @@ app.post('/send-email', (req, res) => {
     // Setup email data
     const mailOptions = {
         from: email, // Use the email provided by the user as the sender
-        to: 'webshinin@outlook.com', // Specify your email address as the recipient
+        to: 'webshinin@gmail.com', // Specify your email address as the recipient
         subject: 'New message from contact form',
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
     };

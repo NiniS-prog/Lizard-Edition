@@ -17,6 +17,10 @@ const transporter = nodemailer.createTransport({
     }
 });
 
+// Define a route for the homepage
+app.get('/', (req, res) => {
+    res.send('Welcome to the homepage!');
+});
 
 // Define a route to handle email sending
 app.post('/send-email', (req, res) => {

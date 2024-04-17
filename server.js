@@ -12,10 +12,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'webshinin@gmail.com', // Your Gmail email address
-        pass: '193653Martini1!'      // Your Gmail password or App Password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
     }
 });
+
 
 // Define a route to handle email sending
 app.post('/send-email', (req, res) => {
@@ -23,8 +24,8 @@ app.post('/send-email', (req, res) => {
 
     // Setup email data
     const mailOptions = {
-        from: 'webshinin@gmail.com',
-        to: 'webshinin@gmail.com', // Recipient address
+        from: email, // Use the email provided by the user as the sender
+        to: 'webshinin@outlook.com', // Specify your email address as the recipient
         subject: 'New message from contact form',
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
     };

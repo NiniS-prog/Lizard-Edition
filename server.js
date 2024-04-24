@@ -37,12 +37,12 @@ app.post('/send-email', (req, res) => {
     // Send email
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.error(error);
+            console.error('Error sending email:', error); // Log detailed error message
             res.status(500).send('Error sending email');
         } else {
             console.log('Email sent:', info.response);
             res.status(200).send('Email sent successfully');
-        }
+            }
     });
 });
 

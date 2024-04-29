@@ -10,12 +10,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Create a transporter object using SMTP transport
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.office365.com',
+    port: 587,
+    secure: false, // true for 465, false for other ports
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS
-    }
+    },
+    debug: true // Enable debugging
 });
+
 
 // Define a route for the homepage
 app.get('/', (req, res) => {

@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -8,46 +7,23 @@ const port = process.env.PORT || 3000;
 // Parse URL-encoded bodies (as sent by HTML forms)
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Create a transporter object using SMTP transport
-const transporter = nodemailer.createTransport({
-    host: 'smtp.office365.com',
-    port: 587,
-    secure: false, // true for 465, false for other ports
-    auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
-    },
-    requireTLS: true // Use STARTTLS for encryption
-});
-
-
 // Define a route for the homepage
 app.get('/', (req, res) => {
     res.send('Welcome to the homepage!');
 });
 
-// Define a route to handle email sending
+// Define a route to handle form submissions
 app.post('/send-email', (req, res) => {
     const { name, email, message } = req.body;
 
-    // Setup email data
-    const mailOptions = {
-        from: email, // Use the email provided by the user as the sender
-        to: 'shinin_p@outlook.com', // Specify your email address as the recipient
-        subject: 'New message from contact form',
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
-    };
+    // Log the received message
+    console.log('Received message:');
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Message:', message);
 
-    // Send email
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.error('Error sending email:', error); // Log detailed error message
-            res.status(500).send('Error sending email');
-        } else {
-            console.log('Email sent:', info.response);
-            res.status(200).send('Email sent successfully');
-            }
-    });
+    // Respond with a success message
+    res.status(200).send('Message received successfully');
 });
 
 // Start the server

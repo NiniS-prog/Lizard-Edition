@@ -606,11 +606,11 @@ footer.copyright{
     overflow-y: hidden; /* Hide vertical scrollbar */
     white-space: nowrap; /* Prevent wrapping of carousel items */
     scrollbar-width: thin; /* Set the width of the scrollbar to thin */
-    scrollbar-color: #ffffff #0F172A; /* Set the color of the scrollbar handle and track */
+    scrollbar-color: #0F172A #ffffff; /* Set the color of the scrollbar handle and track */
 
     /* For Webkit browsers */
     scrollbar-width: thin; /* Set the width of the scrollbar to thin */
-    scrollbar-color: #ffffff #0F172A; /* Set the color of the scrollbar handle and track */
+    scrollbar-color: #0F172A #ffffff; /* Set the color of the scrollbar handle and track */
 }
 
 /* For Webkit browsers */
@@ -619,11 +619,11 @@ footer.copyright{
 }
 
 .carousel-container::-webkit-scrollbar-thumb {
-    background-color: #ffffff; /* color of the handle */
+    background-color: #0F172A; /* color of the handle */
 }
 
 .carousel-container::-webkit-scrollbar-track {
-    background-color: #0F172A; /* color of the track */
+    background-color: #ffffff; /* color of the track */
 }
 
 .workBx {

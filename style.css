@@ -601,26 +601,18 @@ footer.copyright{
 /* new */
 
 
+/* For Firefox */
 .carousel-container {
-    overflow-x: auto; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Hide vertical scrollbar */
-    white-space: nowrap; /* Prevent wrapping of carousel items */
-    position: relative; /* Position relative for absolute positioning of ::after pseudo-element */
+    scrollbar-width: thin; /* Make the scrollbar thin */
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent; /* Set the color of the scrollbar */
 }
 
-.carousel-container::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%; /* Take up the full width of the container */
-    height: 1px; /* Height of the scrolling line */
-    background-color: rgba(255, 255, 255, 0.3); /* Color of the scrolling line */
-    z-index: 1; /* Ensure the line stays above the carousel items */
+/* For WebKit browsers (like Chrome and Safari) */
+.carousel-container::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
 }
 
-.workBx {
-    width: 300px; /* Adjust width as needed */
-    display: inline-block; /* Display items in a single line */
-    margin-right: 20px; /* Add spacing between items */
+.carousel-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3); /* Set the color of the thumb */
 }
+

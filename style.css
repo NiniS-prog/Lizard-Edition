@@ -603,9 +603,7 @@ footer.copyright{
 
 .carousel-container {
     position: relative;
-    overflow-x: scroll; /* Enable horizontal scrolling */
     overflow-y: hidden; /* Hide vertical scrollbar */
-    white-space: nowrap; /* Prevent line breaks */
     -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
 }
 

@@ -601,27 +601,23 @@ footer.copyright{
 /* new */
 
 
-/* Adjusting the carousel container */
-.carousel-container {
-    position: relative;
-    overflow-x: scroll; /* Enable horizontal scrolling */
-    scrollbar-width: none; /* Hide default scrollbar */
-}
-
 /* Thin line indicating scroll */
 .carousel-container::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
+    top: 0; /* Align to the top */
+    left: 0; /* Start from the left */
+    width: 1px; /* Make it a vertical line */
+    height: 100%; /* Extend full height */
     background-color: rgba(255, 255, 255, 0.3); /* Adjust transparency */
     z-index: 1;
 }
 
-/* Hide default scrollbar for webkit browsers */
-.carousel-container::-webkit-scrollbar {
-    display: none;
+/* Adjusting the carousel container */
+.carousel-container {
+    position: relative;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    white-space: nowrap; /* Prevent line breaks */
 }
 

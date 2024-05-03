@@ -601,3 +601,15 @@ footer.copyright{
 /* new */
 
 
+.carousel-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent images from wrapping */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
+
+.workBx {
+    display: inline-block; /* Display images in a row */
+    vertical-align: top; /* Align images to the top */
+    margin-right: 10px; /* Add some space between images */
+    white-space: normal; /* Reset white-space for the paragraph */
+}

@@ -113,54 +113,52 @@
     </section>
 
     <!-- Creating Work Layout in HTML -->
-
     <section class="work" id="work" style="border-top: 1px solid #006d77; box-shadow: 0px 2px 0px #006d77;">
-        
         <div class="heading">
             <h2 style="color: #;">Projects Showcase</h2>
         </div>
         <div class="content">
-            <div class="workBx">
-                <a href="#" target="_blank">
+            <div class="carousel-container">
+                <div class="workBx">
                     <img src="images/Darind.png" alt="">
                     <p style="color: #5EEAD4;">Darind(Jewelry) E-Commerce</p>
-                </a>
-            </div>
-            <div class="workBx">
-                <a href="#" target="_blank">
+                </div>
+                <div class="workBx">
                     <img src="images/shinin.png" alt="">
                     <p style="color: #5EEAD4;">Shinin pro (Fashion Blog) Website</p>
-                </a>
-            </div>
-            <div class="workBx">
-                <a href="#" target="_blank">
+                </div>
+                <div class="workBx">
                     <img src="images/Gbarel.png" alt="">
                     <p style="color: #5EEAD4;">Gbarel (Beauty) E-Commerce</p>
-                </a>
-            </div>
-            <div class="workBx">
-                <a href="#" target="_blank">
+                </div>
+                <div class="workBx">
                     <img src="images/Tameless.png" alt="">
                     <p style="color: #5EEAD4;">TamelessHub (Aparel) E-Commerce</p>
-                </a>
-            </div>
-            <div class="workBx">
-                <a href="#" target="_blank">
+                </div>
+                <div class="workBx">
                     <img src="images/EsseN.png" alt="">
                     <p style="color: #5EEAD4;">EssenVibe (Beauty) E-Commerce</p>
-                </a>
-            </div>
-            <div class="workBx">
-                <a href="#" target="_blank">
+                </div>
+                <div class="workBx">
                     <img src="images/Renby.png" alt="">
                     <p style="color: #5EEAD4;">Renby (Home Coutur) E-Commerce</p>
-                </a>
-            </div>
-            <div class="heading">
+                </div>
             </div>
         </div>
     </section>
 
+    
+    <script>
+        // Function to continuously scroll the carousel
+        function scrollCarousel() {
+            const carousel = document.querySelector('.carousel-container');
+            carousel.scrollLeft += 1; 
+        }
+    
+        // Call the scrollCarousel function every 10 milliseconds
+        setInterval(scrollCarousel, 10); 
+    </script>
+    
     <!-- Creating Testimonial Layout in HTML -->
     <section class="testimonial" id="testimonial" style="border-top: 1px solid #006d77; box-shadow: 0px 2px 0px #006d77;">
         <div class="heading white">

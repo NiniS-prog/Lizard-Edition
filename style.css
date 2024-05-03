@@ -610,7 +610,7 @@ footer.copyright{
 
     /* For Webkit browsers */
     scrollbar-width: thin; /* Set the width of the scrollbar to thin */
-    scrollbar-color: #ffffff #0F172A; /* Set the color of the scrollbar handle and track */
+    scrollbar-color: #ffffff #ffffff; /* Set the color of the scrollbar handle and track */
 }
 
 /* For Webkit browsers */

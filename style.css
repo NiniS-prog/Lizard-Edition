@@ -601,15 +601,62 @@ footer.copyright{
 /* new */
 
 
-.carousel-container {
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent images from wrapping */
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+/* Hide default scrollbar */
+.carousel-container::-webkit-scrollbar {
+    display: none;
 }
 
-.workBx {
-    display: inline-block; /* Display images in a row */
-    vertical-align: top; /* Align images to the top */
-    margin-right: 10px; /* Add some space between images */
-    white-space: normal; /* Reset white-space for the paragraph */
+/* Show arrows for horizontal scrolling */
+.carousel-container {
+    position: relative;
+}
+
+/* Create left and right arrow buttons */
+.carousel-container::before,
+.carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust transparency */
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-container::before {
+    left: 0;
+}
+
+.carousel-container::after {
+    right: 0;
+}
+
+/* Add arrow icons */
+.carousel-container::before {
+    background-image: url('left-arrow.png'); /* Add path to left arrow icon */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.carousel-container::after {
+    background-image: url('right-arrow.png'); /* Add path to right arrow icon */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Thin line indicating scroll */
+.carousel-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3); /* Adjust transparency */
+    z-index: 1;
 }

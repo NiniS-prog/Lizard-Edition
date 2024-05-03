@@ -615,7 +615,7 @@ footer.copyright{
 
 /* For Webkit browsers */
 .carousel-container::-webkit-scrollbar {
-    width: 3px; /* width of the scrollbar */
+    width: 2px; /* width of the scrollbar */
 }
 
 .carousel-container::-webkit-scrollbar-thumb {
@@ -631,3 +631,4 @@ footer.copyright{
     display: inline-block; /* Display items in a single line */
     margin-right: 20px; /* Add spacing between items */
 }
+

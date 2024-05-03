@@ -601,52 +601,11 @@ footer.copyright{
 /* new */
 
 
-/* Hide default scrollbar */
-.carousel-container::-webkit-scrollbar {
-    display: none;
-}
-
-/* Show arrows for horizontal scrolling */
+/* Adjusting the carousel container */
 .carousel-container {
     position: relative;
-}
-
-/* Create left and right arrow buttons */
-.carousel-container::before,
-.carousel-container::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.5); /* Adjust transparency */
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.carousel-container::before {
-    left: 0;
-}
-
-.carousel-container::after {
-    right: 0;
-}
-
-/* Add arrow icons */
-.carousel-container::before {
-    background-image: url('left-arrow.png'); /* Add path to left arrow icon */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.carousel-container::after {
-    background-image: url('right-arrow.png'); /* Add path to right arrow icon */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    scrollbar-width: none; /* Hide default scrollbar */
 }
 
 /* Thin line indicating scroll */
@@ -660,3 +619,9 @@ footer.copyright{
     background-color: rgba(255, 255, 255, 0.3); /* Adjust transparency */
     z-index: 1;
 }
+
+/* Hide default scrollbar for webkit browsers */
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+

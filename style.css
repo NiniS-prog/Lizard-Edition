@@ -601,12 +601,6 @@ footer.copyright{
 /* new */
 
 
-/* For Firefox */
-.carousel-container {
-    scrollbar-width: thin; /* Make the scrollbar thin */
-    scrollbar-color: rgba(255, 255, 255, 0.3) transparent; /* Set the color of the scrollbar */
-}
-
 /* For WebKit browsers (like Chrome and Safari) */
 .carousel-container::-webkit-scrollbar {
     width: 5px; /* Set the width of the scrollbar */
@@ -616,3 +610,8 @@ footer.copyright{
     background-color: rgba(255, 255, 255, 0.3); /* Set the color of the thumb */
 }
 
+/* For Firefox */
+.carousel-container {
+    scrollbar-width: thin; /* Make the scrollbar thin */
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent; /* Set the color of the scrollbar */
+}

@@ -278,42 +278,34 @@
     </script>
     
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        console.log('DOMContentLoaded event fired');
-        
-        const container = document.querySelector('.carousel-container');
-        console.log('Container:', container);
-        
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.querySelector('.carousel-container');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
     
-        container.addEventListener('mousedown', function (e) {
-            console.log('mousedown event fired');
-            isDown = true;
-            startX = e.pageX - container.offsetLeft;
-            scrollLeft = container.scrollLeft;
-        });
+            container.addEventListener('mousedown', function (e) {
+                isDown = true;
+                startX = e.pageX - container.offsetLeft;
+                scrollLeft = container.scrollLeft;
+            });
     
-        container.addEventListener('mouseleave', function () {
-            console.log('mouseleave event fired');
-            isDown = false;
-        });
+            container.addEventListener('mouseleave', function () {
+                isDown = false;
+            });
     
-        container.addEventListener('mouseup', function () {
-            console.log('mouseup event fired');
-            isDown = false;
-        });
+            container.addEventListener('mouseup', function () {
+                isDown = false;
+            });
     
-        container.addEventListener('mousemove', function (e) {
-            console.log('mousemove event fired');
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - container.offsetLeft;
-            const walk = (x - startX) * 3; // Adjust scrolling speed
-            container.scrollLeft = scrollLeft - walk;
+            container.addEventListener('mousemove', function (e) {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - container.offsetLeft;
+                const walk = (x - startX); // Adjust scrolling speed
+                container.scrollLeft = scrollLeft - walk;
+            });
         });
-    });
-</script>        
-</body>
+    </script>
+    </body>
 </html>

@@ -604,6 +604,7 @@ footer.copyright{
     overflow-x: auto; /* Enable horizontal scrolling */
     overflow-y: hidden; /* Hide vertical scrollbar */
     white-space: nowrap; /* Prevent wrapping of carousel items */
+    scrollbar-width: thin; /* Set the width of the scrollbar to thin */
 }
 
 .workBx {

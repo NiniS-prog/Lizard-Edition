@@ -606,7 +606,7 @@ footer.copyright{
     overflow-y: hidden; /* Hide vertical scrollbar */
     white-space: nowrap; /* Prevent wrapping of carousel items */
     scrollbar-width: thin; /* Set the width of the scrollbar to thin */
-    scrollbar-color: #0F172A #f1f1f1; /* Set the color of the scrollbar handle and track */
+    scrollbar-color: #0F172A #636363; /* Set the color of the scrollbar handle and track */
 
     /* For Webkit browsers */
     scrollbar-width: thin; /* Set the width of the scrollbar to thin */

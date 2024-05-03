@@ -600,18 +600,35 @@ footer.copyright{
 
 /* new */
 
+.carousel-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    white-space: nowrap; /* Prevent wrapping of carousel items */
+    scrollbar-width: thin; /* Set the width of the scrollbar to thin */
+}
+
+.workBx {
+    width: 300px; /* Adjust width as needed */
+    display: inline-block; /* Display items in a single line */
+    margin-right: 20px; /* Add spacing between items */
+}
+
 /* Thin scrollbar */
+.carousel-container {
+    scrollbar-width: thin; /* Set the width of the scrollbar to thin */
+    scrollbar-color: #888 #f1f1f1; /* Set the color of the scrollbar handle and track */
+}
+
+/* For Webkit browsers */
 .carousel-container::-webkit-scrollbar {
-    width: 5px; /* width of the scrollbar */
-  }
-  
-  /* Track */
-  .carousel-container::-webkit-scrollbar-track {
-    background: #f1f1f1; /* color of the track */
-  }
-  
-  /* Handle */
-  .carousel-container::-webkit-scrollbar-thumb {
-    background: #888; /* color of the handle */
-  }
-  
+    width: 3px; /* width of the scrollbar */
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+    background-color: #888; /* color of the handle */
+}
+
+.carousel-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* color of the track */
+}
+

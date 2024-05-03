@@ -601,6 +601,14 @@ footer.copyright{
 /* new */
 
 
+.carousel-container {
+    position: relative;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    white-space: nowrap; /* Prevent line breaks */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
+
 /* Thin line indicating scroll */
 .carousel-container::after {
     content: '';
@@ -611,13 +619,4 @@ footer.copyright{
     height: 1px; /* Make it a horizontal line */
     background-color: rgba(255, 255, 255, 0.3); /* Adjust transparency */
     z-index: 1;
-}
-
-/* Adjusting the carousel container */
-.carousel-container {
-    position: relative;
-    overflow-x: scroll; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Hide vertical scrollbar */
-    white-space: nowrap; /* Prevent line breaks */
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
 }

@@ -606,21 +606,15 @@ footer.copyright{
     display: none;
 }
 
-/* Custom scrollbar track */
+/* Show scrollbar track */
 .carousel-container {
-    scrollbar-width: none; /* For Firefox */
-    overflow-y: scroll; /* Ensure scrollbar is displayed even when not needed */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: transparent transparent; /* For Firefox */
 }
 
-/* Custom scrollbar arrows */
-.carousel-container::-webkit-scrollbar-button {
-    display: block;
-    background-color: transparent;
-}
-
-.carousel-container::-webkit-scrollbar-button:start:decrement,
-.carousel-container::-webkit-scrollbar-button:end:increment {
-    display: none;
+/* Custom scrollbar track */
+.carousel-container::-webkit-scrollbar-track {
+    background: transparent; /* Set track color to transparent for WebKit */
 }
 
 /* Custom scrollbar thumb */
@@ -633,5 +627,5 @@ footer.copyright{
 /* For Firefox */
 .carousel-container {
     scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+    scrollbar-color: rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0.1);
 }

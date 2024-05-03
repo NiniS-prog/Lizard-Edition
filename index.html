@@ -277,27 +277,36 @@
     });
     </script>
     
+    <script>
     document.addEventListener('DOMContentLoaded', function () {
+        console.log('DOMContentLoaded event fired');
+        
         const container = document.querySelector('.carousel-container');
+        console.log('Container:', container);
+        
         let isDown = false;
         let startX;
         let scrollLeft;
     
         container.addEventListener('mousedown', function (e) {
+            console.log('mousedown event fired');
             isDown = true;
             startX = e.pageX - container.offsetLeft;
             scrollLeft = container.scrollLeft;
         });
     
         container.addEventListener('mouseleave', function () {
+            console.log('mouseleave event fired');
             isDown = false;
         });
     
         container.addEventListener('mouseup', function () {
+            console.log('mouseup event fired');
             isDown = false;
         });
     
         container.addEventListener('mousemove', function (e) {
+            console.log('mousemove event fired');
             if (!isDown) return;
             e.preventDefault();
             const x = e.pageX - container.offsetLeft;
@@ -305,6 +314,6 @@
             container.scrollLeft = scrollLeft - walk;
         });
     });
-    
+</script>        
 </body>
 </html>

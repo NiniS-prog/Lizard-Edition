@@ -606,6 +606,18 @@ footer.copyright{
     overflow-y: hidden; /* Hide vertical scrollbar */
     white-space: nowrap; /* Prevent wrapping of carousel items */
 }
+
+.carousel-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Change the width to match the container width */
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+}
+
 .workBx {
     width: 300px; /* Adjust width as needed */
     display: inline-block; /* Display items in a single line */

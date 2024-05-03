@@ -621,7 +621,6 @@ footer.copyright{
 .carousel-container::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.3); /* Change thumb color for WebKit */
     border-radius: 5px; /* Add border-radius for WebKit */
-    width: 5px; /* Adjust the width of the scrollbar thumb */
 }
 
 /* For Firefox */

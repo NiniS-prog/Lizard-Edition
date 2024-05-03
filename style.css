@@ -612,11 +612,7 @@ footer.copyright{
     scrollbar-color: transparent transparent; /* For Firefox */
 }
 
-/* Style scrollbar thumb */
-.carousel-container::-webkit-scrollbar-thumb {
-    display: none; /* Hide thumb for WebKit */
-}
-
+/* Custom scrollbar track */
 .carousel-container::-webkit-scrollbar-track {
     background: transparent; /* Set track color to transparent for WebKit */
 }
@@ -627,13 +623,8 @@ footer.copyright{
     border-radius: 5px; /* Add border-radius for WebKit */
 }
 
-/* Custom scrollbar track */
-.carousel-container::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1); /* Change track color for WebKit */
-    border-radius: 5px; /* Add border-radius for WebKit */
-}
-
 /* For Firefox */
 .carousel-container {
     scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.3) rgba(
+    scrollbar-color: rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0.1);
+}

@@ -619,7 +619,7 @@ footer.copyright{
 }
 
 .carousel-container::-webkit-scrollbar-thumb {
-    background-color: #0F172A; /* color of the handle */
+    background-color: #ffffff; /* color of the handle */
 }
 
 .carousel-container::-webkit-scrollbar-track {

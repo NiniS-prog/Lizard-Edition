@@ -602,7 +602,7 @@ footer.copyright{
 
 /* Thin scrollbar */
 .carousel-container::-webkit-scrollbar {
-    width: 3px; /* width of the scrollbar */
+    width: 5px; /* width of the scrollbar */
   }
   
   /* Track */
@@ -613,6 +613,5 @@ footer.copyright{
   /* Handle */
   .carousel-container::-webkit-scrollbar-thumb {
     background: #888; /* color of the handle */
-    border-radius: 10px; /* roundness of the handle */
   }
-    
+  

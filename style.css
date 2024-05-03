@@ -605,10 +605,10 @@ footer.copyright{
 .carousel-container::after {
     content: '';
     position: absolute;
-    top: 0; /* Align to the top */
+    bottom: 0; /* Align to the bottom */
     left: 0; /* Start from the left */
-    width: 1px; /* Make it a vertical line */
-    height: 100%; /* Extend full height */
+    width: 100%; /* Extend full width */
+    height: 1px; /* Make it a horizontal line */
     background-color: rgba(255, 255, 255, 0.3); /* Adjust transparency */
     z-index: 1;
 }
@@ -616,8 +616,8 @@ footer.copyright{
 /* Adjusting the carousel container */
 .carousel-container {
     position: relative;
-    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-x: scroll; /* Enable horizontal scrolling */
     overflow-y: hidden; /* Hide vertical scrollbar */
     white-space: nowrap; /* Prevent line breaks */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
 }
-

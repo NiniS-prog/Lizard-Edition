@@ -601,14 +601,37 @@ footer.copyright{
 /* new */
 
 
-.carousel-container {
-    overflow-x: auto; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Hide vertical scrollbar */
-    white-space: nowrap; /* Prevent wrapping of carousel items */
-}
-.workBx {
-    width: 300px; /* Adjust width as needed */
-    display: inline-block; /* Display items in a single line */
-    margin-right: 20px; /* Add spacing between items */
+/* Hide the default scrollbar */
+.carousel-container::-webkit-scrollbar {
+    display: none;
 }
 
+/* Custom scrollbar track */
+.carousel-container {
+    scrollbar-width: none; /* For Firefox */
+    overflow-y: scroll; /* Ensure scrollbar is displayed even when not needed */
+}
+
+/* Custom scrollbar arrows */
+.carousel-container::-webkit-scrollbar-button {
+    display: block;
+    background-color: transparent;
+}
+
+.carousel-container::-webkit-scrollbar-button:start:decrement,
+.carousel-container::-webkit-scrollbar-button:end:increment {
+    display: none;
+}
+
+/* Custom scrollbar thumb */
+.carousel-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Change thumb color for WebKit */
+    border-radius: 5px; /* Add border-radius for WebKit */
+    width: 5px; /* Adjust the width of the scrollbar thumb */
+}
+
+/* For Firefox */
+.carousel-container {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}

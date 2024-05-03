@@ -605,6 +605,7 @@ footer.copyright{
     overflow-x: auto; /* Enable horizontal scrolling */
     overflow-y: hidden; /* Hide vertical scrollbar */
     white-space: nowrap; /* Prevent wrapping of carousel items */
+    position: relative; /* Position relative for absolute positioning of ::after pseudo-element */
 }
 
 .carousel-container::after {
@@ -612,10 +613,10 @@ footer.copyright{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%; /* Change the width to match the container width */
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.3);
-    z-index: 1;
+    width: 100%; /* Take up the full width of the container */
+    height: 1px; /* Height of the scrolling line */
+    background-color: rgba(255, 255, 255, 0.3); /* Color of the scrolling line */
+    z-index: 1; /* Ensure the line stays above the carousel items */
 }
 
 .workBx {

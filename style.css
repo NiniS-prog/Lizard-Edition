@@ -602,19 +602,12 @@ footer.copyright{
 
 
 .carousel-container {
-    position: relative;
+    overflow-x: auto; /* Enable horizontal scrolling */
     overflow-y: hidden; /* Hide vertical scrollbar */
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+    white-space: nowrap; /* Prevent wrapping of carousel items */
 }
-
-/* Thin line indicating scroll */
-.carousel-container::after {
-    content: '';
-    position: absolute;
-    bottom: 0; /* Align to the bottom */
-    left: 0; /* Start from the left */
-    width: 100%; /* Extend full width */
-    height: 1px; /* Make it a horizontal line */
-    background-color: rgba(255, 255, 255, 0.3); /* Adjust transparency */
-    z-index: 1;
+.workBx {
+    width: 300px; /* Adjust width as needed */
+    display: inline-block; /* Display items in a single line */
+    margin-right: 20px; /* Add spacing between items */
 }

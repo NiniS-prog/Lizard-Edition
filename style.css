@@ -38,13 +38,39 @@ header ul li{
     position:relative;
     list-style: none;
 }
-header ul li a{
+/* Updated hover effect for menu items */
+header ul li a {
     position: relative;
-    display:inline-block;
-    margin:0 15px;
-    color:#fff;
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff;
     text-decoration: none;
+    transition: color 0.3s, transform 0.3s; 
 }
+
+/* New hover effect */
+header ul li a:hover {
+    color: #2DD4BF; 
+    transform: scale(1.1); 
+}
+
+/* Underline effect on hover */
+header ul li a::before {
+    content: ''; 
+    position: absolute;
+    bottom: -2px; 
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2DD4BF; 
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out; 
+}
+
+header ul li a:hover::before {
+    transform: scaleX(1); 
+}
+
 /* Creating Stiky Header Menu Nav Bar */
 header.sticky{
     background:#fff;
@@ -65,7 +91,7 @@ section{
 .banner{
     position:relative;
     min-height: 100vh;
-    background:#0F172A;
+    background:#000000;
     background:url(images/Lizard1.png);
     background-size:cover;
     background-position: right;
@@ -73,6 +99,8 @@ section{
     justify-content: space-between;
     align-items: center;
 }
+
+
 .banner h2{
     font-size: 2.5em;
     color:#444;
@@ -91,24 +119,33 @@ section{
     font-size: 1.5em;
     font-weight: 500;
 }
-.btn{
-    position:relative;
-    background:#2DD4BF;
-    display:inline-block;
-    color:#5EEAD4;
+/* Updated hover effect for buttons */
+.btn {
+    position: relative;
+    background: #2DD4BF;
+    display: inline-block;
+    color: #5EEAD4;
     margin-top: 20px;
-    padding:10px 30px;
+    padding: 10px 30px;
     font-size: 18px;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 500;
+    transition: all 0.3s; 
+}
+
+/* New hover effect for buttons */
+.btn:hover {
+    background: #5EEAD4; 
+    color: #2DD4BF; 
+    transform: scale(1.05); 
 }
     /* Creating About Layout */
 .content{
     display:flex;
     justify-content: space-between;
-    background-color: #0F172A;
+    background-color: #000000;
     
 }
 .heading{
@@ -122,7 +159,7 @@ section{
     font-size:14px;
 }
 .heading h2{
-    font-size: 3em;
+    font-size: 2em;
     color:#006d77
 }
 .contentBx{
@@ -135,7 +172,7 @@ section{
 }
 .proPic{
     width:300px;
-    height:350px;
+    height:300px;
     border-top-left-radius: 30%;
     border-bottom-right-radius: 30%;
 }
@@ -169,7 +206,7 @@ img{
 
 
 .services {
-    background: #0F172A;
+    background: #000000;
     
 }
 
@@ -185,13 +222,17 @@ img{
 
 /* Adjusting width of services boxes */
 .services .content .servicesBx {
-    color: #2DD4BF;
-    background: #0F172A;
+    color: #ffffff;
+    background: #000000;
     padding: 30px 15px;
-    max-width: calc(33.33% - 30px); /* Adjusted width */
+    max-width: calc(33.33% - 30px); 
     margin: 10px 15px;
     text-align: center;
-    border-radius: 20px; /* Apply border radius to all corners */
+    border-radius: 20px; 
+}
+.servicesBx i,
+.servicesBx h3 {
+    color: #5EEAD4;
 }
 
 
@@ -206,12 +247,12 @@ img{
 /* Moving social icons under contact form in mobile view */
 @media (max-width: 768px) {
     .contactInfoBx .boxSocial {
-        padding-left: 0; /* Remove padding */
-        margin-top: 20px; /* Add margin to separate from contact info */
+        padding-left: 0; 
+        margin-top: 20px; 
     }
 
     .formBx {
-        min-width: 100%; /* Make form box full width */
+        min-width: 100%; 
     }
     
 }
@@ -219,12 +260,12 @@ img{
 /* Make icons section responsive for phone view */
 @media (max-width: 600px) {
     .services .content {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column; 
     }
 
     .services .content .servicesBx {
-        max-width: calc(100% - 20px); /* Take full width with some margin */
-        margin: 10px; /* Add margin */
+        max-width: calc(100% - 20px); 
+        margin: 10px;
     }
 }
 
@@ -235,32 +276,25 @@ img{
     justify-content: center;
     flex-wrap:wrap;
     flex-direction:row;
-    background-color: #0F172A;
+    background-color: #000000;
 }
 .work .content .workBx{
     width:500px;
     padding:20px;
 }
-.work .content .workBx img{
-    max-width:100%;
-    border:1px solid rgba(0,0,0,0.4);
-    cursor:pointer;
+.work .content .workBx img {
+    max-width: 80%; 
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
 }
-.work .content .workBx img:hover{
-    box-shadow:0 0 20px 5px #ccc;
-    transform:scale(1.008);
-    -webkit-transform:scale(1.008);
-    -moz-transform:scale(1.008);
-    -ms-transform:scale(1.008);
-    -o-transform:scale(1.008);
-    transition:0.5s;
-    -webkit-transition:0.5s;
-    -moz-transition:0.5s;
-    -ms-transition:0.5s;
-    -o-transition:0.5s;
+
+.work .content .workBx img:hover {
+    box-shadow: 0 0 20px 5px #ccc;
+    transform: scale(1.008);
+    transition: 0.5s;
 }
 .work .content .workBx p{
-    text-align:center;
+    text-align:left;
 }
 .work .content .workBx a:link,
 .work .content .workBx a:visited,
@@ -272,7 +306,7 @@ img{
 
 /* Creating Testimonial Layout in CSS */
 .testimonial{
-    background:#0F172A;
+    background:#000000;
 }
 .testimonial .content{
     display:flex;
@@ -281,7 +315,7 @@ img{
     flex-direction:row;
 }
 .testimonial .content .testimonialBx{
-    background:#0F172A;
+    background:#000000;
     padding:60px 40px;
     margin:20px;
     max-width:calc(50% - 40px);
@@ -312,7 +346,7 @@ img{
 
 /* Creating Contact Details Layout in CSS */
 .contact{
-    background:#0F172A;
+    background:#000000;
 }
 
 .formBx{
@@ -339,7 +373,7 @@ img{
     outline:none;
     background:#006d77;
     resize:vertical;
-    color:#0F172A;
+    color:#000000;
 }
 .formBx form input:focus,
 .formBx form textarea:focus{
@@ -354,10 +388,10 @@ img{
 .formBx form textarea::placeholder{
     color:#999;
 }
-.formBx form input[type="submit"]{
-    background:#2DD4BF;
-    max-width:250px;
-    cursor:pointer;
+.formBx form input[type="submit"] {
+    background: #2DD4BF;
+    max-width: 250px;
+    cursor: pointer;
     font-weight: 600;
     letter-spacing: 2px;
     border-radius: 50px;
@@ -365,6 +399,14 @@ img{
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
+    transition: all 0.3s; 
+}
+
+/* New hover effect for submit button */
+.formBx form input[type="submit"]:hover {
+    background: #5EEAD4; 
+    color: #2DD4BF; 
+    transform: scale(1.05); 
 }
 .contactInfo{
     min-width:40%;
@@ -381,7 +423,7 @@ img{
     display:flex;
 }
 .contactInfoBx .box .icon{
-    color:#0F172A;
+    color:#000000;
     min-width:40px;
     padding-top:4px;
     display:flex;
@@ -418,7 +460,7 @@ img{
     
 }
 footer.copyright{
-    background:#0F172A;
+    background:#000000;
     color:#2DD4BF;
     text-align: center;
     padding:10px;
@@ -602,32 +644,31 @@ footer.copyright{
 
 /* Thin scrollbar */
 .carousel-container {
-    overflow-x: auto; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Hide vertical scrollbar */
-    white-space: nowrap; /* Prevent wrapping of carousel items */
-    scrollbar-width: thin; /* Set the width of the scrollbar to thin */
-    scrollbar-color: #ffffff #0F172A; /* Set the color of the scrollbar handle and track */
-
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    white-space: nowrap; 
+    scrollbar-width: thin; 
+    scrollbar-color: #ffffff #000000; 
     /* For Webkit browsers */
-    scrollbar-width: thin; /* Set the width of the scrollbar to thin */
-    scrollbar-color: #ffffff #0F172A; /* Set the color of the scrollbar handle and track */
+    scrollbar-width: thin; 
+    scrollbar-color: #ffffff #000000; 
 }
 
 /* For Webkit browsers */
 .carousel-container::-webkit-scrollbar {
-    width: 2px; /* width of the scrollbar */
+    width: 2px; 
 }
 
 .carousel-container::-webkit-scrollbar-thumb {
-    background-color: #ffffff; /* color of the handle */
+    background-color: #ffffff;
 }
 
 .carousel-container::-webkit-scrollbar-track {
-    background-color: #0F172A; /* color of the track */
+    background-color: #000000; 
 }
 
 .workBx {
-    width: 300px; /* Adjust width as needed */
-    display: inline-block; /* Display items in a single line */
-    margin-right: 20px; /* Add spacing between items */
+    width: 300px; 
+    display: inline-block; 
+    margin-right: 20px; 
 }

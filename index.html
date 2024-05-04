@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
-<body style="background-color: #0F172A; color:#ffffff;">
+<body style="background-color: #000000; color:#ffffff;">
 
     <!-- Creating Menu Tabs & Logo at Top Using HTML -->
     <header>
@@ -41,12 +41,14 @@
     <!-- Creating About Me Layout in HTML -->
     <section class="about" id="about" style="border-top: 1px solid #006d77; box-shadow: 0px 2px 0px #006d77;">
         <div class="heading">
-            <h2>Overview</h2>
+            <h2>OVERVIEW</h2>
         </div>
         <div class="content">
             <div class="w50">
-                <img src="images/myPic2.png" alt="" class="proPic">
-            </div>
+
+<img src="images/myPic2.png" alt="" class="proPic">
+
+</div>
             <div class="contentBx w50">
                 <h3></h3>
                 <h2> <b style="color: #006d77;">Lizard </b>Edition,  offers premier destination for ecommerce lifecycle expertise, web development, design, and SEO optimization strategies.
@@ -72,7 +74,7 @@
     <!-- Creating Services Layout in HTML -->
     <section class="services" id="services" style="border-top: 1px solid #006d77; box-shadow: 0px 2px 0px #006d77;">
         <div class="heading white">
-            <h2> Services</h2>
+            <h2> SERVICES</h2>
         </div>
         <div class="content">
 
@@ -115,44 +117,47 @@
     <!-- Creating Work Layout in HTML -->
     <section class="work" id="work" style="border-top: 1px solid #006d77; box-shadow: 0px 2px 0px #006d77;">
         <div class="heading">
-            <h2 style="color: #;">Projects Showcase</h2>
+            <h2 style="color: #;">RECENT PROJECTS</h2>
         </div>
         <div class="content">
             <div class="carousel-container">
                 <div class="workBx">
                     <a href="#" target="_blank">
                         <img src="images/Darind.png" alt="">
-                        <p style="color: #5EEAD4;">Darind(Jewelry) E-Commerce</p>
+                        <p style="color: #ffffff;">Darind(Jewelry) E-Commerce</p>
                     </a>
                 </div>
-                <div class="workBx">
-                    <a href="#" target="_blank">
-                        <img src="images/shinin.png" alt="">
-                        <p style="color: #5EEAD4;">Shinin pro (Fashion Blog) Website</p>
-                    </a>
-                </div>
-                <div class="workBx">
-                    <a href="#" target="_blank">
-                        <img src="images/Gbarel.png" alt="">
-                        <p style="color: #5EEAD4;">Gbarel (Beauty) E-Commerce</p>
-                    </a>
-                </div>
+
                 <div class="workBx">
                     <a href="#" target="_blank">
                         <img src="images/Tameless.png" alt="">
-                        <p style="color: #5EEAD4;">TamelessHub (Aparel) E-Commerce</p>
+                        <p style="color: #ffffff;">TamelessHub (Aparel) E-Commerce</p>
+                    </a>
+                </div>
+
+                <div class="workBx">
+                    <a href="#" target="_blank">
+                        <img src="images/Gbarel.png" alt="">
+                        <p style="color: #ffffff;">Gbarel (Beauty) E-Commerce</p>
                     </a>
                 </div>
                 <div class="workBx">
                     <a href="#" target="_blank">
                         <img src="images/EsseN.png" alt="">
-                        <p style="color: #5EEAD4;">EssenVibe (Beauty) E-Commerce</p>
+                        <p style="color: #ffffff;">EssenVibe (Beauty) E-Commerce</p>
                     </a>
                 </div>
                 <div class="workBx">
                     <a href="#" target="_blank">
+                        <img src="images/shinin.png" alt="">
+                        <p style="color: #ffffff;">Shinin pro (Fashion Blog) Website</p>
+                    </a>
+                </div>
+
+                <div class="workBx">
+                    <a href="#" target="_blank">
                         <img src="images/Renby.png" alt="">
-                        <p style="color: #5EEAD4;">Renby (Home Coutur) E-Commerce</p>
+                        <p style="color: #ffffff;">Renby (Home Coutur) E-Commerce</p>
                     </a>
                 </div>
             </div>
@@ -164,12 +169,12 @@
     <!-- Creating Testimonial Layout in HTML -->
     <section class="testimonial" id="testimonial" style="border-top: 1px solid #006d77; box-shadow: 0px 2px 0px #006d77;">
         <div class="heading white">
-            <h2>Highlights</h2>
+            <h2>HIGHLIGHTS</h2>
             <p>Recent Projects</p>
         </div>
         <div class="content">
             <div class="testimonialBx">
-                <p>In a tight timeframe, we delivered Tameless Hub—a comprehensive project covering project management, ecommerce strategy, integrations, apps, SEO, design, and more.
+                <p>In a tight timeframe, delivered Tameless Hub—a comprehensive project covering project management, ecommerce strategy, integrations, apps, SEO, design, and more.
 
                 </p>
                 <h3><a href="https://tamelesshub.shop/" style="color:#5EEAD4;">Tameless Hub</a></h3>
@@ -191,7 +196,7 @@
 <section class="contact" id="contact">
     <div class="heading white">
         <p>Feel free to contact </p>
-        <h2>Get in Touch.</h2>
+        <h2>GET IN TOUCH</h2>
     </div>
     <div class="content">
         <div class="formBx">
@@ -302,7 +307,7 @@
                 if (!isDown) return;
                 e.preventDefault();
                 const x = e.pageX - container.offsetLeft;
-                const walk = (x - startX); // Adjust scrolling speed
+                const walk = (x - startX);
                 container.scrollLeft = scrollLeft - walk;
             });
         });

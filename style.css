@@ -287,8 +287,7 @@ img{
     border: 1px solid rgba(0, 0, 0, 0.4);
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    background-color: rgba(0, 0, 0, 0.7); /* Adjust transparency and color as needed */
-
+    
 }
 
 .work .content .workBx img {
@@ -348,6 +347,8 @@ img{
     bottom: 20px;
     left: 20px;
     margin: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust transparency and color as needed */
+    padding: 10px; /* Optional: add padding for better readability */
 }
 
 .work .content .workBx a:link,

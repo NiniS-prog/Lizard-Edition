@@ -314,6 +314,14 @@ img{
     border: 2px solid #00b4d8; /* Adjust border color */
     transition: transform 0.3s ease, border 0.3s ease;
 }
+.work .content .workBx p:hover {
+    color: #ff6f61; /* Change to your preferred hover color */
+    transition: color 0.3s ease;
+}
+.work {
+    background: linear-gradient(135deg, #006d77, #00b4d8); /* Adjust colors as desired */
+}
+
 
 
 /* Creating Testimonial Layout in CSS */

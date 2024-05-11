@@ -271,55 +271,56 @@ img{
 
 
 /* Creating Work Layout in CSS */
-.work .content{
-    display:flex;
-    justify-content: center;
-    flex-wrap:wrap;
-    flex-direction:row;
-    background-color: #000000;
-}
-.work .content .workBx{
-    width:500px;
-    padding:20px;
-}
-.work .content .workBx img {
-    max-width: 80%; 
+.work .content .workBx {
+    position: relative; /* Ensure overlay positioning */
+    width: 500px;
+    padding: 20px;
+    overflow: hidden; /* Ensure overlay covers the image */
     border: 1px solid rgba(0, 0, 0, 0.4);
     cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
 }
 
-.work .content .workBx img:hover {
-    box-shadow: 0 0 20px 5px #ccc;
-    transform: scale(1.008);
-    transition: 0.5s;
+.work .content .workBx img {
+    max-width: 80%;
+    transition: transform 0.3s ease;
 }
-.work .content .workBx p{
-    text-align:left;
+
+.work .content .workBx:hover img {
+    transform: scale(1.05); /* Optional: add hover effect */
 }
+
+.work .content .workBx .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency as needed */
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Allows mouse events to pass through */
+}
+
+.work .content .workBx:hover .overlay {
+    opacity: 0;
+}
+
+.work .content .workBx p {
+    text-align: left;
+    color: #ffffff;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+}
+
 .work .content .workBx a:link,
 .work .content .workBx a:visited,
-.work .content .workBx a:active{
-    color:#161616;
+.work .content .workBx a:active {
+    color: #161616;
     text-decoration: none;
     font-weight: 600;
-}
-.work .content .workBx a:hover {
-    cursor: pointer;
-}
-.work .content .workBx {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
-}
-.work .content .workBx img:hover {
-    transform: scale(1.05); /* Adjust scale as needed */
-    border: 2px solid #00b4d8; /* Adjust border color */
-    transition: transform 0.3s ease, border 0.3s ease;
-}
-.work .content .workBx p:hover {
-    color: #ff6f61; /* Change to your preferred hover color */
-    transition: color 0.3s ease;
-}
-.work {
-    background: linear-gradient(135deg, #006d77, #00b4d8); /* Adjust colors as desired */
 }
 
 

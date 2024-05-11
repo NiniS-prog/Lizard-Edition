@@ -323,17 +323,18 @@
     </script>
 
     <script>// JavaScript for scrolling effect
-        document.addEventListener('DOMContentLoaded', function () {
-            window.addEventListener('scroll', function () {
-                var scrolled = window.scrollY;
-                var workBx = document.querySelector('.work .content .workBx');
-                if (scrolled > 100) { // Change this value as needed
-                    workBx.classList.add('scrolled');
-                } else {
-                    workBx.classList.remove('scrolled');
-                }
-            });
-        });
+document.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('scroll', function () {
+        var scrolled = window.scrollY;
+        var workSection = document.querySelector('.work');
+        if (scrolled > 100) { // Change this value as needed
+            workSection.classList.add('scrolled');
+        } else {
+            workSection.classList.remove('scrolled');
+        }
+    });
+});
+
         </script>
     </body>
 </html>

@@ -271,14 +271,22 @@ img{
 
 
 /* Creating Work Layout in CSS */
+.work .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #000000;
+}
+
 .work .content .workBx {
-    position: relative; /* Ensure overlay positioning */
+    position: relative; 
     width: 500px;
     padding: 20px;
-    overflow: hidden; /* Ensure overlay covers the image */
+    overflow: hidden; 
     border: 1px solid rgba(0, 0, 0, 0.4);
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .work .content .workBx img {
@@ -287,7 +295,7 @@ img{
 }
 
 .work .content .workBx:hover img {
-    transform: scale(1.05); /* Optional: add hover effect */
+    transform: scale(1.05); 
 }
 
 .work .content .workBx .overlay {
@@ -296,10 +304,35 @@ img{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency as needed */
+    background-color: rgba(0, 0, 0, 0.5); 
     opacity: 1;
     transition: opacity 0.3s ease;
-    pointer-events: none; /* Allows mouse events to pass through */
+    pointer-events: none; 
+}
+
+.work .content .workBx:hover .overlay {
+    opacity: 0;
+}
+
+.work .content .workBx p {
+    text-align: left;
+    color: #ffffff;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+}
+
+.work .content .workBx .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    pointer-events: none; 
 }
 
 .work .content .workBx:hover .overlay {
@@ -321,6 +354,11 @@ img{
     color: #161616;
     text-decoration: none;
     font-weight: 600;
+}
+
+.work .content .workBx p:hover {
+    color: #ff6f61; 
+    transition: color 0.3s ease;
 }
 
 

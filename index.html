@@ -195,15 +195,18 @@
 <!-- Creating Contact Layout in HTML -->
 <section class="contact" id="contact">
     <div class="heading white">
-        <p>Feel free to contact </p>
         <h2>GET IN TOUCH</h2>
+
+        <p>Feel free to share some details about your project</p>
     </div>
     <div class="content">
         <div class="formBx">
             <form id="contactForm" method="post" action="https://lizard-form-37eac8e3b553.herokuapp.com/send-email">
                 <input type="text" placeholder="Full Name" name="name">
                 <input type="email" placeholder="Email" name="email">
-                <textarea name="message" rows="6" id="message" placeholder="Your Message"></textarea>
+                <input type="text" placeholder="Brand Name" name="name">
+
+                <textarea name="message" rows="6" id="message" placeholder="Tell us about your project"></textarea>
                 <!-- Add a hidden input field for the sender email address -->
                 <input type="hidden" name="from" value="Shinin_p@outlook.com">
                 <input style="color: #525252;" type="submit" value="Send Message" name="submit">

@@ -271,70 +271,38 @@ img{
 
 
 /* Creating Work Layout in CSS */
-/* CSS for Work Layout */
-.work .content {
-    display: flex;
+.work .content{
+    display:flex;
     justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-wrap:wrap;
+    flex-direction:row;
     background-color: #000000;
 }
-
-.work .content .workBx {
-    position: relative; 
-    width: 500px;
-    padding: 20px;
-    overflow: hidden; 
+.work .content .workBx{
+    width:500px;
+    padding:20px;
+}
+.work .content .workBx img {
+    max-width: 80%; 
     border: 1px solid rgba(0, 0, 0, 0.4);
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
-.work .content .workBx img {
-    max-width: 80%;
-    transition: filter 0.3s ease; /* Changed transition to filter */
+.work .content .workBx img:hover {
+    box-shadow: 0 0 20px 5px #ccc;
+    transform: scale(1.008);
+    transition: 0.5s;
 }
-
-.work .content .workBx:hover img,
-.work .content .workBx.scrolled img { /* Added class for scrolled state */
-    filter: grayscale(100%); /* Changed to grayscale for demonstration */
+.work .content .workBx p{
+    text-align:left;
 }
-
-.work .content .workBx .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    pointer-events: none; 
-}
-
-.work .content .workBx:hover .overlay {
-    opacity: 0;
-}
-
-.work .content .workBx p {
-    text-align: left;
-    color: #ffffff;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    margin: 0;
-    background-color: #000000;
-}
-
 .work .content .workBx a:link,
 .work .content .workBx a:visited,
-.work .content .workBx a:active {
-    color: #161616;
+.work .content .workBx a:active{
+    color:#161616;
     text-decoration: none;
     font-weight: 600;
 }
-
-
 
 /* Creating Testimonial Layout in CSS */
 .testimonial{

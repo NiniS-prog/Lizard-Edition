@@ -271,6 +271,7 @@ img{
 
 
 /* Creating Work Layout in CSS */
+/* CSS */
 .work .content {
     display: flex;
     justify-content: center;
@@ -290,12 +291,13 @@ img{
 }
 
 .work .content .workBx img {
-    max-width: 100%; /* Adjusted to fill container */
-    transition: transform 0.3s ease;
+    max-width: 80%;
+    transition: filter 0.3s ease; /* Changed transition to filter */
 }
 
-.work .content .workBx:hover img {
-    transform: scale(1.05); 
+.work .content .workBx:hover img,
+.work .content .workBx.scrolled img { /* Added class for scrolled state */
+    filter: grayscale(100%); /* Changed to grayscale for demonstration */
 }
 
 .work .content .workBx .overlay {
@@ -318,13 +320,10 @@ img{
     text-align: left;
     color: #ffffff;
     position: absolute;
-    bottom: 20px; /* Adjusted from top to bottom */
+    bottom: 20px;
     left: 20px;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Adjusted background opacity */
-    padding: 10px; /* Added padding */
-    width: calc(100% - 40px); /* Adjusted width */
-    box-sizing: border-box; /* Added to include padding in width */
+    background-color: #000000;
 }
 
 .work .content .workBx a:link,

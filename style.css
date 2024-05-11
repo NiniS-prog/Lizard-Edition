@@ -270,101 +270,70 @@ img{
 }
 
 
-/* Creating Work Layout in CSS */
-.work .content {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: #000000;
-}
+    /* Creating Work Layout in CSS */
+    .work .content {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        background-color: #000000;
+    }
 
-.work .content .workBx {
-    position: relative; 
-    width: 500px;
-    padding: 20px;
-    overflow: hidden; 
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    
-}
+    .work .content .workBx {
+        position: relative; /* Ensure overlay and paragraph positioning */
+        width: 500px;
+        padding: 20px;
+        overflow: hidden; /* Ensure overlay covers the image */
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+    }
 
-.work .content .workBx img {
-    max-width: 80%;
-    transition: transform 0.3s ease;
-}
+    .work .content .workBx img {
+        max-width: 100%; /* Ensure the image fills the container */
+        display: block; /* Remove any default inline styles */
+        transition: transform 0.3s ease;
+    }
 
-.work .content .workBx:hover img {
-    transform: scale(1.05); 
-}
+    .work .content .workBx .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency as needed */
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        pointer-events: none; /* Allows mouse events to pass through */
+    }
 
-.work .content .workBx .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    pointer-events: none; 
-}
+    .work .content .workBx:hover .overlay {
+        opacity: 0;
+    }
 
-.work .content .workBx:hover .overlay {
-    opacity: 0;
-}
+    .work .content .workBx p {
+        text-align: left;
+        color: #ffffff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.8); /* Adjust transparency and color as needed */
+        padding: 10px; /* Optional: add padding for better readability */
+        box-sizing: border-box; /* Ensure padding is included in the width */
+    }
 
-.work .content .workBx p {
-    text-align: left;
-    color: #ffffff;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    margin: 0;
-}
+    .work .content .workBx:hover p {
+        bottom: auto; /* Reset position when hovered */
+        top: 0;
+    }
 
-.work .content .workBx .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    pointer-events: none; 
-}
+    .work .content .workBx p:hover {
+        color: #ff6f61; /* Change to your preferred hover color */
+        transition: color 0.3s ease;
+    }
 
-.work .content .workBx:hover .overlay {
-    opacity: 0;
-}
-
-.work .content .workBx p {
-    text-align: left;
-    color: #ffffff;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Adjust transparency and color as needed */
-    padding: 10px; /* Optional: add padding for better readability */
-    box-sizing: border-box; /* Ensure padding is included in the width */
-}
-
-.work .content .workBx a:link,
-.work .content .workBx a:visited,
-.work .content .workBx a:active {
-    color: #161616;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.work .content .workBx p:hover {
-    color: #ff6f61; 
-    transition: color 0.3s ease;
-}
 
 
 

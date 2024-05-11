@@ -309,6 +309,11 @@ img{
 .work .content .workBx {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
 }
+.work .content .workBx img:hover {
+    transform: scale(1.05); /* Adjust scale as needed */
+    border: 2px solid #00b4d8; /* Adjust border color */
+    transition: transform 0.3s ease, border 0.3s ease;
+}
 
 
 /* Creating Testimonial Layout in CSS */

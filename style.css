@@ -344,11 +344,13 @@ img{
     text-align: left;
     color: #ffffff;
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Adjust transparency and color as needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust transparency and color as needed */
     padding: 10px; /* Optional: add padding for better readability */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .work .content .workBx a:link,

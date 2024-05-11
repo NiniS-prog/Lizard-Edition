@@ -303,6 +303,10 @@ img{
     text-decoration: none;
     font-weight: 600;
 }
+.work .content .workBx a:hover {
+    cursor: pointer;
+}
+
 
 /* Creating Testimonial Layout in CSS */
 .testimonial{

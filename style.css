@@ -306,6 +306,9 @@ img{
 .work .content .workBx a:hover {
     cursor: pointer;
 }
+.work .content .workBx {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
+}
 
 
 /* Creating Testimonial Layout in CSS */

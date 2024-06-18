@@ -1055,3 +1055,35 @@ footer.copyright{
     }
 }
 
+/* Style for the section */
+.section-post {
+    border-top: 1px solid #006d77;
+    box-shadow: 0px 0px 0px #006d77;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Style for the div within the section */
+.section-post .post-center {
+    text-align: center;
+}
+
+/* Style for the image to make it responsive */
+.section-post img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Optional: Limit the max height */
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 768px) {
+    .section-post img {
+        max-height: 300px; /* Adjust the height for smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .section-post img {
+        max-height: 200px; /* Adjust the height for even smaller devices */
+    }
+}

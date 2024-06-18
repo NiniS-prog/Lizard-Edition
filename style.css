@@ -180,18 +180,29 @@ section{
 /* Base styles */
 .contentBx {
     padding-left: 40px;
-    padding-right: 40px; /* Ensure padding on both sides */
-    text-align: center;
+    padding-right: 40px;
+    text-align: left; /* Ensure text alignment is left for better readability */
 }
 
 .contentBx1 {
     background-color: #d2deeb;
-    padding: 20px; /* Add padding for internal content spacing */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding does not affect the overall width */
 }
 
 .contentBx h2 {
     font-weight: 300;
     margin-bottom: 10px;
+}
+
+/* Adjusting list item padding and margin */
+.contentBx ul {
+    padding-left: 20px; /* Ensure padding for the list */
+    margin: 0; /* Reset default margin */
+}
+
+.contentBx ul li {
+    margin-bottom: 10px; /* Add space between list items */
 }
 
 /* Responsive styles */

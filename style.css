@@ -177,14 +177,45 @@ section{
         color: #4663ac	;
     }
     
+/* Base styles */
+.contentBx {
+    padding-left: 40px;
+    padding-right: 40px; /* Ensure padding on both sides */
+    text-align: center;
+}
+
+.contentBx1 {
+    background-color: #d2deeb;
+    padding: 20px; /* Add padding for internal content spacing */
+}
+
+.contentBx h2 {
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
     .contentBx {
-        padding-left: 40px;
-        text-align: center;      }
-    .contentBx1{background-color:#d2deeb;}
-    .contentBx h2 {
-        font-weight: 300;
-        margin-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
+
+    .contentBx1 {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contentBx {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .contentBx1 {
+        padding: 10px;
+    }
+}
     
     .proPic {
         width: 300px;

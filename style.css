@@ -1118,15 +1118,15 @@ footer.copyright{
     max-height: 400px; /* Limit the max height for larger screens */
 }
 
-/* Media queries for different screen sizes */
-@media (max-width: 768px) {
+/* Media query for smaller screens */
+@media (max-width: 700px) {
     .section-post img {
-        max-height: 300px; /* Adjust the height for medium-sized devices */
+        max-height: 300px; /* Adjust the height for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .section-post img {
-        max-height: 150px; /* Adjust the height for smaller devices */
+        max-height: 200px; /* Adjust the height for even smaller devices */
     }
 }

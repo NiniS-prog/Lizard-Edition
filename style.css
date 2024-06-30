@@ -1112,20 +1112,22 @@ footer.copyright{
 
 /* Style for the image to make it responsive */
 .section-post img {
+    display: block;
     width: 100%;
     height: auto;
-    max-width: 100%; /* Ensures the image does not exceed its container width */
+    max-width: 100%;
+    object-fit: cover; /* Ensures the image fills its container */
 }
 
 /* Media queries for different screen sizes */
 @media (max-width: 768px) {
     .section-post img {
-        max-height: 300px; /* Adjust the height for smaller tablets */
+        max-height: 300px; /* Adjust height for tablets */
     }
 }
 
 @media (max-width: 480px) {
     .section-post img {
-        max-height: 200px; /* Adjust the height for smartphones */
+        max-height: 200px; /* Adjust height for smartphones */
     }
 }

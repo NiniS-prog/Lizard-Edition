@@ -1114,7 +1114,7 @@ footer.copyright{
     max-height: 400px; /* Limit the max height for larger screens */
 }
 
-/* Media query for smaller screens */
+/* Media queries for different screen sizes */
 @media (max-width: 700px) {
     .section-post img {
         max-height: 300px; /* Adjust height for medium-sized screens */
@@ -1124,5 +1124,11 @@ footer.copyright{
 @media (max-width: 480px) {
     .section-post img {
         max-height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 312px) {
+    .section-post img {
+        max-height: 150px; /* Adjust height for very small screens */
     }
 }

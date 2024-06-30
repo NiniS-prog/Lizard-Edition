@@ -1112,23 +1112,21 @@ footer.copyright{
 
 /* Style for the image to make it responsive */
 .section-post img {
-    display: block;
     width: 100%;
-    height: auto;
-    max-width: 100%;
-    object-fit: cover; /* Ensures the image fills its container */
-    max-height: 100%; /* Ensures the image does not exceed its container height */
+    height: auto; /* Ensures the image scales proportionally */
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    max-height: 400px; /* Limit the max height for larger screens */
 }
 
 /* Media queries for different screen sizes */
 @media (max-width: 768px) {
     .section-post img {
-        max-height: 300px; /* Adjust height for tablets */
+        max-height: 300px; /* Adjust the height for medium-sized devices */
     }
 }
 
 @media (max-width: 480px) {
     .section-post img {
-        max-height: 200px; /* Adjust height for smartphones */
+        max-height: 150px; /* Adjust the height for smaller devices */
     }
 }

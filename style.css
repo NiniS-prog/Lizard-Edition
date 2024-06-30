@@ -1105,28 +1105,25 @@ footer.copyright{
     max-width: 100%;
 }
 
-/* Style for the div within the section */
-.section-post .post-center {
-    text-align: center;
-}
-
-/* Style for the image to make it responsive */
+/* Ensure images are responsive and maintain aspect ratio */
 .section-post img {
+    display: block; /* Ensures the image behaves like a block element */
     width: 100%;
-    height: auto; /* Ensures the image scales proportionally */
-    max-width: 100%; /* Ensure image doesn't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent image from exceeding container width */
+    object-fit: cover; /* Ensures the image covers its entire container */
     max-height: 400px; /* Limit the max height for larger screens */
 }
 
 /* Media query for smaller screens */
 @media (max-width: 700px) {
     .section-post img {
-        max-height: 300px; /* Adjust the height for smaller screens */
+        max-height: 300px; /* Adjust height for medium-sized screens */
     }
 }
 
 @media (max-width: 480px) {
     .section-post img {
-        max-height: 200px; /* Adjust the height for even smaller devices */
+        max-height: 200px; /* Adjust height for smaller screens */
     }
 }

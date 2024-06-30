@@ -1114,18 +1114,18 @@ footer.copyright{
 .section-post img {
     width: 100%;
     height: auto;
-    max-height: 400px; /* Optional: Limit the max height */
+    max-width: 100%; /* Ensures the image does not exceed its container width */
 }
 
 /* Media queries for different screen sizes */
 @media (max-width: 768px) {
     .section-post img {
-        max-height: 300px; /* Adjust the height for smaller devices */
+        max-height: 300px; /* Adjust the height for smaller tablets */
     }
 }
 
 @media (max-width: 480px) {
     .section-post img {
-        max-height: 200px; /* Adjust the height for even smaller devices */
+        max-height: 200px; /* Adjust the height for smartphones */
     }
 }

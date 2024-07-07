@@ -9,3 +9,16 @@ function toggleMenu(){
     menuToggle.classList.toggle("active");
     menu.classList.toggle("active");
 }
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded and parsed');
+
+    document.getElementById('accessibility-button').addEventListener('click', function() {
+        console.log('Button clicked');
+        toggleBackground(); // Toggle background color
+    });
+});
+
+function toggleBackground() {
+    document.body.classList.toggle('alternate-background'); // Toggle a class for alternate background color
+    alert('Alternate Background Mode toggled.');
+}

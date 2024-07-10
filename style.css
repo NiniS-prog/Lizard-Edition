@@ -206,12 +206,12 @@ section{
     
     .content {
         display: flex;
-        justify-content: center;  /* Center the content horizontally */
+        justify-content: center;  
         background-color: #4663ac	;
     }
     .contentblog {
         display: flex;
-        justify-content: center;  /* Center the content horizontally */
+        justify-content: center;  
         background-color: #d2deeb	;
     }
     
@@ -238,13 +238,13 @@ section{
 .contentBx {
     padding-left: 40px;
     padding-right: 40px;
-    text-align: left; /* Ensure text alignment is left for better readability */
+    text-align: left; 
 }
 
 .contentBx1 {
     background-color: #d2deeb;
     padding: 20px;
-    box-sizing: border-box; /* Ensure padding does not affect the overall width */
+    box-sizing: border-box; 
 }
 
 .contentBx h2 {
@@ -254,12 +254,12 @@ section{
 
 /* Adjusting list item padding and margin */
 .contentBx ul {
-    padding-left: 20px; /* Ensure padding for the list */
-    margin: 0; /* Reset default margin */
+    padding-left: 20px; 
+    margin: 0; 
 }
 
 .contentBx ul li {
-    margin-bottom: 10px; /* Add space between list items */
+    margin-bottom: 10px; 
 }
 
 /* Responsive styles */
@@ -382,13 +382,13 @@ section{
     
     @media (max-width: 624px) {
         .services .content .accordion-item {
-            width: calc(50% - 30px); /* Two items per row */
+            width: calc(50% - 30px); 
         }
     }
     
     @media (max-width: 399px) {
         .services .content .accordion-item {
-            width: calc(100% - 30px); /* One item per row */
+            width: calc(100% - 30px); 
         }
     }
                 
@@ -409,15 +409,15 @@ section{
 /* Make icons section responsive for phone view */
 @media (max-width: 768px) {
     .services .content {
-        flex-direction: row; /* Display items in a row */
-        flex-wrap: wrap; /* Allow items to wrap to the next line */
-        justify-content: space-between; /* Add space between items */
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: space-between; 
     }
 
     .services .content .servicesBx {
-        flex-basis: calc(50% - 20px); /* Set the initial size of the flex item to 50% minus the margin */
-        max-width: calc(50% - 20px); /* Set max-width to half the container width minus the margin */
-        margin: 10px; /* Adjust margin to create spacing between items */
+        flex-basis: calc(50% - 20px);
+        max-width: calc(50% - 20px); 
+        margin: 10px; 
     }
 }
 
@@ -432,6 +432,7 @@ section{
 }
 
 .work .content .workBx {
+    position: relative;
     border: 1px solid #c8d9ed;
     overflow: hidden;
     background-color: #c1d8f0;
@@ -464,16 +465,42 @@ section{
     height: 100%;
 }
 
+.work .content .workBx .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(193, 216, 240, 0.9);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.work .content .workBx:hover .overlay {
+    opacity: 1;
+}
+
+.work .content .workBx .overlay-text {
+    padding: 10px;
+    text-align: center;
+    max-width: 90%;
+}
+
 /* Responsive adjustments for "work" section */
 @media (max-width: 1024px) {
     .work .content {
-        grid-template-columns: repeat(2, 1fr); /* Display two items per row */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 480px) {
     .work .content {
-        grid-template-columns: 1fr; /* Display one item per row */
+        grid-template-columns: 1fr; 
     }
 }
 
@@ -567,7 +594,7 @@ section{
     resize: vertical;
     color: #4663ac;
     border-radius: 5px;
-    margin-bottom: 20px; /* Ensure space between inputs */
+    margin-bottom: 20px; 
 }
 
 .formBx form input:focus,
@@ -582,7 +609,7 @@ section{
 }
 
 .formBx form textarea {
-    min-height: 100px; /* Ensure the textarea has enough height */
+    min-height: 100px; 
 }
 
 .formBx form input[type="submit"] {
@@ -594,8 +621,8 @@ section{
     border-radius: 25px;
     transition: all 0.3s;
     padding: 10px;
-    align-self: flex-start; /* Align the button to the start */
-    margin-top: 10px; /* Add margin to avoid overlap */
+    align-self: flex-start; 
+    margin-top: 10px; 
 }
 
 .formBx form input[type="submit"]:hover {
@@ -913,12 +940,12 @@ footer.copyright{
 
 .marquee-item {
     padding: 0 2rem;
-    font-size: 2rem; /* Adjust font size as needed */
-    color: rgba(255, 255, 255, 0.4); /* Transparent white (adjust the alpha value as needed) */
+    font-size: 2rem; 
+    color: rgba(255, 255, 255, 0.4); 
 }
 
 .marquee-item.alt {
-    color:#B99AE4	; /* Transparent cyan (adjust the alpha value as needed) */
+    color:#B99AE4	; 
 }
 
 /* Keyframes for animations */
@@ -934,7 +961,7 @@ footer.copyright{
 /* Mobile responsive */
 @media (max-width: 600px) {
     .marquee-item {
-        font-size: 1.2rem; /* Adjust font size for mobile */
+        font-size: 1.2rem; 
     }
 }
 
@@ -978,16 +1005,16 @@ footer.copyright{
 .blog .blog-content {
     display: flex;
     gap: 20px;
-    overflow-x: scroll; /* Enable horizontal scrolling */
+    overflow-x: scroll;
     scroll-behavior: smooth;
     padding: 20px;
     background-color: #d2deeb			;
     flex: 1;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none; 
 }
 
 .blog .blog-content::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none; 
 }
 
 .blog .blogBx {
@@ -996,8 +1023,8 @@ footer.copyright{
     background-color: #c8d9ed		;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
-    min-width: 400px; /* Set a larger minimum width for banner style */
-    height: 250px; /* Set a smaller height for banner style */
+    min-width: 400px; 
+    height: 250px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1013,7 +1040,7 @@ footer.copyright{
 .blog .blogBx img {
     width: 100%;
     height: auto;
-    max-height: 150px; /* Ensure the image fits within the height */
+    max-height: 150px; 
     object-fit: cover;
 }
 
@@ -1022,15 +1049,15 @@ footer.copyright{
     padding: 10px;
     text-align: center;
     margin: 0;
-    font-size: 1em; /* Adjusted font size for better readability */
+    font-size: 1em; 
 }
 
 .blog .blogBx a {
     color: inherit;
     text-decoration: none;
     display: block;
-    width: 100%; /* Ensure the anchor takes the full width */
-    height: 100%; /* Ensure the anchor takes the full height */
+    width: 100%; 
+    height: 100%; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1043,12 +1070,12 @@ footer.copyright{
         gap: 15px;
     }
     .blog .blogBx {
-        width: 300px; /* Adjust the width for smaller screens */
-        height: 200px; /* Adjust the height for smaller screens */
+        width: 300px; 
+        height: 200px; 
     }
     .blog .blogBx p {
-        font-size: 0.8em; /* Decrease font size for smaller screens */
-        line-height: 1.2; /* Increase line height for better readability */
+        font-size: 0.8em; 
+        line-height: 1.2; 
     }
 }
 
@@ -1057,12 +1084,12 @@ footer.copyright{
         gap: 10px;
     }
     .blog .blogBx {
-        width: 250px; /* Adjust the width for smaller screens */
-        height: 200px; /* Adjust the height for smaller screens */
+        width: 250px; 
+        height: 200px; 
     }
     .blog .blogBx p {
-        font-size: 0.7em; /* Decrease font size further for smaller screens */
-        line-height: 1.2; /* Maintain line height */
+        font-size: 0.7em; 
+        line-height: 1.2; 
     }
 }
 
@@ -1102,7 +1129,7 @@ footer.copyright{
 .blog-grid-item img {
     width: 100%;
     height: auto;
-    max-height: 150px; /* Ensure the image fits within the height */
+    max-height: 150px; 
     object-fit: cover;
 }
 
@@ -1112,7 +1139,7 @@ footer.copyright{
     padding: 10px;
     text-align: center;
     margin: 0;
-    font-size: 1em; /* Adjusted font size for better readability */
+    font-size: 1em; 
 
 }
 
@@ -1120,8 +1147,8 @@ footer.copyright{
     color: inherit;
     text-decoration: none;
     display: block;
-    width: 100%; /* Ensure the anchor takes the full width */
-    height: 100%; /* Ensure the anchor takes the full height */
+    width: 100%; 
+    height: 100%; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1134,11 +1161,11 @@ footer.copyright{
         gap: 15px;
     }
     .blog-grid-item {
-        min-width: 300px; /* Adjust the width for smaller screens */
+        min-width: 300px; 
     }
     .blog-grid-item p {
-        font-size: 0.8em; /* Decrease font size for smaller screens */
-        line-height: 1.2; /* Increase line height for better readability */
+        font-size: 0.8em; 
+        line-height: 1.2; 
     }
 }
 
@@ -1147,11 +1174,11 @@ footer.copyright{
         gap: 10px;
     }
     .blog-grid-item {
-        min-width: 250px; /* Adjust the width for smaller screens */
+        min-width: 250px;
     }
     .blog-grid-item p {
-        font-size: 0.7em; /* Decrease font size further for smaller screens */
-        line-height: 1.2; /* Maintain line height */
+        font-size: 0.7em; 
+        line-height: 1.2;
     }
 }
 
@@ -1172,18 +1199,18 @@ footer.copyright{
 .section-post img {
     width: 100%;
     height: auto;
-    max-height: 400px; /* Optional: Limit the max height */
+    max-height: 400px; 
 }
 
 /* Media queries for different screen sizes */
 @media (max-width: 768px) {
     .section-post img {
-        max-height: 300px; /* Adjust the height for smaller devices */
+        max-height: 300px; 
     }
 }
 
 @media (max-width: 480px) {
     .section-post img {
-        max-height: 200px; /* Adjust the height for even smaller devices */
+        max-height: 200px; 
     }
 }

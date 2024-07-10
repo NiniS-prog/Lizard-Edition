@@ -9,32 +9,28 @@
     <link rel="icon" href="images\favicon.png" type="image/png" />
 
     <script src="ext.js" language="javascript"></script>
-    <script src="ext2.js" language="javascript"></script>
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
-<body>
-    <div id="accessibility-button" class="accessibility-button" aria-label="Accessibility Options" role="button" tabindex="0">
-        <img src="images/ariab.png" alt="Accessibility Options">
-    </div>
-
+<body style="background-color: #d2deeb	; color:#4663ac	;">
     
 
-<!-- Creating Menu Tabs & Logo at Top Using HTML -->
-<header>
-    <a href="#" class="logo"></a>
-    <div class="toggle" onclick="toggleMenu();"></div>
-    <ul class="menu">
-        <li><a href="#home" onclick="toggleMenu();" class="active">Home</a></li>
-        <li><a href="#about" onclick="toggleMenu();">About</a></li>
-        <li><a href="#services" onclick="toggleMenu();">Services</a></li>
-        <li><a href="#work" onclick="toggleMenu();">Work</a></li>
-        <li><a href="Byte.html" onclick="toggleMenu();">Byte</a></li>
-        <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
-    </ul>
-</header>
+    <!-- Creating Menu Tabs & Logo at Top Using HTML -->
+    <header>
+        <a href="#" class="logo"></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="#services" onclick="toggleMenu();">Services</a></li>
+            <li><a href="#work" onclick="toggleMenu();">Work</a></li>
+            <li><a href="/Byte.html">Byte</a></li>
+                        <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+
+    
+        </ul>
+    </header>
 
     <!-- Creating Banner Layout in HTML -->
     <section class="banner" id="home">
@@ -42,8 +38,8 @@
             <h2>Shinin Pro<br> <span>Lizard Edition</span></h2>
             <h3> Your premier destination for ecommerce lifecycle expertise, <br>
                 web development, design, and SEO optimization strategies.</h3>
-                <a href="#about" class="btn">About</a>
-            </div>
+            <a style="color: #4663ac	;" href="#about" class="btn">About </a>
+        </div>
     </section>
     <br>
     
@@ -86,7 +82,7 @@
                 </div>
             </section>
     <!-- Creating About Me Layout in HTML -->
-    <section class="about" id="about">
+    <section class="about" id="about" style="border-top: 1px solid #c8d9ed	; box-shadow: 0px 0px 0px #c8d9ed	;">
         <div class="heading">
             <h2>OVERVIEW</h2>
         </div>
@@ -116,16 +112,15 @@
     </section>
 
     
-<section class="services" id="services">
-    <div class="heading white">
-        <h2>SERVICES</h2>
-    </div>
-    <div class="content">
-        <div class="accordion-item">
-            <div class="accordion-header">
-                <i class="fa fa-server fa-4x"></i>
-                <h3>Web Development</h3>
-
+    <section class="services" id="services" style="border-top: 1px solid #c8d9ed; box-shadow: 0px 2px 0px #c8d9ed;">
+        <div class="heading white">
+            <h2> SERVICES</h2>
+        </div>
+        <div class="content">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <i class="fa fa-server fa-4x"></i>
+                    <h3>Web Development</h3>
                 </div>
                 <div class="accordion-content">
                     <p>Crafting customized websites that reflect your unique preferences and requirements, employing cutting-edge technologies and design principles.</p>
@@ -186,80 +181,50 @@
         <script src="script.js"></script>
 
 
-<!-- Creating Work Layout in HTML -->
-<section class="work" id="work">
-    <div class="heading">
-        <h2 style="color: #4663ac;">RECENT PROJECTS</h2>
-    </div>
-    <div class="content">
-        <div class="workBx">
-            <a href="https://tamelesshub.shop/" target="_blank">
-                <img src="images/Tameless.png" alt="Tameless">
-                <div class="overlay">
-                    <p>TamelessHub (Apparel) E-Commerce</p>
-                    <div class="overlay-text">
-                        <p>Created an innovative apparel and accessories platform, focusing on custom designs and seamless Shopify integration.</p>
-                    </div>
-                </div>
-            </a>
+    <!-- Creating Work Layout in HTML -->
+    <section class="work" id="work" style="border-top: 1px solid #c8d9ed; box-shadow: 0px 2px 0px #c8d9ed	;">
+        <div class="heading">
+            <h2 style="color: #4663ac	;">RECENT PROJECTS</h2>
         </div>
-        <div class="workBx">
-            <a href="https://shop.renby.co.il/en" target="_blank">
-                <img src="images/Renby.png" alt="Renby">
-                <div class="overlay">
-                    <p>Renby (Home Couture) E-Commerce</p>
-                    <div class="overlay-text">
-                        <p>Led digital initiatives for an e-commerce platform, transitioning from WordPress to Shopify and enhancing user experience.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="workBx">
-            <a href="#" target="_blank">
-                <img src="images/Darind.png" alt="Darind">
-                <div class="overlay">
-                    <p>Darind (Jewelry) E-Commerce</p>
-                    <div class="overlay-text">
-                        <p>Designed and managed a successful e-commerce jewelry shop, integrating technical proficiency with strategic marketing.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="workBx">
-            <a href="#" target="_blank">
-                <img src="images/Gbarel.png" alt="Gbarel">
-                <div class="overlay">
+        <div class="content">
+            <div class="workBx">
+                <a href="#" target="_blank">
+                    <img src="images/Darind.png" alt="Darind">
+                    <p>Darind(Jewelry) E-Commerce</p>
+                </a>
+            </div>
+            <div class="workBx">
+                <a href="#" target="_blank">
+                    <img src="images/Tameless.png" alt="Tameless">
+                    <p>TamelessHub (Aparel) E-Commerce</p>
+                </a>
+            </div>
+            <div class="workBx">
+                <a href="#" target="_blank">
+                    <img src="images/Gbarel.png" alt="Gbarel">
                     <p>Gbarel (Beauty) E-Commerce</p>
-                    <div class="overlay-text">
-                        <p>Developed and optimized a beauty e-commerce platform with a focus on custom design and strategic marketing.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="workBx">
-            <a href="#" target="_blank">
-                <img src="images/EsseN.png" alt="EssenVibe">
-                <div class="overlay">
+                </a>
+            </div>
+            <div class="workBx">
+                <a href="#" target="_blank">
+                    <img src="images/EsseN.png" alt="EssenVibe">
                     <p>EssenVibe (Beauty) E-Commerce</p>
-                    <div class="overlay-text">
-                        <p>Worked on designing and managing a beauty e-commerce shop, integrating custom CSS and strategic marketing.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="workBx">
-            <a href="https://shininpro.github.io/Shininpro/" target="_blank">
-                <img src="images/shinin.png" alt="Shinin Pro">
-                <div class="overlay">
+                </a>
+            </div>
+            <div class="workBx">
+                <a href="#" target="_blank">
+                    <img src="images/shinin.png" alt="Shinin Pro">
                     <p>Shinin Pro (Fashion Blog) Website</p>
-                    <div class="overlay-text">
-                        <p>Designed and developed a dynamic multi-page blog website with responsive design and interactive features.</p>
-                    </div>
-                </div>
-            </a>
+                </a>
+            </div>
+            <div class="workBx">
+                <a href="#" target="_blank">
+                    <img src="images/Renby.png" alt="Renby">
+                    <p>Renby (Home Couture) E-Commerce</p>
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
         
     
     
@@ -433,38 +398,6 @@ accordionItems.forEach(item => {
     });
 });
 </script>
-<script>
-
-// Function to toggle the menu
-function toggleMenu() {
-    // Implement your toggle menu functionality
-}
-
-// Function to update the active menu item based on scroll position
-function updateActiveMenu() {
-    const sections = document.querySelectorAll("section");
-    const menuItems = document.querySelectorAll("header .menu li a");
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
-            menuItems.forEach(item => {
-                item.classList.remove("active");
-                if (item.getAttribute("href") === `#${section.id}`) {
-                    item.classList.add("active");
-                }
-            });
-        }
-    });
-}
-
-// Event listeners for scroll and load to update active menu item
-window.addEventListener("scroll", updateActiveMenu);
-window.addEventListener("load", updateActiveMenu);
-
-</script>
-
 
 </body>
 </html>

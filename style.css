@@ -7,60 +7,9 @@
     scroll-behavior: smooth;
 }
 body {
-    background-color: #d2deeb;
-    color: #4663ac;
     cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNSIgZmlsbD0iI0I5OUFFNCIgLz48L3N2Zz4='), auto;
 }
 
-.accessibility-button {
-    position: fixed;
-    left: 10px;
-    bottom: 10px;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    z-index: 1000;
-}
-.accessibility-mode .btn {
-    background: #000000;
-    color: #ffffff;
-}
-
-.accessibility-button img {
-    width: 100%;
-    height: 100%;
-}
-
-.accessibility-mode {
-    background-color: #000000;
-    color: #000000; /* Change text color to black */
-
-}
-.accessibility-mode h1,
-.accessibility-mode h2,
-.accessibility-mode h3,
-.accessibility-mode h4,
-.accessibility-mode h5,
-.accessibility-mode h6 {
-    color: #000000;
-}
-
-.accessibility-mode h1 {
-    font-size: 2.5em;
-}
-
-.accessibility-mode p {
-    font-size: 1.5em;
-}
-
-.content {
-    padding: 20px;
-}
-
-.about {
-    border-top: 1px solid #c8d9ed;
-    box-shadow: 0px 0px 0px #c8d9ed;
-}
 
 
 header{
@@ -95,38 +44,37 @@ header ul li{
     position:relative;
     list-style: none;
 }
-/* Default link style */
+/* Updated hover effect for menu items */
 header ul li a {
     position: relative;
     display: inline-block;
     margin: 0 15px;
-    color: #4663ac;
+    color: #4663ac	;
     text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
+    transition: color 0.3s, transform 0.3s; 
 }
 
-/* Hover effect */
+/* New hover effect */
 header ul li a:hover {
-    color: #4663ac;
-    transform: scale(1.1);
+    color: #4663ac			; 
+    transform: scale(1.1); 
 }
 
-/* Underline effect */
-header ul li a::after {
-    content: '';
+/* Underline effect on hover */
+header ul li a::before {
+    content: ''; 
     position: absolute;
-    bottom: -2px;
+    bottom: -2px; 
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #4663ac;
+    background-color: #4663ac			; 
     transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; 
 }
 
-header ul li a:hover::after,
-header ul li a.active::after {
-    transform: scaleX(1);
+header ul li a:hover::before {
+    transform: scaleX(1); 
 }
 
 /* Creating Stiky Header Menu Nav Bar */
@@ -199,20 +147,15 @@ section{
 /* New hover effect for buttons */
 .btn:hover {
     background: #e1f1fd	; 
-    color: #4663ac	; 
+    color: #e1f1fd	; 
     transform: scale(1.05); 
 }
     /* Creating About Layout */
     
     .content {
         display: flex;
-        justify-content: center;  
+        justify-content: center;  /* Center the content horizontally */
         background-color: #4663ac	;
-    }
-    .contentblog {
-        display: flex;
-        justify-content: center;  
-        background-color: #d2deeb	;
     }
     
     .heading {
@@ -238,13 +181,13 @@ section{
 .contentBx {
     padding-left: 40px;
     padding-right: 40px;
-    text-align: left; 
+    text-align: left; /* Ensure text alignment is left for better readability */
 }
 
 .contentBx1 {
     background-color: #d2deeb;
     padding: 20px;
-    box-sizing: border-box; 
+    box-sizing: border-box; /* Ensure padding does not affect the overall width */
 }
 
 .contentBx h2 {
@@ -254,12 +197,12 @@ section{
 
 /* Adjusting list item padding and margin */
 .contentBx ul {
-    padding-left: 20px; 
-    margin: 0; 
+    padding-left: 20px; /* Ensure padding for the list */
+    margin: 0; /* Reset default margin */
 }
 
 .contentBx ul li {
-    margin-bottom: 10px; 
+    margin-bottom: 10px; /* Add space between list items */
 }
 
 /* Responsive styles */
@@ -382,13 +325,13 @@ section{
     
     @media (max-width: 624px) {
         .services .content .accordion-item {
-            width: calc(50% - 30px); 
+            width: calc(50% - 30px); /* Two items per row */
         }
     }
     
     @media (max-width: 399px) {
         .services .content .accordion-item {
-            width: calc(100% - 30px); 
+            width: calc(100% - 30px); /* One item per row */
         }
     }
                 
@@ -409,15 +352,15 @@ section{
 /* Make icons section responsive for phone view */
 @media (max-width: 768px) {
     .services .content {
-        flex-direction: row; 
-        flex-wrap: wrap; 
-        justify-content: space-between; 
+        flex-direction: row; /* Display items in a row */
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        justify-content: space-between; /* Add space between items */
     }
 
     .services .content .servicesBx {
-        flex-basis: calc(50% - 20px);
-        max-width: calc(50% - 20px); 
-        margin: 10px; 
+        flex-basis: calc(50% - 20px); /* Set the initial size of the flex item to 50% minus the margin */
+        max-width: calc(50% - 20px); /* Set max-width to half the container width minus the margin */
+        margin: 10px; /* Adjust margin to create spacing between items */
     }
 }
 
@@ -432,7 +375,6 @@ section{
 }
 
 .work .content .workBx {
-    position: relative;
     border: 1px solid #c8d9ed;
     overflow: hidden;
     background-color: #c1d8f0;
@@ -465,42 +407,16 @@ section{
     height: 100%;
 }
 
-.work .content .workBx .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(193, 216, 240, 0.9);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.work .content .workBx:hover .overlay {
-    opacity: 1;
-}
-
-.work .content .workBx .overlay-text {
-    padding: 10px;
-    text-align: center;
-    max-width: 90%;
-}
-
 /* Responsive adjustments for "work" section */
 @media (max-width: 1024px) {
     .work .content {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr); /* Display two items per row */
     }
 }
 
 @media (max-width: 480px) {
     .work .content {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* Display one item per row */
     }
 }
 
@@ -566,7 +482,6 @@ section{
 .formBx {
     min-width: 60%;
     padding: 20px;
-    
 }
 
 .formBx form {
@@ -594,7 +509,7 @@ section{
     resize: vertical;
     color: #4663ac;
     border-radius: 5px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px; /* Ensure space between inputs */
 }
 
 .formBx form input:focus,
@@ -609,7 +524,7 @@ section{
 }
 
 .formBx form textarea {
-    min-height: 100px; 
+    min-height: 100px; /* Ensure the textarea has enough height */
 }
 
 .formBx form input[type="submit"] {
@@ -621,8 +536,8 @@ section{
     border-radius: 25px;
     transition: all 0.3s;
     padding: 10px;
-    align-self: flex-start; 
-    margin-top: 10px; 
+    align-self: flex-start; /* Align the button to the start */
+    margin-top: 10px; /* Add margin to avoid overlap */
 }
 
 .formBx form input[type="submit"]:hover {
@@ -940,12 +855,12 @@ footer.copyright{
 
 .marquee-item {
     padding: 0 2rem;
-    font-size: 2rem; 
-    color: rgba(255, 255, 255, 0.4); 
+    font-size: 2rem; /* Adjust font size as needed */
+    color: rgba(255, 255, 255, 0.4); /* Transparent white (adjust the alpha value as needed) */
 }
 
 .marquee-item.alt {
-    color:#B99AE4	; 
+    color:#B99AE4	; /* Transparent cyan (adjust the alpha value as needed) */
 }
 
 /* Keyframes for animations */
@@ -961,7 +876,7 @@ footer.copyright{
 /* Mobile responsive */
 @media (max-width: 600px) {
     .marquee-item {
-        font-size: 1.2rem; 
+        font-size: 1.2rem; /* Adjust font size for mobile */
     }
 }
 
@@ -1005,16 +920,16 @@ footer.copyright{
 .blog .blog-content {
     display: flex;
     gap: 20px;
-    overflow-x: scroll;
+    overflow-x: scroll; /* Enable horizontal scrolling */
     scroll-behavior: smooth;
     padding: 20px;
     background-color: #d2deeb			;
     flex: 1;
-    scrollbar-width: none; 
+    scrollbar-width: none; /* Firefox */
 }
 
 .blog .blog-content::-webkit-scrollbar {
-    display: none; 
+    display: none; /* Chrome, Safari, Opera */
 }
 
 .blog .blogBx {
@@ -1023,8 +938,8 @@ footer.copyright{
     background-color: #c8d9ed		;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
-    min-width: 400px; 
-    height: 250px; 
+    min-width: 400px; /* Set a larger minimum width for banner style */
+    height: 250px; /* Set a smaller height for banner style */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1040,7 +955,7 @@ footer.copyright{
 .blog .blogBx img {
     width: 100%;
     height: auto;
-    max-height: 150px; 
+    max-height: 150px; /* Ensure the image fits within the height */
     object-fit: cover;
 }
 
@@ -1049,15 +964,15 @@ footer.copyright{
     padding: 10px;
     text-align: center;
     margin: 0;
-    font-size: 1em; 
+    font-size: 1em; /* Adjusted font size for better readability */
 }
 
 .blog .blogBx a {
     color: inherit;
     text-decoration: none;
     display: block;
-    width: 100%; 
-    height: 100%; 
+    width: 100%; /* Ensure the anchor takes the full width */
+    height: 100%; /* Ensure the anchor takes the full height */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1070,12 +985,12 @@ footer.copyright{
         gap: 15px;
     }
     .blog .blogBx {
-        width: 300px; 
-        height: 200px; 
+        width: 300px; /* Adjust the width for smaller screens */
+        height: 200px; /* Adjust the height for smaller screens */
     }
     .blog .blogBx p {
-        font-size: 0.8em; 
-        line-height: 1.2; 
+        font-size: 0.8em; /* Decrease font size for smaller screens */
+        line-height: 1.2; /* Increase line height for better readability */
     }
 }
 
@@ -1084,12 +999,12 @@ footer.copyright{
         gap: 10px;
     }
     .blog .blogBx {
-        width: 250px; 
-        height: 200px; 
+        width: 250px; /* Adjust the width for smaller screens */
+        height: 200px; /* Adjust the height for smaller screens */
     }
     .blog .blogBx p {
-        font-size: 0.7em; 
-        line-height: 1.2; 
+        font-size: 0.7em; /* Decrease font size further for smaller screens */
+        line-height: 1.2; /* Maintain line height */
     }
 }
 
@@ -1129,7 +1044,7 @@ footer.copyright{
 .blog-grid-item img {
     width: 100%;
     height: auto;
-    max-height: 150px; 
+    max-height: 150px; /* Ensure the image fits within the height */
     object-fit: cover;
 }
 
@@ -1139,7 +1054,7 @@ footer.copyright{
     padding: 10px;
     text-align: center;
     margin: 0;
-    font-size: 1em; 
+    font-size: 1em; /* Adjusted font size for better readability */
 
 }
 
@@ -1147,8 +1062,8 @@ footer.copyright{
     color: inherit;
     text-decoration: none;
     display: block;
-    width: 100%; 
-    height: 100%; 
+    width: 100%; /* Ensure the anchor takes the full width */
+    height: 100%; /* Ensure the anchor takes the full height */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1161,11 +1076,11 @@ footer.copyright{
         gap: 15px;
     }
     .blog-grid-item {
-        min-width: 300px; 
+        min-width: 300px; /* Adjust the width for smaller screens */
     }
     .blog-grid-item p {
-        font-size: 0.8em; 
-        line-height: 1.2; 
+        font-size: 0.8em; /* Decrease font size for smaller screens */
+        line-height: 1.2; /* Increase line height for better readability */
     }
 }
 
@@ -1174,11 +1089,11 @@ footer.copyright{
         gap: 10px;
     }
     .blog-grid-item {
-        min-width: 250px;
+        min-width: 250px; /* Adjust the width for smaller screens */
     }
     .blog-grid-item p {
-        font-size: 0.7em; 
-        line-height: 1.2;
+        font-size: 0.7em; /* Decrease font size further for smaller screens */
+        line-height: 1.2; /* Maintain line height */
     }
 }
 
@@ -1199,18 +1114,18 @@ footer.copyright{
 .section-post img {
     width: 100%;
     height: auto;
-    max-height: 400px; 
+    max-height: 400px; /* Optional: Limit the max height */
 }
 
 /* Media queries for different screen sizes */
 @media (max-width: 768px) {
     .section-post img {
-        max-height: 300px; 
+        max-height: 300px; /* Adjust the height for smaller devices */
     }
 }
 
 @media (max-width: 480px) {
     .section-post img {
-        max-height: 200px; 
+        max-height: 200px; /* Adjust the height for even smaller devices */
     }
 }

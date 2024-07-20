@@ -1,16 +1,19 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-*{
-    margin:0;
-    padding:0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;regular;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
+
 body {
     background-color: #d2deeb;
     color: #4663ac;
     cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNSIgZmlsbD0iI0I5OUFFNCIgLz48L3N2Zz4='), auto;
 }
+
 
 .accessibility-button {
     position: fixed;
@@ -57,9 +60,26 @@ body {
     padding: 20px;
 }
 
-.about {
-    border-top: 1px solid #c8d9ed;
-    box-shadow: 0px 0px 0px #c8d9ed;
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contentBx {
+    flex: 1;
+    padding-right: 20px; /* Adjust spacing as needed */
+}
+
+.imageBx {
+    flex: 0 0 auto; /* Prevents the image container from growing */
+    max-width: 40%; /* Adjust as needed to control the size of the image */
+}
+
+.imageBx img {
+    width: 300px; /* Adjust this value as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: adds rounded corners to the image */
 }
 
 
@@ -228,11 +248,34 @@ section{
         text-align: center;  
     }
     
-    .heading h2 {
-        text-align: center;  
-        font-size: 2em;
-        color: #4663ac	;
-    }
+/* Base styling */
+.heading h2 {
+    text-align: center;
+    font-size: 32px; /* Increased size */
+    color: #ff6f9c; /* Base color */
+    font-family: 'Poppins', sans-serif; /* More stylish font */
+    transition: transform 0.3s, color 0.3s, text-shadow 0.3s; /* Smooth transitions */
+    position: relative;
+    display: inline-block; /* Ensure text is not stretched */
+}
+
+/* Rainbow gradient text color effect on hover */
+.heading h2:hover {
+    color: #ff7e5f; /* Base color on hover */
+    transform: rotate(-5deg) scale(1.1) translateY(-10px); /* Bounce effect */
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    background: linear-gradient(45deg, #00f5d4, #b9a0e2, #ff6f9c); /* Gradient effect */
+    background-clip: text; /* Clip the gradient to the text */
+    -webkit-background-clip: text; /* Apply gradient to text */
+    -webkit-text-fill-color: transparent; /* Make the text color transparent to show gradient */
+}
+    /* Rainbow gradient text color effect on scroll */
+.heading h2.rainbow {
+    background: linear-gradient(45deg, #00f5d4, #b9a0e2, #ff6f9c); /* Gradient effect */
+    background-clip: text; /* Clip the gradient to the text */
+    -webkit-background-clip: text; /* Apply gradient to text */
+    -webkit-text-fill-color: transparent; /* Make the text color transparent to show gradient */
+}
     
 /* Base styles */
 .contentBx {
@@ -333,7 +376,7 @@ section{
     
     .heading.white h2 {
         text-align: center;
-        color: #4663ac;
+        
         margin-bottom: 20px;
     }
     
@@ -915,7 +958,7 @@ footer.copyright{
 
 /* Marquee Section */
 .marquee-section {
-    background: #d2deeb		;
+    background: #d2deeb;
     padding: 20px 0;
     overflow: hidden;
 }
@@ -941,12 +984,15 @@ footer.copyright{
 
 .marquee-item {
     padding: 0 2rem;
-    font-size: 2rem; 
-    color: rgba(255, 255, 255, 0.4); 
+    font-size: 2rem;
+    background: linear-gradient(45deg, #00f5d4, #b9a0e2, #ff6f9c); /* Gradient */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .marquee-item.alt {
-    color:#B99AE4	; 
+    color: #B99AE4;
 }
 
 /* Keyframes for animations */
@@ -962,9 +1008,11 @@ footer.copyright{
 /* Mobile responsive */
 @media (max-width: 600px) {
     .marquee-item {
-        font-size: 1.2rem; 
+        font-size: 1.2rem;
     }
 }
+
+
 
 /* Creating Blog Layout in CSS */
 .blog {
@@ -974,8 +1022,8 @@ footer.copyright{
 }
 
 .blog .heading h2 {
-    color: #B99AE4;
-    text-align: center;
+    text-align: left;
+    padding-left: 30px;
     margin-bottom: 20px;
 }
 

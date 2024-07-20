@@ -166,62 +166,115 @@ header.sticky ul li a{
 section{
     padding:80px;
 }
-.banner{
-    position:relative;
+.banner {
+    position: relative;
     min-height: 100vh;
-    background:#d2deeb	;
-    background:url(images/myPic21.png);
-    background-size:cover;
+    background: #d2deeb;
+    background: url(images/myPic21.png);
+    background-size: cover;
     background-position: right;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 60px; /* Increased left padding for PC view */
+    box-sizing: border-box;
 }
 
-
-.banner h2{
+.banner h2 {
     font-size: 2.5em;
-    color:#c1d8f0	;
+    background: linear-gradient(45deg, #00f5d4, #b9a0e2, #ff6f9c); /* Rainbow gradient effect */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 300;
     line-height: 1.5em;
+    transition: transform 0.3s, text-shadow 0.3s; /* Smooth transitions */
 }
-.banner h2 span{
+
+.banner h2 span {
     font-size: 1.2em;
     font-weight: 300;
-    color:#4663ac		;
+    color: #4663ac;
 }
 
-
-.banner h3{
-    color:#4663ac	;
+.banner h3 {
+    color: #4663ac;
     font-size: 1.5em;
     font-weight: 500;
-
 }
 
+/* Rainbow gradient effect on hover */
+.banner h2:hover {
+    color: #ff7e5f; /* Optional base color on hover */
+    transform: rotate(-5deg) scale(1.1) translateY(-10px); /* Bounce effect */
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
 
-/* Updated hover effect for buttons */
+/* Button styles */
 .btn {
     position: relative;
-    background: #c8d9ed	;
+    background: linear-gradient(45deg, #ff6f9c, #00f5d4); /* Gradient background */
+    color: #fff; /* White text color */
     display: inline-block;
-    color: #4663ac		;
     margin-top: 20px;
-    padding: 10px 30px;
+    padding: 12px 36px; /* Slightly increased padding */
     font-size: 18px;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 2px;
-    font-weight: 500;
-    transition: all 0.3s; 
+    font-weight: 600; /* Slightly bolder font weight */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transitions */
 }
 
-/* New hover effect for buttons */
+/* Hover effect for button */
 .btn:hover {
-    background: #e1f1fd	; 
-    color: #4663ac	; 
-    transform: scale(1.05); 
+    background: linear-gradient(45deg, #00f5d4, #ff6f9c); /* Reversed gradient on hover */
+    color: #fff; /* White text color */
+    transform: scale(1.1) rotate(3deg); /* Slightly larger and rotated */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
 }
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px; /* Increased padding on mobile */
+        text-align: center;
+    }
+
+    .banner h2 {
+        font-size: 2em;
+    }
+
+    .banner h2 span {
+        font-size: 1.2em;
+    }
+
+    .banner h3 {
+        font-size: 1.5em;
+    }
+
+    .btn {
+        padding: 10px 25px;
+        font-size: 18px;
+    }
+}
+
+.banner h3 {
+    font-size: 1.2em;
+    color: #4663ac; /* Default color */
+    margin: 0;
+    padding: 0;
+    transition: color 0.3s, text-shadow 0.3s; /* Smooth transitions */
+}
+
+.banner h3:hover {
+    color: #ff6f9c; /* Color change on hover */
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+}
+
     /* Creating About Layout */
     
     .content {

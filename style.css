@@ -36,7 +36,7 @@ body {
 
 .accessibility-mode {
     background-color: #000000;
-    color: #000000; /* Change text color to black */
+    color: #000000; 
 
 }
 .accessibility-mode h1,
@@ -68,18 +68,18 @@ body {
 
 .contentBx {
     flex: 1;
-    padding-right: 20px; /* Adjust spacing as needed */
+    padding-right: 20px; 
 }
 
 .imageBx {
-    flex: 0 0 auto; /* Prevents the image container from growing */
-    max-width: 40%; /* Adjust as needed to control the size of the image */
+    flex: 0 0 auto; 
+    max-width: 40%; 
 }
 
 .imageBx img {
-    width: 300px; /* Adjust this value as needed */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: adds rounded corners to the image */
+    width: 300px; 
+    height: auto; 
+    border-radius: 8px; 
 }
 
 
@@ -176,19 +176,19 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px; /* Increased left padding for PC view */
+    padding: 20px 60px; 
     box-sizing: border-box;
 }
 
 .banner h2 {
     font-size: 2.5em;
-    background: linear-gradient(45deg, #00f5d4, #b9a0e2, #ff6f9c); /* Rainbow gradient effect */
+    background: linear-gradient(45deg, #00f5d4, #b9a0e2, #ff6f9c);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 300;
     line-height: 1.5em;
-    transition: transform 0.3s, text-shadow 0.3s; /* Smooth transitions */
+    transition: transform 0.3s, text-shadow 0.3s; 
 }
 
 .banner h2 span {
@@ -205,16 +205,16 @@ section{
 
 /* Rainbow gradient effect on hover */
 .banner h2:hover {
-    color: #ff7e5f; /* Optional base color on hover */
-    transform: rotate(-5deg) scale(1.1) translateY(-10px); /* Bounce effect */
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    color: #ff7e5f; 
+    transform: rotate(-5deg) scale(1.1) translateY(-10px); 
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
 /* Button styles */
 .btn {
     position: relative;
-    background: rgba(200, 217, 237, 0.8); /* Slightly transparent background */
-    color: #4663ac; /* Text color */
+    background: rgba(200, 217, 237, 0.8); 
+    color: #4663ac; 
     display: inline-block;
     margin-top: 20px;
     padding: 12px 36px;
@@ -230,7 +230,7 @@ section{
 
 /* Hover effect for button */
 .btn:hover {
-    background: rgba(255, 111, 156, 0.8); /* Slightly transparent background on hover */
+    background: rgba(255, 111, 156, 0.8); 
     color: #fff;
     transform: scale(1.1) rotate(3deg);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -240,7 +240,7 @@ section{
     .banner {
         flex-direction: column;
         align-items: center;
-        padding: 20px; /* Increased padding on mobile */
+        padding: 20px; 
         text-align: center;
     }
 
@@ -264,18 +264,18 @@ section{
 
 .banner h3 {
     color: #4663ac;
-    font-size: 2em; /* Adjusted font size */
+    font-size: 2em; 
     font-weight: 500;
-    margin: 10px 0; /* Added margin for spacing */
-    text-align: center; /* Center text alignment */
-    text-transform: uppercase; /* Transform text to uppercase */
-    transition: color 0.3s, text-shadow 0.3s; /* Smooth transitions */
+    margin: 10px 0; 
+    text-align: center; 
+    text-transform: uppercase;
+    transition: color 0.3s, text-shadow 0.3s; 
 }
 
 /* Hover effect for h3 */
 .banner h3:hover {
-    color: #ff6f9c; /* Color change on hover */
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+    color: #ff6f9c; 
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
 }
     /* Creating About Layout */
     
@@ -306,30 +306,30 @@ section{
 /* Base styling */
 .heading h2 {
     text-align: center;
-    font-size: 32px; /* Increased size */
-    color: #ff6f9c; /* Base color */
-    font-family: 'Poppins', sans-serif; /* More stylish font */
-    transition: transform 0.3s, color 0.3s, text-shadow 0.3s; /* Smooth transitions */
+    font-size: 32px; 
+    color: #ff6f9c; 
+    font-family: 'Poppins', sans-serif; 
+    transition: transform 0.3s, color 0.3s, text-shadow 0.3s; 
     position: relative;
-    display: inline-block; /* Ensure text is not stretched */
+    display: inline-block; 
 }
 
 /* Rainbow gradient text color effect on hover */
 .heading h2:hover {
-    color: #ff7e5f; /* Base color on hover */
-    transform: rotate(-5deg) scale(1.1) translateY(-10px); /* Bounce effect */
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    background: linear-gradient(45deg, #00f5d4, #b9a0e2, #ff6f9c); /* Gradient effect */
-    background-clip: text; /* Clip the gradient to the text */
-    -webkit-background-clip: text; /* Apply gradient to text */
-    -webkit-text-fill-color: transparent; /* Make the text color transparent to show gradient */
+    color: #ff7e5f; 
+    transform: rotate(-5deg) scale(1.1) translateY(-10px); 
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    background: linear-gradient(45deg, #00f5d4, #b9a0e2, #ff6f9c);
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
 }
     /* Rainbow gradient text color effect on scroll */
 .heading h2.rainbow {
-    background: linear-gradient(45deg, #00f5d4, #b9a0e2, #ff6f9c); /* Gradient effect */
-    background-clip: text; /* Clip the gradient to the text */
-    -webkit-background-clip: text; /* Apply gradient to text */
-    -webkit-text-fill-color: transparent; /* Make the text color transparent to show gradient */
+    background: linear-gradient(45deg, #00f5d4, #b9a0e2, #ff6f9c); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
 }
     
 /* Base styles */

@@ -213,27 +213,27 @@ section{
 /* Button styles */
 .btn {
     position: relative;
-    background: linear-gradient(45deg, #ff6f9c, #00f5d4); /* Gradient background */
-    color: #fff; /* White text color */
+    background: rgba(200, 217, 237, 0.8); /* Slightly transparent background */
+    color: #4663ac; /* Text color */
     display: inline-block;
     margin-top: 20px;
-    padding: 12px 36px; /* Slightly increased padding */
+    padding: 12px 36px;
     font-size: 18px;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 2px;
-    font-weight: 600; /* Slightly bolder font weight */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    transition: all 0.3s ease; /* Smooth transitions */
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 /* Hover effect for button */
 .btn:hover {
-    background: linear-gradient(45deg, #00f5d4, #ff6f9c); /* Reversed gradient on hover */
-    color: #fff; /* White text color */
-    transform: scale(1.1) rotate(3deg); /* Slightly larger and rotated */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+    background: rgba(255, 111, 156, 0.8); /* Slightly transparent background on hover */
+    color: #fff;
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 /* Mobile responsiveness */
 @media (max-width: 768px) {
@@ -263,18 +263,20 @@ section{
 }
 
 .banner h3 {
-    font-size: 1.2em;
-    color: #4663ac; /* Default color */
-    margin: 0;
-    padding: 0;
+    color: #4663ac;
+    font-size: 2em; /* Adjusted font size */
+    font-weight: 500;
+    margin: 10px 0; /* Added margin for spacing */
+    text-align: center; /* Center text alignment */
+    text-transform: uppercase; /* Transform text to uppercase */
     transition: color 0.3s, text-shadow 0.3s; /* Smooth transitions */
 }
 
+/* Hover effect for h3 */
 .banner h3:hover {
     color: #ff6f9c; /* Color change on hover */
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
 }
-
     /* Creating About Layout */
     
     .content {

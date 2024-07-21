@@ -169,7 +169,7 @@ section{
 .banner {
     position: relative;
     min-height: 100vh;
-    background: #d2deeb;
+    background: #404655;
     background: url(images/myPic21.png);
     background-size: cover;
     background-position: right;
@@ -235,6 +235,7 @@ section{
     transform: scale(1.1) rotate(3deg);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .banner {
@@ -245,20 +246,33 @@ section{
     }
 
     .banner h2 {
-        font-size: 2em;
+        font-size: 2.5em; /* Increased font size */
     }
 
     .banner h2 span {
-        font-size: 1.2em;
+        font-size: 1.5em; /* Increased font size */
     }
 
     .banner h3 {
-        font-size: 1.5em;
+        font-size: 2em; /* Increased font size */
     }
 
     .btn {
-        padding: 10px 25px;
-        font-size: 18px;
+        padding: 14px 30px; /* Adjusted padding */
+        font-size: 20px; /* Increased font size */
+    }
+
+    .heading h2 {
+        font-size: 34px; /* Increased font size */
+    }
+
+    .heading p {
+        font-size: 16px; /* Increased font size */
+    }
+
+    .content, .contentblog {
+        padding: 20px; /* Adjusted padding */
+        font-size: 18px; /* Increased font size */
     }
 }
 
@@ -276,46 +290,59 @@ section{
     color: #ff6f9c; 
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
 }
-    /* Creating About Layout */
-    
-    .content {
-        display: flex;
-        justify-content: center;  
-        background-color: #404655	;
-    }
-    .contentblog {
-        display: flex;
-        justify-content: center;  
-        background-color: #d2deeb	;
-    }
-    
-    .heading {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 30px;
-        color: #4663ac	;
-    }
-    
-    .heading p {
-        font-style: italic;
-        font-size: 14px;
-        text-align: center;  
-    }
-    
+
+/* Creating About Layout */
+.content {
+    display: flex;
+    justify-content: center;  
+    background-color: #404655;
+}
+
+.contentblog {
+    display: flex;
+    justify-content: center;  
+    background-color: #d2deeb;
+}
+
+.heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4663ac;
+}
+
+.heading p {
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;  
+}
+
+/* Base styling */
 /* Base styling */
 .heading h2 {
-    text-align: center;
-    font-size: 32px; 
-    color: #ff6f9c; 
+    font-size: 28px; 
+    color: #ff6f9d9d; 
     font-family: 'Poppins', sans-serif; 
-    transition: transform 0.3s, color 0.3s, text-shadow 0.3s; 
     position: relative;
     display: inline-block; 
+    margin-bottom: 20px; /* Adjust if needed */
+}
+
+/* Add underline with spacing using ::after pseudo-element */
+.heading h2::after {
+    content: '';
+    display: block;
+    width: 100%; /* Full width of the heading */
+    height: 4px; /* Thickness of the underline */
+    background: #ff6f9d47; /* Color of the underline */
+    position: absolute;
+    bottom: -10px; /* Distance between text and underline */
+    left: 0;
 }
 
 /* Rainbow gradient text color effect on hover */
 .heading h2:hover {
-    color: #ff7e5f; 
+    color: #ff6f9c; 
     transform: rotate(-5deg) scale(1.1) translateY(-10px); 
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
     background: linear-gradient(45deg, #00f5d4, #b9a0e2, #ff6f9c);
@@ -323,12 +350,10 @@ section{
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
 }
-    /* Rainbow gradient text color effect on scroll */
-.heading h2.rainbow {
-    background: linear-gradient(45deg, #00f5d4, #b9a0e2, #ff6f9c); 
-    background-clip: text; 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
+
+/* Adjust underline on hover */
+.heading h2:hover::after {
+    background: #ff6f9c; /* Change underline color on hover if needed */
 }
     
 /* Base styles */
@@ -436,72 +461,90 @@ section{
     
     .services .content {
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
-        background-color: #d2deeb;
+        gap: 20px; /* Added gap between items */
     }
     
+/* Accordion item styling */
+.services .content .accordion-item {
+    width: calc(33.33% - 30px);
+    margin: 10px 15px;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.services .content .accordion-item:hover {
+    background-color: (70, 99, 172, 0.1);
+}
+
+.services .content .accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: yellow;
+    color: #ff6f9c;
+}
+
+.services .content .accordion-header i {
+    margin-right: 10px;
+}
+
+.services .content .accordion-content {
+    display: none;
+    padding: 20px;
+    color: yellow;
+}
+
+.services .content .accordion-item.active .accordion-content {
+    display: block;
+}
+
+@media (max-width: 624px) {
     .services .content .accordion-item {
-        width: calc(33.33% - 30px);
-        margin: 10px 15px;
-        text-align: center;
-        border-radius: 20px;
-        overflow: hidden;
-        position: relative;
-        cursor: pointer;
-        transition: background-color 0.3s;
+        width: calc(50% - 30px); 
     }
-    
-    .services .content .accordion-item:hover {
-        background-color: rgba(70, 99, 172, 0.1);
+}
+
+@media (max-width: 399px) {
+    .services .content .accordion-item {
+        width: calc(100% - 30px); 
     }
-    
-    .services .content .accordion-header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        background-color: #c1d8f0;
-    }
-    
-    .services .content .accordion-header i {
-        margin-right: 10px;
-    }
-    
-    .services .content .accordion-content {
-        display: none;
-        padding: 20px;
-    }
-    
-    .services .content .accordion-item.active .accordion-content {
-        display: block;
-    }
-    
-    @media (max-width: 624px) {
-        .services .content .accordion-item {
-            width: calc(50% - 30px); 
-        }
-    }
-    
-    @media (max-width: 399px) {
-        .services .content .accordion-item {
-            width: calc(100% - 30px); 
-        }
-    }
-                
+}
+            
 
 /* Moving social icons under contact form in mobile view */
 @media (max-width: 768px) {
-    .contactInfoBx .boxSocial {
-        padding-left: 0; 
-        margin-top: 20px; 
-    }
-
-    .formBx {
-        min-width: 100%; 
-    }
-    
+.contactInfoBx .boxSocial {
+    padding-left: 0; 
+    margin-top: 20px; 
 }
+
+.formBx {
+    min-width: 100%; 
+}
+
+}
+
+/* Make icons section responsive for phone view */
+@media (max-width: 768px) {
+.services .content {
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+.services .content .servicesBx {
+    flex-basis: calc(50% - 20px);
+    max-width: calc(50% - 20px); 
+    margin: 10px; 
+}
+}
+
 
 /* Make icons section responsive for phone view */
 @media (max-width: 768px) {
@@ -711,8 +754,8 @@ section{
 
 .formBx form input[type="submit"] {
     position: relative;
-    background: rgba(200, 217, 237, 0.8); 
-    color: #4663ac;
+    background: rgba(255, 111, 156, 0.8); 
+    color: #fff;
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px; /* Adjusted padding */
@@ -730,8 +773,8 @@ section{
 }
 
 .formBx form input[type="submit"]:hover {
-    background: rgba(255, 111, 156, 0.8); 
-    color: #fff;
+    background: rgba(200, 217, 237, 0.8); 
+    color: #4663ac;
     transform: scale(1.1) rotate(3deg); /* Added rotation */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
@@ -792,7 +835,7 @@ section{
 }
 
 .contactInfoBx .boxSocial .fa {
-    color: #d2deeb;
+    color: #ff6f9c;
     font-size: 36px;
     cursor: pointer;
     transition: transform 0.3s;

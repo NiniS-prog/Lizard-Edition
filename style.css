@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #d2deeb;
+    background-color: #f0f0f0;
     color: #4663ac;
     cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNSIgZmlsbD0iI0I5OUFFNCIgLz48L3N2Zz4='), auto;
 }
@@ -151,7 +151,7 @@ header ul li a.active::after {
 
 /* Creating Stiky Header Menu Nav Bar */
 header.sticky{
-    background:#fff;
+    background:#f0f0f0;
     padding:20px 100px;
     box-shadow:0 5px 20px #4663ac;
 }
@@ -295,13 +295,13 @@ section{
 .content {
     display: flex;
     justify-content: center;  
-    background-color: #404655;
+    background-color: #f0f0f0;
 }
 
 .contentblog {
     display: flex;
     justify-content: center;  
-    background-color: #d2deeb;
+    background-color: #f0f0f0;
 }
 
 .heading {
@@ -318,26 +318,30 @@ section{
 }
 
 /* Base styling */
-/* Base styling */
 .heading h2 {
     font-size: 28px; 
-    color: #ff6f9d9d; 
+    color: #ff6f9c; 
     font-family: 'Poppins', sans-serif; 
     position: relative;
     display: inline-block; 
     margin-bottom: 20px; /* Adjust if needed */
+    padding: 0; /* Ensure no padding affects the highlight */
 }
 
-/* Add underline with spacing using ::after pseudo-element */
-.heading h2::after {
+/* Persistent yellow highlight with non-straight effect using ::before pseudo-element */
+.heading h2::before {
     content: '';
     display: block;
-    width: 100%; /* Full width of the heading */
-    height: 4px; /* Thickness of the underline */
-    background: #ff6f9d47; /* Color of the underline */
     position: absolute;
-    bottom: -10px; /* Distance between text and underline */
+    bottom: -8px; /* Adjust distance between text and highlight */
     left: 0;
+    width: 100%;
+    height: 10px; /* Height of the highlight */
+    background: rgba(255, 255, 0, 0.4); /* Yellow color with transparency */
+    z-index: -1; /* Place behind the text */
+    border-radius: 0 0 5px 5px; /* Rounded corners */
+    transform: skewY(-5deg); /* Slant or skew for an uneven effect */
+    transition: background 0.3s; /* Smooth transition */
 }
 
 /* Rainbow gradient text color effect on hover */
@@ -351,10 +355,18 @@ section{
     -webkit-text-fill-color: transparent; 
 }
 
-/* Adjust underline on hover */
-.heading h2:hover::after {
-    background: #ff6f9c; /* Change underline color on hover if needed */
+/* Ensure highlight is always visible */
+.heading h2::before {
+    background: rgba(255, 255, 0, 0.4); /* Persistent highlight color */
 }
+
+/* Adjust highlight appearance on hover to ensure it remains visible */
+.heading h2:hover::before {
+    background: rgba(255, 255, 0, 0.4); /* Maintain highlight color */
+    transform: skewY(-5deg); /* Keep the skew effect on hover */
+}
+
+
     
 /* Base styles */
 .contentBx {
@@ -364,7 +376,7 @@ section{
 }
 
 .contentBx1 {
-    background-color: #d2deeb;
+    background-color: #f0f0f0;
     padding: 20px;
     box-sizing: border-box; 
 }
@@ -447,7 +459,7 @@ section{
     }
     
     .services {
-        background: #d2deeb;
+        background: #f0f0f0;
         border-top: 1px solid #c8d9ed;
         box-shadow: 0px 2px 0px #c8d9ed;
         padding: 20px 0;
@@ -486,8 +498,8 @@ section{
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: yellow;
-    color: #ff6f9c;
+    background-color: #e6e6fa; /* Light lavender */
+    color: #ff6f9c; /* Pink */
 }
 
 .services .content .accordion-header i {
@@ -497,7 +509,8 @@ section{
 .services .content .accordion-content {
     display: none;
     padding: 20px;
-    color: yellow;
+    color: #ff6f9c; /* Light lavender */
+}
 }
 
 .services .content .accordion-item.active .accordion-content {
@@ -568,14 +581,14 @@ section{
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
-    background-color: #d2deeb;
+    background-color: #f0f0f0;
 }
 
 .work .content .workBx {
     position: relative;
-    border: 1px solid #c8d9ed;
+    border: 1px solid #e6e6fa;
     overflow: hidden;
-    background-color: #c1d8f0;
+    background-color: #f0f0f0;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -611,7 +624,7 @@ section{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(193, 216, 240, 0.9);
+    background-color: #e6e6fa;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -658,17 +671,17 @@ section{
 
 /* Creating Testimonial Layout in CSS */
 .testimonial{
-    background:#d2deeb			;
+    background:#f0f0f0			;
 }
 .testimonial .content{
     display:flex;
     justify-content: center;
     flex-wrap:wrap;
     flex-direction:row;
-    background-color: #d2deeb	;
+    background-color: #f0f0f0	;
 }
 .testimonial .content .testimonialBx{
-    background:#d2deeb			;
+    background:#f0f0f0			;
     padding:60px 40px;
     margin:20px;
     max-width:calc(50% - 40px);
@@ -728,7 +741,7 @@ section{
 .formBx form textarea {
     padding: 10px;
     font-size: 14px;
-    background: #d2deeb;
+    background: #f0f0f0;
     border: none;
     outline: none;
     resize: vertical;
@@ -785,7 +798,7 @@ section{
 }
 
 .contactInfo p {
-    color: #d2deeb;
+    color: #f0f0f0;
 }
 
 .contactInfoBx {
@@ -799,7 +812,7 @@ section{
 }
 
 .contactInfoBx .box .icon {
-    color: #d2deeb;
+    color: #f0f0f0;
     min-width: 40px;
     padding-top: 4px;
     display: flex;
@@ -818,7 +831,7 @@ section{
 
 .contactInfoBx .box .text h3 {
     font-weight: 500;
-    color: #d2deeb;
+    color: #f0f0f0;
     margin-bottom: 0;
 }
 
@@ -845,7 +858,7 @@ section{
     transform: scale(1.1);
 }
 footer.copyright{
-    background:#d2deeb		;
+    background:#f0f0f0		;
     color:#4663ac	;
     text-align: center;
     padding:10px;
@@ -864,7 +877,7 @@ footer.copyright{
     }
     header .menu{
         position:fixed;
-        background:#fff;
+        background:#f0f0f0;
         display:block;
         top:75px;
         left:-100%;
@@ -888,7 +901,7 @@ footer.copyright{
         text-align: center;
         width: 100%;
         height: 100vh;
-        background: #fff;
+        background: #f0f0f0;
     }
     header ul li a{
         font-size: 20px;
@@ -1046,11 +1059,11 @@ footer.copyright{
 }
 
 .carousel-container::-webkit-scrollbar-thumb {
-    background-color: #ffffff;
+    background-color: #f0f0f0;
 }
 
 .carousel-container::-webkit-scrollbar-track {
-    background-color: #d2deeb	; 
+    background-color: #f0f0f0	; 
 }
 
 .workBx {
@@ -1063,7 +1076,7 @@ footer.copyright{
 
 /* Marquee Section */
 .marquee-section {
-    background: #d2deeb;
+    background: #f0f0f0;
     padding: 20px 0;
     overflow: hidden;
 }
@@ -1162,7 +1175,7 @@ footer.copyright{
     overflow-x: scroll;
     scroll-behavior: smooth;
     padding: 20px;
-    background-color: #d2deeb			;
+    background-color: #f0f0f0			;
     flex: 1;
     scrollbar-width: none; 
 }
@@ -1174,7 +1187,7 @@ footer.copyright{
 .blog .blogBx {
     border: 1px solid #c8d9ed	;
     overflow: hidden;
-    background-color: #c8d9ed		;
+    background-color: #f0f0f0		;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
     min-width: 400px; 
@@ -1250,7 +1263,7 @@ footer.copyright{
 /* New classes for blog grid layout */
 .blog-grid {
     padding: 20px;
-    background-color: #d2deeb		;
+    background-color: #f0f0f0		;
 }
 
 .blog-grid .heading h2 {
@@ -1270,7 +1283,7 @@ footer.copyright{
 .blog-grid-item {
     border: 1px solid #c8d9ed	;
     overflow: hidden;
-    background-color: #d2deeb	;
+    background-color: #f0f0f0	;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
 }

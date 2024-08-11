@@ -885,52 +885,80 @@ footer.copyright{
     padding:10px;
     font-size: 12px;
 }
-@media (max-width: 991px)
-{
-    header,
-    header.sticky{
-        padding:20px 50px;
-		z-index:2;
-    }
-    header .menu{
-        display:none;
-        z-index:1;
-    }
-    header .menu{
-        position:fixed;
-        background:#f0f0f0;
-        display:block;
-        top:75px;
-        left:-100%;
-        padding:100px 50px;
-        width:100%;
-        height:100vh;
-        border-top:1px solid #c8d9ed		;
-        text-align:center;
-        transition:0.5s;
-        -webkit-transition:0.5s;
-        -moz-transition:0.5s;
-        -ms-transition:0.5s;
-        -o-transition:0.5s;
+/* General header styles for screens larger than 991px */
+header,
+header.sticky {
+    padding: 40px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 2;
+    background: #ffffff; /* White background for desktop view */
+    transition: background 0.5s, padding 0.5s, box-shadow 0.5s;
 }
-    header .menu.active{
-        position: fixed;
-        top: 75px;
-        left: 0;
-        padding: 100px 50px;
-        display: block;
-        text-align: center;
-        width: 100%;
-        height: 100vh;
-        background: #f0f0f0;
+
+/* Menu styles */
+header .menu {
+    display: none;
+    z-index: 1;
+}
+
+header .menu {
+    position: fixed;
+    background: #f0f0f0;
+    display: block;
+    top: 75px;
+    left: -100%;
+    padding: 100px 50px;
+    width: 100%;
+    height: 100vh;
+    border-top: 1px solid #c8d9ed;
+    text-align: center;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+header .menu.active {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    padding: 100px 50px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background: #f0f0f0; /* Background color for active menu */
+}
+
+/* Mobile menu styles for screens 991px and smaller */
+@media (max-width: 991px) {
+    header {
+        padding: 20px 50px;
+        z-index: 2;
     }
-    header ul li a{
-        font-size: 20px;
-        font-weight: 400;
-        color:#4663ac	;
-        margin:10px 0;
+
+    header .menu {
+        background: #f0f0f0; /* White background for mobile menu */
     }
+}
+
+/* Mobile menu toggle adjustment for screens 768px and smaller */
+@media (max-width: 768px) {
+    header {
+        background: transparent; /* Remove background color on mobile */
+    }
+
     .toggle {
+        position: absolute; /* Ensure it’s positioned relative to the header */
+        top: 20px; /* Adjust top position as needed */
+        left: 20px; /* Set left position to move toggle to the left side */
+        transform: none; /* Remove any transformation */
+        padding: 10px; /* Adjust padding as needed */
+        margin: 0; /* Ensure no extra margin */
+        z-index: 3; /* Ensure it’s above other elements */
         width: 40px;
         height: 40px;
         background: url(images/menu.png) center center no-repeat;
@@ -938,30 +966,18 @@ footer.copyright{
         cursor: pointer;
         transition: background-size 0.3s ease; /* Smooth transition for background-size */
     }
-    
+
     .toggle.active {
         background: url(images/close.png) center center no-repeat;
         background-size: 25px 25px;
     }
-    
+
     /* Sticky header toggle */
     header.sticky .toggle {
         filter: invert(1);
         -webkit-filter: invert(1);
     }
-    
-    /* Mobile menu toggle adjustment */
-    @media (max-width: 768px) {
-        .toggle {
-            position: absolute; /* Ensure it’s positioned relative to the header */
-            top: 20px; /* Adjust top position as needed */
-            left: 20px; /* Set left position to move toggle to the left side */
-            transform: none; /* Remove any transformation */
-            padding: 10px; /* Adjust padding as needed */
-            margin: 0; /* Ensure no extra margin */
-            z-index: 3; /* Ensure it’s above other elements */
-        }
-    }
+}
     
     
     section {

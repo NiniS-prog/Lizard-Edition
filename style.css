@@ -1263,7 +1263,7 @@ footer.copyright{
 .blog .blogBx img {
     width: 100%;
     height: auto;
-    max-height: 150px; 
+    max-height: 2000px; 
     object-fit: cover;
 }
 

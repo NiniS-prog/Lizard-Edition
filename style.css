@@ -885,37 +885,35 @@ footer.copyright{
     padding:10px;
     font-size: 12px;
 }
-/* Mobile menu adjustments for screen widths up to 991px */
-@media (max-width: 991px) {
+@media (max-width: 991px)
+{
     header,
-    header.sticky {
-        padding: 20px 50px;
-        z-index: 2;
-        background: none; /* Remove background color or image */
-        box-shadow: none; /* Remove any shadow if present */
+    header.sticky{
+        padding:20px 50px;
+		z-index:2;
     }
-
-    header .menu {
-        display: none;
-        z-index: 1;
+    header .menu{
+        display:none;
+        z-index:1;
     }
-
-    header .menu {
-        position: fixed;
-        background: #f0f0f0;
-        display: block;
-        top: 75px;
-        left: -100%;
-        padding: 100px 50px;
-        width: 100%;
-        height: 100vh;
-        border-top: 1px solid #c8d9ed;
-        text-align: center;
-        transition: 0.5s;
-        box-shadow: none; /* Remove shadow */
-    }
-
-    header .menu.active {
+    header .menu{
+        position:fixed;
+        background:#f0f0f0;
+        display:block;
+        top:75px;
+        left:-100%;
+        padding:100px 50px;
+        width:100%;
+        height:100vh;
+        border-top:1px solid #c8d9ed		;
+        text-align:center;
+        transition:0.5s;
+        -webkit-transition:0.5s;
+        -moz-transition:0.5s;
+        -ms-transition:0.5s;
+        -o-transition:0.5s;
+}
+    header .menu.active{
         position: fixed;
         top: 75px;
         left: 0;
@@ -925,17 +923,13 @@ footer.copyright{
         width: 100%;
         height: 100vh;
         background: #f0f0f0;
-        box-shadow: none; /* Remove shadow */
     }
-
-    header ul li a {
+    header ul li a{
         font-size: 20px;
         font-weight: 400;
-        color: #4663ac;
-        margin: 10px 0;
+        color:#4663ac	;
+        margin:10px 0;
     }
-
-    /* Toggle button styles for screens up to 991px */
     .toggle {
         width: 40px;
         height: 40px;
@@ -944,13 +938,19 @@ footer.copyright{
         cursor: pointer;
         transition: background-size 0.3s ease; /* Smooth transition for background-size */
     }
-
+    
     .toggle.active {
         background: url(images/close.png) center center no-repeat;
         background-size: 25px 25px;
     }
-
-    /* Mobile menu toggle adjustment for screens up to 768px */
+    
+    /* Sticky header toggle */
+    header.sticky .toggle {
+        filter: invert(1);
+        -webkit-filter: invert(1);
+    }
+    
+    /* Mobile menu toggle adjustment */
     @media (max-width: 768px) {
         .toggle {
             position: absolute; /* Ensure it’s positioned relative to the header */
@@ -961,13 +961,7 @@ footer.copyright{
             margin: 0; /* Ensure no extra margin */
             z-index: 3; /* Ensure it’s above other elements */
         }
-        
-        header {
-            background: none; /* Remove background color or image */
-            box-shadow: none; /* Remove any shadow if present */
-        }
     }
-}
     
     
     section {

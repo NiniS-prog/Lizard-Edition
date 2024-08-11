@@ -1565,3 +1565,93 @@ footer.copyright{
     }
 }
 
+#ordering-process {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    font-family: Arial, sans-serif;
+}
+
+#ordering-process .container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#ordering-process h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+}
+
+.step-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+    text-align: left;
+}
+
+.step-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Button styles */
+.btn {
+    position: relative;
+    background: linear-gradient(45deg, #ff0099, #493240, #00c6ff, #00ff99);
+    color: #fff;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 36px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    background-size: 400% 400%;
+    animation: gradientAnimation 3s ease infinite;
+}
+
+/* Button hover effect */
+.btn:hover {
+    background: rgba(255, 111, 156, 0.8);
+    color: #fff;
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}

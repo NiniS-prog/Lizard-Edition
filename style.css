@@ -285,7 +285,7 @@ section{
         padding: 20px; /* Adjusted padding */
         font-size: 18px; /* Increased font size */
     }
-}
+
 
 .banner h3 {
     color: #ffffff;
@@ -1263,7 +1263,7 @@ footer.copyright{
 .blog .blogBx img {
     width: 100%;
     height: auto;
-    max-height: 2000px; 
+    max-height: 180px; 
     object-fit: cover;
 }
 

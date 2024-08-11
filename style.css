@@ -83,51 +83,58 @@ body {
 }
 
 
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:40px 100px;
-    display:flex;
-    justify-content: space-between;
+/* General header styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 0; /* Adjust padding to move content */
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
     align-items: center;
     z-index: 2;
-    transition:0.5s;
-    -webkit-transition:0.5s;
-    -moz-transition:0.5s;
-    -ms-transition:0.5s;
-    -o-transition:0.5s;
+    background: transparent; /* Initially transparent */
+    transition: background 0.5s, padding 0.5s, box-shadow 0.5s; /* Smooth transitions */
 }
-header .logo{
-    color:#4663ac	;
-    font-size:24px;
+
+/* Logo styles */
+header .logo {
+    color: #4663ac;
+    font-size: 24px;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 700;
     letter-spacing: 2px;
+    margin-right: 40px; /* Space between logo and menu */
 }
-header ul{
-    position: relative;
-    display:flex;
+
+/* Menu styles */
+header ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
-header ul li{
-    position:relative;
+
+/* List item styles */
+header ul li {
     list-style: none;
+    margin: 0;
 }
+
 /* Default link style */
 header ul li a {
-    position: relative;
     display: inline-block;
     margin: 0 15px;
-    color: #4663ac;
+    color: #ffffff; /* Default color for links */
     text-decoration: none;
+    position: relative; /* Required for underline effect */
     transition: color 0.3s, transform 0.3s;
 }
 
 /* Hover effect */
 header ul li a:hover {
-    color: #4663ac;
+    color: #4663ac; /* Change color on hover */
     transform: scale(1.1);
 }
 
@@ -139,7 +146,7 @@ header ul li a::after {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #4663ac;
+    background-color: #ff6f9c; /* Underline color */
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
@@ -149,17 +156,20 @@ header ul li a.active::after {
     transform: scaleX(1);
 }
 
-/* Creating Stiky Header Menu Nav Bar */
-header.sticky{
-    background:#f0f0f0;
-    padding:20px 100px;
-    box-shadow:0 5px 20px #4663ac;
+/* Sticky Header styles */
+header.sticky {
+    background: #f0f0f0; /* Background color when sticky */
+    padding: 20px 0; /* Adjusted padding */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
 }
-header.sticky .logo{
-    color:#4663ac	;
+
+/* Sticky header link color */
+header.sticky ul li a {
+    color: #4663ac; /* Blue color for links in sticky header */
 }
-header.sticky ul li a{
-    color:#4663ac	;
+
+header.sticky ul li a:hover {
+    color: #ff6f9c; /* Optional: Change color on hover for sticky header */
 }
 
 /* Creating Services Layout */
@@ -170,7 +180,7 @@ section{
     position: relative;
     min-height: 100vh;
     background: #404655;
-    background: url(images/myPic21.png);
+    /*background: url(images/myPic21.png);*/
     background-size: cover;
     background-position: right;
     display: flex;
@@ -198,7 +208,7 @@ section{
 }
 
 .banner h3 {
-    color: #4663ac;
+    color: #ffffff;
     font-size: 1.5em;
     font-weight: 500;
 }
@@ -277,7 +287,7 @@ section{
 }
 
 .banner h3 {
-    color: #4663ac;
+    color: #ffffff;
     font-size: 2em; 
     font-weight: 500;
     margin: 10px 0; 
@@ -320,7 +330,7 @@ section{
 /* Base styling */
 .heading h2 {
     font-size: 28px; 
-    color: #ff6f9c; 
+    color: #89CFF0; 
     font-family: 'Poppins', sans-serif; 
     position: relative;
     display: inline-block; 
@@ -458,76 +468,86 @@ section{
         max-width: 100%;
     }
     
-    .services {
-        background: #f0f0f0;
-        border-top: 1px solid #c8d9ed;
-        box-shadow: 0px 2px 0px #c8d9ed;
-        padding: 20px 0;
-    }
-    
-    .heading.white h2 {
-        text-align: center;
-        
-        margin-bottom: 20px;
-    }
-    
-    .services .content {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px; /* Added gap between items */
-    }
-    
-/* Accordion item styling */
+/* Basic styles for services section */
+.services {
+    background: #f0f0f071;
+    border-top: 1px solid #c8d9ed;
+    box-shadow: 0px 2px 0px #c8d9ed;
+    padding: 20px 0;
+}
+
+.heading.white h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Flexbox container */
+.services .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Styling for accordion items */
 .services .content .accordion-item {
-    width: calc(33.33% - 30px);
-    margin: 10px 15px;
+    width: calc(33.33% - 20px); /* 3 items in a row on larger screens */
+    margin: 10px 0;
     text-align: center;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #4663ac; /* Border around the item */
+    background: #fff; /* Background color for the item */
 }
 
+/* Rainbow gradient effect and zoom on hover */
 .services .content .accordion-item:hover {
-    background-color: (70, 99, 172, 0.1);
+    background: linear-gradient(135deg, #f7f7f7, #ff6f9c, #b9a0e2, #f0f4f0, #b9d8f2);
+    background-size: 400% 400%;
+    animation: rainbow-animation 3s ease infinite;
+    color: #fff; /* Change text color for better contrast */
+    box-shadow: 0 10px 18px rgba(255, 255, 255, 0.3); /* Add shadow on hover */
+    transform: scale(1.05); /* Zoom effect */
 }
 
+/* Rainbow animation */
+@keyframes rainbow-animation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Header styling */
 .services .content .accordion-header {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: #e6e6fa; /* Light lavender */
-    color: #ff6f9c; /* Pink */
+    background-color: transparent; /* Remove background color */
+    color: #4663ac; /* Text color */
 }
 
-.services .content .accordion-header i {
-    margin-right: 10px;
-}
-
+/* Content styling */
 .services .content .accordion-content {
-    display: none;
     padding: 20px;
-    color: #ff6f9c; /* Light lavender */
-}
-}
-
-.services .content .accordion-item.active .accordion-content {
-    display: block;
+    color: #4663ac; /* Content text color */
 }
 
+/* Media Queries for responsiveness */
 @media (max-width: 624px) {
     .services .content .accordion-item {
-        width: calc(50% - 30px); 
+        width: calc(50% - 20px); /* 2 items in a row on medium screens */
     }
 }
 
 @media (max-width: 399px) {
     .services .content .accordion-item {
-        width: calc(100% - 30px); 
+        width: calc(100% - 20px); /* 1 item per row on small screens */
     }
 }
+
             
 
 /* Moving social icons under contact form in mobile view */
@@ -848,7 +868,7 @@ section{
 }
 
 .contactInfoBx .boxSocial .fa {
-    color: #ff6f9c;
+    color: #89CFF0;
     font-size: 36px;
     cursor: pointer;
     transition: transform 0.3s;
@@ -1381,3 +1401,131 @@ footer.copyright{
         max-height: 200px; 
     }
 }
+
+/* Creating Examples Layout in CSS */
+/* General styles */
+.examples {
+    padding: 20px;
+}
+
+.examples .heading h2 {
+    text-align: left;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.examples-container {
+    position: relative;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.examples-content {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0 60px;
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    scroll-snap-type: x mandatory;
+}
+
+.examples-content::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
+    
+}
+
+
+.examplesbx {
+    border: 1px solid #c8d9ed;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 0 0 344px; /* Adjust width */
+    height: 275px; /* Maintain the aspect ratio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    scroll-snap-align: center; /* Snap to the center */
+    margin-bottom: 60px; /* Adjust margin to create space for arrows */
+}
+
+.examplesbx img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Arrows styling */
+.arrows {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    display: flex;
+    gap: 20px;
+    z-index: 20;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 2em;
+    color: #4663ac;
+    user-select: none;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.arrow:hover {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Dots styling */
+.dots-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 20;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #4663ac;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #b99ae4; /* Highlight active dot */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .examplesbx {
+        flex: 0 0 90vw; /* Make each image take full viewport width */
+        height: auto; /* Adjust height for better fit */
+    }
+
+    .examples-content {
+        padding-bottom: 60px; /* Add padding to ensure dots are visible */
+    }
+
+    .arrows {
+        display: none; /* Hide arrows on mobile view */
+    }
+
+    .dots-container {
+        display: flex; /* Show dots on mobile view */
+    }
+}
+

@@ -38,10 +38,11 @@
     <!-- Creating Banner Layout in HTML -->
     <section class="banner" id="home">
         <div class="textBx">
-            <h2>Shinin Pro<br> <span>Lizard Edition</span></h2>
+            <h2>Premium E-commerce Solutions<br> <span>& Advanced Web Development</span></h2>
             <h3>  Your premier destination for ecommerce lifecycle expertise, <br>
 web development, design, and SEO optimization strategies.</h3>
-                <a href="#about" class="btn">About</a>
+
+                <a href="#about" class="btn">OVERVIEW</a>
             </div>
     </section>
     <br>
@@ -84,6 +85,36 @@ web development, design, and SEO optimization strategies.</h3>
                     </div>
                 </div>
             </section>
+
+            <!-- Creating Examples Layout in HTML -->
+<section class="examples" id="examples">
+    <div class="examples-container">
+        <div class="examples-content">
+            <div class="examplesbx">
+                <img src="images/eco3.png" alt="">
+            </div>
+            <div class="examplesbx">
+                <img src="images/eco4.png" alt="">
+            </div>
+            <div class="examplesbx">
+                <img src="images/eco1.png" alt="">
+            </div>
+            <div class="examplesbx">
+                <img src="images/eco2.png" alt="">
+            </div>
+        </div>
+        <!-- Arrow navigation -->
+        <div class="arrows">
+            <div class="arrow left-arrow">&#9664;</div>
+            <div class="arrow right-arrow">&#9654;</div>
+        </div>
+        <!-- Dots for mobile view -->
+        <div class="dots-container">
+            <!-- Dots will be dynamically added here by JavaScript -->
+        </div>
+    </div>
+</section>
+
 <!-- Creating About Me Layout in HTML -->
 <section class="about" id="about">
     <div class="heading">
@@ -92,7 +123,7 @@ web development, design, and SEO optimization strategies.</h3>
     <div class="about-content">
         <div class="contentBx w50">
             <h3></h3>
-            <h2><b style="color: #ff6f9c;">Lizard </b>Edition offers a premier destination for ecommerce lifecycle expertise, web development, design, and SEO optimization strategies.</h2>
+            <h2><b style="color: #89CFF0;">Lizard </b>Edition offers a premier destination for ecommerce lifecycle expertise, web development, design, and SEO optimization strategies.</h2>
             <p>In the dynamic world of ecommerce, emphasis lies on collective elegance and vibrant creativity, much like a lizard adeptly navigating new terrains. This approach reflects the adaptability and resilience of these reptilian companions, specializing in web development, optimization, and customization across various platforms through proficient coding and development. Crafted solutions extend beyond the confines of pre-existing platforms like Shopify, WordPress with Elementor, WooCommerce, and Wix.</p><br>
             <p>Commitment to loyalty and morals is as steadfast as a lizard's loyalty to its habitat. Offering tailored solutions for your digital presence to thrive. SEO expertise also at your service, ensuring your brand shines brightly.</p><br>
             <blockquote style="font-style: italic; color:#ff6f9c;">
@@ -376,77 +407,139 @@ web development, design, and SEO optimization strategies.</h3>
 </footer>
 
 <script>
-    function validateForm() {
-        var name = document.forms["contactForm"]["name"].value;
-        var email = document.forms["contactForm"]["email"].value;
-        var message = document.forms["contactForm"]["message"].value;
-
-        if (name == "" || email == "" || message == "") {
-            alert("Please fill out all fields");
-            return false;
-        }
-
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!email.match(emailPattern)) {
-            alert("Please enter a valid email address");
-            return false;
-        }
-
-        return true;
-    }
-
     document.addEventListener("DOMContentLoaded", function() {
+        // Form validation
+        function validateForm() {
+            var name = document.forms["contactForm"]["name"].value;
+            var email = document.forms["contactForm"]["email"].value;
+            var message = document.forms["contactForm"]["message"].value;
+
+            if (name == "" || email == "" || message == "") {
+                alert("Please fill out all fields");
+                return false;
+            }
+
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            return true;
+        }
+
         var form = document.getElementById("contactForm");
-        form.addEventListener("submit", function(event) {
-            if (validateForm()) {
-                alert("Your message has been successfully sent!");
-            } else {
-                event.preventDefault();
+        if (form) {
+            form.addEventListener("submit", function(event) {
+                if (validateForm()) {
+                    alert("Your message has been successfully sent!");
+                } else {
+                    event.preventDefault();
+                }
+            });
+        }
+
+        // Arrow navigation script for blog
+        const leftArrowBlog = document.querySelector('.blog .left-arrow');
+        const rightArrowBlog = document.querySelector('.blog .right-arrow');
+        const blogContent = document.querySelector('.blog .blog-content');
+
+        if (leftArrowBlog && rightArrowBlog && blogContent) {
+            leftArrowBlog.addEventListener('click', function() {
+                blogContent.scrollBy({
+                    left: -300,
+                    behavior: 'smooth'
+                });
+            });
+
+            rightArrowBlog.addEventListener('click', function() {
+                blogContent.scrollBy({
+                    left: 300,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Arrow navigation script for examples
+        const leftArrowExamples = document.querySelector('.examples .left-arrow');
+        const rightArrowExamples = document.querySelector('.examples .right-arrow');
+        const examplesContent = document.querySelector('.examples .examples-content');
+
+        if (leftArrowExamples && rightArrowExamples && examplesContent) {
+            leftArrowExamples.addEventListener('click', function() {
+                examplesContent.scrollBy({
+                    left: -300,
+                    behavior: 'smooth'
+                });
+            });
+
+            rightArrowExamples.addEventListener('click', function() {
+                examplesContent.scrollBy({
+                    left: 300,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Dot navigation script
+        const dotsContainer = document.querySelector('.dots-container');
+        const examples = document.querySelectorAll('.examplesbx');
+
+        if (dotsContainer && examples.length > 0) {
+            examples.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.className = 'dot';
+                dot.dataset.index = index;
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = document.querySelectorAll('.dot');
+
+            function updateDots() {
+                const scrollLeft = examplesContent.scrollLeft;
+                const itemWidth = examples[0].offsetWidth + 20; // Including gap
+                const index = Math.round(scrollLeft / itemWidth);
+                dots.forEach(dot => dot.classList.remove('active'));
+                if (dots[index]) {
+                    dots[index].classList.add('active');
+                }
+            }
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const index = this.dataset.index;
+                    examplesContent.scrollTo({
+                        left: index * (examples[0].offsetWidth + 20),
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            examplesContent.addEventListener('scroll', updateDots);
+
+            // Initial dot state update
+            updateDots();
+        }
+
+        // Accordion script
+        const accordionItems = document.querySelectorAll('.services .content .accordion-item');
+
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            const content = item.querySelector('.accordion-content');
+
+            if (header && content) {
+                header.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                    if (item.classList.contains('active')) {
+                        content.style.display = 'block';
+                    } else {
+                        content.style.display = 'none';
+                    }
+                });
             }
         });
-
-        // Arrow navigation script
-        const leftArrow = document.querySelector('.left-arrow');
-        const rightArrow = document.querySelector('.right-arrow');
-        const blogContent = document.querySelector('.blog-content');
-
-        leftArrow.addEventListener('click', function() {
-            blogContent.scrollBy({
-                left: -300,
-                behavior: 'smooth'
-            });
-        });
-
-        rightArrow.addEventListener('click', function() {
-            blogContent.scrollBy({
-                left: 300,
-                behavior: 'smooth'
-            });
-        });
     });
-</script>
-<script>
-// Get all accordion items
-const accordionItems = document.querySelectorAll('.services .content .accordion-item');
-
-// Add event listener for each accordion item
-accordionItems.forEach(item => {
-    const header = item.querySelector('.accordion-header');
-    const content = item.querySelector('.accordion-content');
-
-    // Toggle accordion content on header click
-    header.addEventListener('click', () => {
-        // Toggle active class on accordion item
-        item.classList.toggle('active');
-
-        // Toggle display of accordion content
-        if (item.classList.contains('active')) {
-            content.style.display = 'block';
-        } else {
-            content.style.display = 'none';
-        }
-    });
-});
 </script>
 
 

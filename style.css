@@ -274,7 +274,7 @@ section{
 }
 
     .heading h2 {
-        font-size: 34px; /* Increased font size */
+        font-size: 2em; /* Increased font size */
     }
 
     .heading p {
@@ -326,7 +326,7 @@ section{
 
 /* Base styling */
 .heading h2 {
-    font-size: 28px; 
+    font-size: 2.5em; 
     font-family: 'Poppins', sans-serif; 
     position: relative;
     display: inline-block; 
@@ -1688,7 +1688,7 @@ footer.copyright{
 /* Mobile view */
 @media (max-width: 480px) {
     #ordering-process h2 {
-        font-size: 2em;
+        font-size: 24px;
     }
 
     .step {

@@ -47,3 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Accessibility button not found');
     }
 });
+
+
+
+
+
+

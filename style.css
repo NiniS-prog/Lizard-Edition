@@ -169,6 +169,86 @@ header.sticky ul li a {
 }
 
 header.sticky ul li a:hover {
+    color: #ff6f9c; /* Change color on hover for sticky header */
+}
+
+/* Ensure link color is white when not sticky */
+header:not(.sticky) ul li a {
+    color: #ffffff;
+}
+
+
+/* blog header styles */
+.header1 .logo {
+    color: #4663ac;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-right: 40px; /* Space between logo and menu */
+}
+
+/* Menu styles */
+.header1 ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* List item styles */
+.header1 ul li {
+    list-style: none;
+    margin: 0;
+}
+
+/* Default link style */
+.header1 ul li a {
+    display: inline-block;
+    margin: 0 15px;
+    color: #4663ac; /* Default color for links */
+    text-decoration: none;
+    position: relative; /* Required for underline effect */
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Hover effect */
+.header1 ul li a:hover {
+    color: #4663ac; /* Change color on hover */
+    transform: scale(1.1);
+}
+
+/* Underline effect */
+.header1 ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6f9c; /* Underline color */
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.header1 ul li a:hover::after,
+.header1 ul li a.active::after {
+    transform: scaleX(1);
+}
+
+/* Sticky Header styles */
+.header1.sticky {
+    background: #f0f0f0; /* Background color when sticky */
+    padding: 20px 50px; /* Adjusted padding */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+}
+
+/* Sticky header link color */
+.header1.sticky ul li a {
+    color: #4663ac; /* Blue color for links in sticky header */
+}
+
+.header1.sticky ul li a:hover {
     color: #ff6f9c; /* Optional: Change color on hover for sticky header */
 }
 
@@ -221,7 +301,7 @@ section{
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
 
-/* Button styles */
+/* Button styles 
 .btn {
     position: relative;
     background: rgba(200, 217, 237, 0.8); 
@@ -238,29 +318,32 @@ section{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
+    
 
-/* Hover effect for button */
+/* Hover effect for button 
 .btn:hover {
     background: rgba(255, 111, 156, 0.8); 
     color: #fff;
     transform: scale(1.1) rotate(3deg);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+*/
+
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .banner {
         flex-direction: column;
         align-items: center;
-        padding: 40px 20px; /* Adjust padding to fit mobile view */
-        background-position: center; /* Center background image */
-        text-align: center; /* Center text */
+        padding: 40px 20px; 
+        background-position: center; 
+        text-align: center; 
     }
 
     .banner h2 {
-        font-size: 2em; /* Adjust font size for mobile */
-        line-height: 1.2em; /* Adjust line-height for better readability */
-        margin-bottom: 20px; /* Space between heading and button */
+        font-size: 2em; 
+        line-height: 1.2em; 
+        margin-bottom: 20px; 
     }
 
     .banner h3 {
@@ -305,9 +388,9 @@ section{
 /* Creating About Layout */
 .content, .contentblog {
     display: flex;
-    justify-content: center;  
+    justify-content: left;  
     background-color: #f0f0f0;
-    text-align: center; /* Center text in content and contentblog */
+    text-align: left; /* Center text in content and contentblog */
 }
 
 .heading {
@@ -335,7 +418,7 @@ section{
     padding: 20px;
 }
 
-/* Persistent yellow highlight with non-straight effect using ::before pseudo-element */
+/* Persistent yellow highlight with non-straight effect using ::before pseudo-element 
 .heading h2::before {
     content: '';
     display: block;
@@ -351,7 +434,7 @@ section{
     transition: background 0.3s;
 }
 
-/* Rainbow gradient text color effect on hover */
+/* Rainbow gradient text color effect on hover 
 .heading h2:hover {
     color: #ff6f9c; 
     transform: rotate(-5deg) scale(1.1) translateY(-10px); 
@@ -362,17 +445,17 @@ section{
     -webkit-text-fill-color: transparent; 
 }
 
-/* Ensure highlight is always visible */
+/* Ensure highlight is always visible 
 .heading h2::before {
     background: rgba(255, 255, 0, 0.4);
 }
 
-/* Adjust highlight appearance on hover to ensure it remains visible */
+/* Adjust highlight appearance on hover to ensure it remains visible 
 .heading h2:hover::before {
     background: rgba(255, 255, 0, 0.4);
     transform: skewY(-5deg);
 }
-
+*/
 
 /* Styles for the about section */
 .about {
@@ -480,8 +563,14 @@ section{
     margin-top: 20px;
 }
 
+/* Style for the image to make it responsive and gentle */
 img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Adjust this value to make the image less high */
+    object-fit: cover; /* Ensure the image covers the area gracefully */
+    border-radius: 8px; /* Optional: Add rounded corners for a softer look */
+    margin-bottom: 20px; /* Optional: Add space below the image */
 }
     
 /* Basic styles for services section */
@@ -801,31 +890,42 @@ img {
     min-height: 100px; 
 }
 
+/* Styled button with gradient colors */
 .formBx form input[type="submit"] {
     position: relative;
-    background: rgba(255, 111, 156, 0.8); 
-    color: #fff;
+    background: linear-gradient(45deg, #ff0099, #493240, #00c6ff, #00ff99); /* Gradient background */
+    color: #fff; /* Text color */
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px; /* Adjusted padding */
-    font-size: 16px; /* Adjusted font size */
+    margin-top: 20px; /* Adjusted margin */
+    padding: 12px 36px; /* Adjusted padding */
+    font-size: 18px; /* Adjusted font size */
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 600;
-    border-radius: 25px; /* Retained original border-radius */
+    border-radius: 8px; /* Adjusted border-radius */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     cursor: pointer;
     max-width: 200px; /* Retained original max-width */
-    align-self: flex-start; 
+    align-self: flex-start;
+    background-size: 400% 400%; /* For gradient animation */
+    animation: gradientAnimation 3s ease infinite; /* Gradient animation */
 }
 
+/* Button hover effect */
 .formBx form input[type="submit"]:hover {
-    background: rgba(200, 217, 237, 0.8); 
-    color: #4663ac;
-    transform: scale(1.1) rotate(3deg); /* Added rotation */
+    background: rgba(255, 111, 156, 0.8); /* Background color on hover */
+    color: #fff; /* Text color on hover */
+    transform: scale(1.1) rotate(3deg); /* Scale and rotate on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
 }
 
 .contactInfo {
@@ -884,10 +984,28 @@ img {
 }
 
 .contactInfoBx .boxSocial .fa {
-    color: #89CFF0;
     font-size: 36px;
     cursor: pointer;
-    transition: transform 0.3s;
+    background: linear-gradient(45deg, #007bff , #ff0099, #00c6ff, #00ff99); /* Gradient colors */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Hides the default text color so gradient is visible */
+    display: inline-block;
+    background-size: 400% 400%;
+    animation: gradientAnimation 3s ease infinite;
+}
+
+/* Define the keyframes for gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
 .contactInfoBx .boxSocial .fa:hover {
@@ -985,7 +1103,8 @@ footer.copyright{
             z-index: 3; /* Ensure it’s above other elements */
         }
     }
-    
+
+    /*blog toglle*/
     
     section {
         padding: 100px 30px;
@@ -1195,11 +1314,6 @@ footer.copyright{
     padding: 20px;
 }
 
-.blog .heading h2 {
-    text-align: left;
-    padding-left: 30px;
-    margin-bottom: 20px;
-}
 
 .blog-container {
     display: flex;
@@ -1231,7 +1345,6 @@ footer.copyright{
     overflow-x: scroll;
     scroll-behavior: smooth;
     padding: 20px;
-    background-color: #f0f0f0			;
     flex: 1;
     scrollbar-width: none; 
 }
@@ -1323,9 +1436,9 @@ footer.copyright{
 }
 
 .blog-grid .heading h2 {
-    color: #B99AE4;
     text-align: center;
     margin-bottom: 20px;
+    margin-top: 60px;
 }
 
 .blog-grid-container {
@@ -1405,13 +1518,13 @@ footer.copyright{
     }
 }
 
-/* Style for the section */
+/* Style for the section 
 .section-post {
     border-top: 1px solid #006d77;
     box-shadow: 0px 0px 0px #006d77;
     margin: 0 auto;
     max-width: 100%;
-}
+}*/
 
 /* Style for the div within the section */
 .section-post .post-center {

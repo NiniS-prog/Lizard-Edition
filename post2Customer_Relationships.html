@@ -10,21 +10,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+    <div id="accessibility-button" class="accessibility-button" aria-label="Accessibility Options" role="button" tabindex="0">
+        <img src="images/ariab.png" alt="Accessibility Options">
+    </div>
+
     <!-- Creating Menu Tabs & Logo at Top Using HTML -->
-    <header>
+    <header class="header1">
+        <a href="#" class="logo"></a>
         <div class="toggle" onclick="toggleMenu();"></div>
         <ul class="menu">
             <li><a href="index.html#home" onclick="toggleMenu();">Home</a></li>
 
-            <li><a href="index.html#about" onclick="toggleMenu();">About</a></li>
+
+            <li><a href="index.html#about" onclick="toggleMenu();">Why Choose Us</a></li>
             <li><a href="index.html#services" onclick="toggleMenu();">Services</a></li>
-            <li><a href="index.html#work" onclick="toggleMenu();">Work</a></li>
-            <li><a href="Byte.html" onclick="toggleMenu();">Byte</a></li>
+            <li><a href="index.html#ordering-process" onclick="toggleMenu();">Workflow Overview</a></li>
+        <li><a href="blog.html#blog" onclick="toggleMenu();" class="active">Insights & News</a></li>
+
             <li><a href="index.html#contact" onclick="toggleMenu();">Contact</a></li>
-
+            
         </ul>
-    </header>
 
+    </header>
     <section class="post" id="post";>
         <div class="post" style="text-align: center;">
             <img src="images/customer.png" alt="Cart" style="width: 100%; height: 300px;">
@@ -95,43 +102,45 @@
         <h2 style="color: #d2deeb;">GET IN TOUCH</h2>
         <p style="color: #d2deeb;">Feel free to share some details about your project</p>
     </div>
-        <div class="content">
-            <div class="formBx">
-                <form id="contactForm" method="post" action="https://lizard-form-37eac8e3b553.herokuapp.com/send-email">
-                    <input type="text" placeholder="Full Name" name="name">
-                    <input type="email" placeholder="Email" name="email">
-                    <textarea name="message" rows="6" id="message" placeholder="Your Message"></textarea>
-                    <input type="hidden" name="from" value="Shinin_p@outlook.com">
-                    <input style="color: #525252;" type="submit" value="Send Message" name="submit">
-                </form>
-            </div>
-            <div class="contactInfo">
-                <div class="contactInfoBx">
-                    <div class="boxSocial">
-                        <div class="icon">
-                            <a href="https://www.facebook.com" target="_blank">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="https://www.linkedin.com/" target="_blank">
-                                <i class="fa fa-linkedin-square"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="https://www.instagram.com/?hl=en" target="_blank">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </div>
+    <div class="content"  style= "background-color: #404655;">
+        <div class="formBx">
+            <form id="contactForm" method="post" action="https://lizard-form-37eac8e3b553.herokuapp.com/send-email">
+                <div class="inputGroup">
+                    <input type="text" placeholder="Full Name" name="name" class="halfWidth">
+                    <input type="email" placeholder="Email" name="email" class="halfWidth">
+                </div>
+                <textarea name="message" rows="6" id="message" placeholder="Your Message"></textarea>
+                <input type="hidden" name="from" value="Shinin_p@outlook.com">
+                <input type="submit" value="Send IT" name="submit">
+            </form>
+        </div>
+        <div class="contactInfo">
+            <div class="contactInfoBx">
+                <div class="boxSocial">
+                    <div class="icon">
+                        <a href="https://www.facebook.com" target="_blank">
+                            <i class="fa fa-facebook-square"></i>
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <i class="fa fa-linkedin-square"></i>
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="https://www.instagram.com/?hl=en" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="copyright">
-        <p>&copy; 2024, ShininPro Web-lizardEdition, All rights reserved</p>
+        <p>&copy; 2024, Webe-lizardEdition, All rights reserved</p>
     </footer>
 
     <script>

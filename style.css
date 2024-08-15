@@ -178,79 +178,6 @@ header:not(.sticky) ul li a {
 }
 
 
-/* blog header styles */
-.header1 .logo {
-    color: #4663ac;
-    font-size: 24px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-right: 40px; /* Space between logo and menu */
-}
-
-/* Menu styles */
-.header1 ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-/* List item styles */
-.header1 ul li {
-    list-style: none;
-    margin: 0;
-}
-
-/* Default link style */
-.header1 ul li a {
-    display: inline-block;
-    margin: 0 15px;
-    color: #4663ac; /* Default color for links */
-    text-decoration: none;
-    position: relative; /* Required for underline effect */
-    transition: color 0.3s, transform 0.3s;
-}
-
-/* Hover effect */
-.header1 ul li a:hover {
-    color: #4663ac; /* Change color on hover */
-    transform: scale(1.1);
-}
-
-/* Underline effect */
-.header1 ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #ff6f9c; /* Underline color */
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-
-.header1 ul li a:hover::after,
-.header1 ul li a.active::after {
-    transform: scaleX(1);
-}
-
-/* Sticky Header styles */
-.header1.sticky {
-    background: #f0f0f0; /* Background color when sticky */
-    padding: 20px 50px; /* Adjusted padding */
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
-}
-
-/* Sticky header link color */
-.header1.sticky ul li a {
-    color: #4663ac; /* Blue color for links in sticky header */
-}
-
-.header1.sticky ul li a:hover {
-    color: #ff6f9c; /* Optional: Change color on hover for sticky header */
-}
 
 
 /* Creating Services Layout */
@@ -1104,7 +1031,6 @@ footer.copyright{
         }
     }
 
-    /*blog toglle*/
     
     section {
         padding: 100px 30px;

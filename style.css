@@ -159,7 +159,7 @@ header ul li a.active::after {
 /* Sticky Header styles */
 header.sticky {
     background: #f0f0f0; /* Background color when sticky */
-    padding: 20px 50px; /* Adjusted padding */
+    padding: 20px 0; /* Adjusted padding */
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
 }
 
@@ -169,12 +169,7 @@ header.sticky ul li a {
 }
 
 header.sticky ul li a:hover {
-    color: #ff6f9c; /* Change color on hover for sticky header */
-}
-
-/* Ensure link color is white when not sticky */
-header:not(.sticky) ul li a {
-    color: #ffffff;
+    color: #ff6f9c; /* Optional: Change color on hover for sticky header */
 }
 
 

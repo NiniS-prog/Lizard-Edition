@@ -14,9 +14,21 @@
 
 </head>
 <body >
-    <div id="accessibility-button" class="accessibility-button" aria-label="Accessibility Options" role="button" tabindex="0">
-        <img src="images/ariab.png" alt="Accessibility Options">
+<!-- Accessibility Button -->
+<div id="accessibility-button" class="accessibility-button" aria-label="Accessibility Options" role="button" tabindex="0">
+    <img src="images/ariab.png" alt="Accessibility Options">
+</div>
+
+<!-- Accessibility Modal -->
+<div id="accessibility-modal" class="accessibility-modal" role="dialog" aria-labelledby="accessibility-modal-title" aria-hidden="true">
+    <div class="accessibility-modal-content">
+        <span id="close-modal" class="close-modal" aria-label="Close">&times;</span>
+        <h2 id="accessibility-modal-title">Accessibility Options</h2>
+        <button id="toggle-high-contrast" class="accessibility-option">Toggle High Contrast</button>
+        <button id="increase-font-size" class="accessibility-option">Increase Font Size</button>
+        <button id="decrease-font-size" class="accessibility-option">Decrease Font Size</button>
     </div>
+</div>
 
 
     <!-- Creating Menu Tabs & Logo at Top Using HTML -->
@@ -24,15 +36,15 @@
         <a href="#" class="logo"></a>
         <div class="toggle" onclick="toggleMenu();"></div>
         <ul class="menu">
-            <li><a style="color: #4663ac;" href="index.html#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="index.html#home" onclick="toggleMenu();">Home</a></li>
 
 
-            <li><a style="color: #4663ac;" href="index.html#about" onclick="toggleMenu();">Why Choose Us</a></li>
-            <li><a style="color: #4663ac;" href="index.html#services" onclick="toggleMenu();">Services</a></li>
-            <li><a style="color: #4663ac;" href="index.html#ordering-process" onclick="toggleMenu();">Workflow Overview</a></li>
-        <li><a style="color: #4663ac;" href="#blog" onclick="toggleMenu();">Insights & News</a></li>
+            <li><a href="index.html#about" onclick="toggleMenu();">Why Choose Us</a></li>
+            <li><a href="index.html#services" onclick="toggleMenu();">Services</a></li>
+            <li><a href="index.html#ordering-process" onclick="toggleMenu();">Workflow Overview</a></li>
+        <li><a href="#blog" onclick="toggleMenu();">Insights & News</a></li>
 
-            <li><a style="color: #4663ac;" href="index.html#contact" onclick="toggleMenu();">Contact</a></li>
+            <li><a href="index.html#contact" onclick="toggleMenu();">Contact</a></li>
             
         </ul>
 
@@ -87,7 +99,7 @@
     </div>
 </section>
 <section class="back-to-home" style="text-align: center; margin-top: 20px;">
-    <p><a href="index.html" style="text-decoration: underline; color: #4663ac	;">Back to Home page</a></p>
+    <p><a href="index.html" style="text-decoration: underline; color: #f0f0f0	;">Back to Home page</a></p>
 </section>
 
 
@@ -98,7 +110,7 @@
         <h2 style="color: #d2deeb;">GET IN TOUCH</h2>
         <p style="color: #d2deeb;">Feel free to share some details about your project</p>
     </div>
-    <div class="content"  style= "background-color: #404655;">
+    <div class="content">
         <div class="formBx">
             <form id="contactForm" method="post" action="https://lizard-form-37eac8e3b553.herokuapp.com/send-email">
                 <div class="inputGroup">

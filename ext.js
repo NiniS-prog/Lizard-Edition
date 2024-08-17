@@ -34,16 +34,51 @@ function updateActiveMenu() {
 window.addEventListener("scroll", updateActiveMenu);
 window.addEventListener("load", updateActiveMenu);
 
-// ext2.js (Accessibility Button)
 document.addEventListener('DOMContentLoaded', function() {
     const button = document.getElementById('accessibility-button');
+    const modal = document.getElementById('accessibility-modal');
+    const closeModal = document.getElementById('close-modal');
+    const toggleHighContrast = document.getElementById('toggle-high-contrast');
+    const increaseFontSize = document.getElementById('increase-font-size');
+    const decreaseFontSize = document.getElementById('decrease-font-size');
+
     if (button) {
         button.addEventListener('click', function() {
-            console.log('Accessibility button clicked');
-            document.body.classList.toggle('accessibility-mode');
-            console.log('Accessibility mode:', document.body.classList.contains('accessibility-mode'));
+            modal.style.display = 'block';
         });
     } else {
         console.error('Accessibility button not found');
+    }
+
+    if (closeModal) {
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+    }
+
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    if (toggleHighContrast) {
+        toggleHighContrast.addEventListener('click', function() {
+            document.body.classList.toggle('accessibility-mode');
+        });
+    }
+
+    if (increaseFontSize) {
+        increaseFontSize.addEventListener('click', function() {
+            document.body.classList.add('large-font-size');
+            document.body.classList.remove('small-font-size');
+        });
+    }
+
+    if (decreaseFontSize) {
+        decreaseFontSize.addEventListener('click', function() {
+            document.body.classList.add('small-font-size');
+            document.body.classList.remove('large-font-size');
+        });
     }
 });

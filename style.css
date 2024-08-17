@@ -81,6 +81,11 @@ body {
     background-color: #e0e0e0;
 }
 
+/* Default title color */
+#accessibility-modal-title {
+    color: #000000; /* Black color for the title */
+}
+
 /* High contrast mode */
 .accessibility-mode {
     background-color: #ffffff;
@@ -98,14 +103,15 @@ body {
 .accessibility-mode h4,
 .accessibility-mode h5,
 .accessibility-mode h6,
-.accessibility-mode p {
+.accessibility-mode p,
+.accessibility-mode #accessibility-modal-title {
     color: #000000 !important;
 }
 
 /* Modal content in high contrast mode */
 .accessibility-mode .accessibility-modal-content {
     background-color: #ffffff;
-    color: #000000;
+    color: #000000 !important;
 }
 
 /* Font size adjustments */
@@ -127,11 +133,6 @@ body.small-font-size h4,
 body.small-font-size h5,
 body.small-font-size h6 {
     font-size: smaller;
-}
-
-/* Accessibility title color */
-.accessibility-title {
-    color: #000000; /* Black color for the title */
 }
 
 .content {

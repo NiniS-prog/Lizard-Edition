@@ -646,16 +646,23 @@ img {
     color: #f0f4f0; /* Content text color */
 }
 
+/* Base styling for the accordion items */
+.services .content .accordion-item {
+    padding: 20px; /* Default padding */
+}
+
 /* Media Queries for responsiveness */
 @media (max-width: 624px) {
     .services .content .accordion-item {
         width: calc(50% - 20px); /* 2 items in a row on medium screens */
+        padding: 10px; /* Adjust padding for medium screens if needed */
     }
 }
 
 @media (max-width: 399px) {
     .services .content .accordion-item {
         width: calc(100% - 20px); /* 1 item per row on small screens */
+        padding: 10px; /* Adjust padding for small screens if needed */
     }
 }
 

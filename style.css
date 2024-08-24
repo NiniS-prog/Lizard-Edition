@@ -175,7 +175,6 @@ header {
     align-items: center; 
     justify-content: space-between; 
     box-sizing: border-box; 
-    box-shadow: 0 5px 20px #007bff; 
 
     background: transparent; 
     transition: background 0.5s, padding 0.5s, box-shadow 0.5s;

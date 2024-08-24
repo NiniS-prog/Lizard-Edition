@@ -165,32 +165,45 @@ body.small-font-size h6 {
 
 
 /* General header styles */
+.toggle {
+    cursor: pointer;
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+    background-image: url('path/to/your/toggle-image.png'); /* Replace with your toggle image path */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* General header styles */
+/* General header styles */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 30px; 
+    padding: 10px 30px;
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    box-sizing: border-box; 
-
-    background: transparent; 
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background: transparent;
     transition: background 0.5s, padding 0.5s, box-shadow 0.5s;
-    z-index: 2;
+    z-index: 3; /* Ensure header is on top */
 }
 
 /* Logo container styles */
 header .logo-container {
     display: flex;
-    align-items: center; 
+    align-items: center;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    z-index: 1; /* Ensure logo container is below header */
 }
 
 /* Logo image styles */
 header .logo img {
-    width: 120px; 
-    height: auto; 
+    width: 120px; /* Adjust logo size as needed */
+    height: auto;
     margin-left: 25px;
 }
 
@@ -200,20 +213,19 @@ header .menu {
     list-style: none;
     padding: 20px;
     margin: 0;
-    margin-right: auto; 
-    
+    margin-right: auto;
 }
 
 /* List item styles */
 header .menu li {
-    margin: 0 8px; 
+    margin: 0 8px;
 }
 
 /* Link styles */
 header .menu li a {
     display: inline-block;
-    padding: 8px 15px; 
-    color: #f0f0f0; 
+    padding: 8px 15px;
+    color: #f0f0f0;
     text-decoration: none;
     transition: color 0.3s, background 0.3s;
     position: relative;
@@ -221,7 +233,7 @@ header .menu li a {
 
 /* Active menu item */
 header .menu li a.active {
-    color: #ff6f9c; 
+    color: #ff6f9c;
 }
 
 /* Hover effect */
@@ -232,10 +244,10 @@ header .menu li a:hover {
 header .menu li a::after {
     content: '';
     position: absolute;
-    bottom: -2px; 
+    bottom: -2px;
     left: 0;
     width: 100%;
-    height: 2px; 
+    height: 2px;
     background-color: #ff6f9c;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
@@ -248,61 +260,65 @@ header .menu li a.active::after {
 
 /* Sticky Header styles */
 header.sticky {
-    background: #000000; 
-    box-shadow: 0 5px 20px #007bff; 
-}
-
-/* Sticky header link color */
-header.sticky .menu li a {
-    color: #f0f0f0; 
-}
-
-header.sticky .menu li a:hover {
-    color: #ff6f9c; 
+    background: #000000;
+    box-shadow: 0 5px 20px #007bff;
+    z-index: 4; /* Ensure sticky header is above other elements */
 }
 
 /* Mobile view adjustments */
 @media (max-width: 768px) {
     header {
-        flex-direction: row; 
-        align-items: center; 
-        padding: 10px 20px; 
-        height: 60px; 
-        box-shadow: none; 
-        transition: height 0.3s ease, padding 0.3s ease; 
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 20px;
+        height: 120px;
+        box-shadow: none;
+        transition: height 0.3s ease, padding 0.3s ease;
     }
 
     .logo-container {
-        margin-right: 15px; 
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        flex: 1; 
-        position: relative; 
-        transition: opacity 0.3s ease, transform 0.3s ease; 
-        margin-top: 30px; 
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        position: relative;
+        margin-top: 30px;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 2; /* Ensure logo container is below header */
     }
 
     .logo img {
-        width: 80px; 
-        height: auto; 
+        width: 80px; /* Adjust logo size for mobile */
+        height: auto;
     }
 
     .toggle {
         display: flex;
-        align-items: center; 
-        justify-content: center; 
-        margin-left: auto; 
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        z-index: 5; /* Ensure toggle is above header and logo */
     }
 
     .menu {
         display: flex;
-        flex-direction: column; 
-        margin: 0; 
-        padding: 0; 
-        width: 100%; 
-        align-items: center; 
-        transition: opacity 0.3s ease; 
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        align-items: center;
+        transition: opacity 0.3s ease;
+        position: fixed;
+        top: 60px; /* Adjust to ensure it appears below header */
+        left: -100%;
+        height: 100vh;
+        background: #000000;
+        z-index: 3; /* Ensure menu is below toggle but above other elements */
+    }
+
+    .menu.active {
+        left: 0; /* Slide in the menu */
     }
 
     .menu li {
@@ -311,20 +327,22 @@ header.sticky .menu li a:hover {
 
     /* Shrink header height and center logo on scroll (for mobile) */
     header.shrink {
-        padding: 5px 20px; 
-        height: 50px; 
-        box-shadow: none; 
+        padding: 5px 20px;
+        height: 50px;
+        box-shadow: none;
     }
 
     header.shrink .logo-container {
         opacity: 0; /* Hide logo smoothly */
-        transform: translateY(-22px); 
+        transform: translateY(-22px);
     }
 
-    header.shrink .menu {
-        margin-top: 0; 
+    /* Hide logo when toggle is active */
+    .menu-toggle:checked ~ .logo-container {
+        opacity: 0; /* Hide logo when menu is toggled */
     }
 }
+
 
 
 
@@ -1149,19 +1167,19 @@ footer.copyright{
         background: url(images/menu.png) center center no-repeat;
         background-size: 25px 25px;
         cursor: pointer;
-        transition: background-size 0.3s ease; /* Smooth transition for background-size */
+        transition: background-size 0.3s ease; 
     }
     
 /* Active state styles for the toggle menu button */
 .toggle.active {
     background: url(images/close.png) no-repeat;
-    background-size: 25px 25px; /* Adjust size if needed */
-    background-position: center; /* Center the image */
-    position: absolute; /* Ensure it’s positioned relative to the header */
-    top: 5px; /* Adjust this value to move the image up */
-    left: 10px; /* Position the image on the left side */
-    width: 40px; /* Ensure the width matches the original size */
-    height: 40px; /* Ensure the height matches the original size */
+    background-size: 25px 25px;
+    background-position: center; 
+    position: absolute; 
+    top: 5px; 
+    left: 10px; 
+    width: 40px; 
+    height: 40px; 
 }
     
 

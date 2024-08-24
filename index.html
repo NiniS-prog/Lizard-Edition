@@ -37,7 +37,7 @@
 <!-- Creating Menu Tabs & Logo at Top Using HTML -->
 <header>
     <div class="logo-container">
-        <a href="images/LOGOME.png" class="logo">
+        <a href="#home" class="logo">
             <img src="images/LOGOME.png" alt="Logo">
         </a>
     </div>
@@ -604,8 +604,29 @@ web development, design, and SEO optimization strategies.</h3>
         });
     });
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.querySelector('.toggle');
+    const menu = document.querySelector('.menu.mobile-menu');
+    const logoContainer = document.querySelector('.logo-container');
 
+    if (toggleButton && menu && logoContainer) {
+        toggleButton.addEventListener('click', function() {
+            if (menu.classList.contains('active')) {
+                menu.classList.remove('active');
+                logoContainer.style.opacity = '1'; // Show the logo
+                toggleButton.classList.remove('active');
+            } else {
+                menu.classList.add('active');
+                logoContainer.style.opacity = '0'; // Hide the logo
+                toggleButton.classList.add('active');
+            }
+        });
+    } else {
+        console.error('Error: One or more elements are missing.');
+    }
+});
 
-
+</script>
 </body>
 </html>

@@ -267,38 +267,38 @@ header.sticky .menu li a:hover {
     header {
         flex-direction: column;
         align-items: center;
-        padding: 5px 20px; /* Reduced padding for mobile */
-        height: auto; /* Ensure height adjusts automatically */
-        box-shadow: none; /* Optional: Remove shadow for mobile */
+        padding: 5px 20px; 
+        height: auto; 
+        box-shadow: none; 
     }
 
     .logo-container {
-        margin-bottom: 5px; /* Adjust space below the logo */
-        transition: opacity 0.5s, transform 0.5s; /* Smooth transition for hiding/showing */
+        margin-bottom: 5px; 
+        transition: opacity 0.5s, transform 0.5s; 
     }
 
     .menu {
         display: flex;
         flex-direction: column; 
         margin: 0; 
-        padding: 0; /* Adjust or remove padding as needed */
-        width: 100%; /* Ensure menu takes full width */
-        align-items: center; /* Center menu items */
+        padding: 0; 
+        width: 100%; 
+        align-items: center; 
     }
 
     .menu li {
-        margin: 5px 0; /* Adjust space between menu items */
+        margin: 5px 0; 
     }
 
     /* Hide logo and reduce header height on scroll (for mobile) */
     header.hide-logo-on-scroll {
-        padding: 5px 20px; /* Adjusted padding for scrolled state */
-        height: 50px; /* Adjust height to match toggle button */
+        padding: 5px 20px; 
+        height: 50px; 
     }
 
     header.hide-logo-on-scroll .logo-container {
         opacity: 0; /* Hide logo */
-        transform: translateY(-10px); /* Move logo up slightly */
+        transform: translateY(-10px); 
     }
 }
 

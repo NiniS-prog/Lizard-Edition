@@ -265,44 +265,67 @@ header.sticky .menu li a:hover {
 /* Mobile view adjustments */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        align-items: center;
-        padding: 5px 20px; 
-        height: auto; 
-        box-shadow: none; 
+        flex-direction: row; /* Align items in a row */
+        align-items: center; /* Center items vertically */
+        padding: 10px 20px; /* Reduced padding for mobile */
+        height: 60px; /* Adjust height for mobile */
+        box-shadow: none; /* Optional: Remove shadow for mobile */
+        transition: height 0.3s ease, padding 0.3s ease; /* Smooth transition for height and padding */
     }
 
     .logo-container {
-        margin-bottom: 5px; 
-        transition: opacity 0.5s, transform 0.5s; 
+        margin-right: 15px; /* Space between logo and toggle */
+        display: flex; /* Make logo-container a flex container */
+        align-items: center; /* Align logo vertically with toggle */
+        justify-content: center; /* Center logo horizontally */
+        flex: 1; /* Allow logo-container to take available space */
+        position: relative; /* For logo position adjustment */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+        margin-top: 30px; /* Extra space to ensure logo is not cut off */
+    }
+
+    .logo img {
+        width: 80px; /* Adjust logo size for mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .toggle {
+        display: flex;
+        align-items: center; /* Align toggle vertically */
+        justify-content: center; /* Center toggle content */
+        margin-left: auto; /* Push toggle to the right */
     }
 
     .menu {
         display: flex;
         flex-direction: column; 
         margin: 0; 
-        padding: 0; 
-        width: 100%; 
-        align-items: center; 
+        padding: 0; /* Adjust or remove padding as needed */
+        width: 100%; /* Ensure menu takes full width */
+        align-items: center; /* Center menu items */
+        transition: opacity 0.3s ease; /* Smooth transition for menu visibility */
     }
 
     .menu li {
-        margin: 5px 0; 
+        margin: 5px 0; /* Adjust space between menu items */
     }
 
-    /* Hide logo and reduce header height on scroll (for mobile) */
-    header.hide-logo-on-scroll {
-        padding: 5px 20px; 
-        height: 50px; 
+    /* Shrink header height and center logo on scroll (for mobile) */
+    header.shrink {
+        padding: 5px 20px; /* Adjusted padding for scrolled state */
+        height: 50px; /* Reduced height when scrolled */
+        box-shadow: none; /* Optional: remove shadow when scrolled */
     }
 
-    header.hide-logo-on-scroll .logo-container {
-        opacity: 0; /* Hide logo */
-        transform: translateY(-10px); 
+    header.shrink .logo-container {
+        opacity: 0; /* Hide logo smoothly */
+        transform: translateY(-22px); /* Adjusted for extra space */
+    }
+
+    header.shrink .menu {
+        margin-top: 0; /* Remove space between menu and top of header */
     }
 }
-
-
 
 
 

@@ -273,6 +273,12 @@ header.sticky .menu li a:hover {
 
     .logo-container {
         margin-bottom: 10px; 
+        margin-right: 5px; /* Move logo 5px to the right */
+    }
+
+    .logo img {
+        width: 100px; /* Reduce logo size for mobile */
+        height: auto; /* Maintain aspect ratio */
     }
 
     .menu {

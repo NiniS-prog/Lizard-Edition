@@ -265,65 +265,65 @@ header.sticky .menu li a:hover {
 /* Mobile view adjustments */
 @media (max-width: 768px) {
     header {
-        flex-direction: row; /* Align items in a row */
-        align-items: center; /* Center items vertically */
-        padding: 10px 20px; /* Reduced padding for mobile */
-        height: 60px; /* Adjust height for mobile */
-        box-shadow: none; /* Optional: Remove shadow for mobile */
-        transition: height 0.3s ease, padding 0.3s ease; /* Smooth transition for height and padding */
+        flex-direction: row; 
+        align-items: center; 
+        padding: 10px 20px; 
+        height: 60px; 
+        box-shadow: none; 
+        transition: height 0.3s ease, padding 0.3s ease; 
     }
 
     .logo-container {
-        margin-right: 15px; /* Space between logo and toggle */
-        display: flex; /* Make logo-container a flex container */
-        align-items: center; /* Align logo vertically with toggle */
-        justify-content: center; /* Center logo horizontally */
-        flex: 1; /* Allow logo-container to take available space */
-        position: relative; /* For logo position adjustment */
-        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
-        margin-top: 30px; /* Extra space to ensure logo is not cut off */
+        margin-right: 15px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        flex: 1; 
+        position: relative; 
+        transition: opacity 0.3s ease, transform 0.3s ease; 
+        margin-top: 30px; 
     }
 
     .logo img {
-        width: 80px; /* Adjust logo size for mobile */
-        height: auto; /* Maintain aspect ratio */
+        width: 80px; 
+        height: auto; 
     }
 
     .toggle {
         display: flex;
-        align-items: center; /* Align toggle vertically */
-        justify-content: center; /* Center toggle content */
-        margin-left: auto; /* Push toggle to the right */
+        align-items: center; 
+        justify-content: center; 
+        margin-left: auto; 
     }
 
     .menu {
         display: flex;
         flex-direction: column; 
         margin: 0; 
-        padding: 0; /* Adjust or remove padding as needed */
-        width: 100%; /* Ensure menu takes full width */
-        align-items: center; /* Center menu items */
-        transition: opacity 0.3s ease; /* Smooth transition for menu visibility */
+        padding: 0; 
+        width: 100%; 
+        align-items: center; 
+        transition: opacity 0.3s ease; 
     }
 
     .menu li {
-        margin: 5px 0; /* Adjust space between menu items */
+        margin: 5px 0;
     }
 
     /* Shrink header height and center logo on scroll (for mobile) */
     header.shrink {
-        padding: 5px 20px; /* Adjusted padding for scrolled state */
-        height: 50px; /* Reduced height when scrolled */
-        box-shadow: none; /* Optional: remove shadow when scrolled */
+        padding: 5px 20px; 
+        height: 50px; 
+        box-shadow: none; 
     }
 
     header.shrink .logo-container {
         opacity: 0; /* Hide logo smoothly */
-        transform: translateY(-22px); /* Adjusted for extra space */
+        transform: translateY(-22px); 
     }
 
     header.shrink .menu {
-        margin-top: 0; /* Remove space between menu and top of header */
+        margin-top: 0; 
     }
 }
 

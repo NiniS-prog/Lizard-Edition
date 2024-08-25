@@ -176,7 +176,6 @@ body.small-font-size h6 {
 }
 
 /* General header styles */
-/* General header styles */
 header {
     position: fixed;
     top: 0;
@@ -283,7 +282,7 @@ header.sticky {
         justify-content: center;
         flex: 1;
         position: relative;
-        margin-top: 30px;
+        margin-top: 0x;
         transition: opacity 0.3s ease, transform 0.3s ease;
         z-index: 2; /* Ensure logo container is below header */
     }

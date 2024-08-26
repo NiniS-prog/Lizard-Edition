@@ -248,7 +248,7 @@ header .menu li a.active::after {
 
 /* Sticky Header styles */
 header.sticky {
-    background: #000000;
+    background: #000000bd;
     box-shadow: 0 5px 20px #007bff;
     z-index: 4; /* Ensure sticky header is above other elements */
 }
@@ -315,9 +315,9 @@ header.sticky {
     }
 
     header.shrink {
-        padding: 5px 20px;
-        height: 50px;
-        box-shadow: none;
+        padding: 2px 10px !important; /* Use !important to override other styles */
+        height: 40px !important;
+            box-shadow: none;
     }
 
     header.shrink .logo-container {

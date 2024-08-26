@@ -271,7 +271,6 @@ header.sticky {
         justify-content: center;
         flex: 1;
         position: relative;
-        margin-top: 0;
         transition: opacity 0.3s ease, transform 0.3s ease;
         z-index: 2;
     }
@@ -279,7 +278,7 @@ header.sticky {
     .logo img {
         width: 80px; /* Adjust logo size for mobile */
         height: auto;
-        content: url('images/3.png'); /* Add the path to your mobile-specific logo */
+        content: url('images/3.png'); /* Ensure path to mobile-specific logo is correct */
     }
 
     .toggle {
@@ -299,7 +298,7 @@ header.sticky {
         align-items: center;
         transition: opacity 0.3s ease;
         position: fixed;
-        top: 60px;
+        top: 60px; /* Adjust if necessary */
         left: -100%;
         height: 100vh;
         background: #000000;
@@ -315,9 +314,9 @@ header.sticky {
     }
 
     header.shrink {
-        padding: 2px 10px !important; /* Use !important to override other styles */
-        height: 40px !important;
-            box-shadow: none;
+        padding: 2px 10px; /* Removed !important */
+        height: 40px; /* Adjust as needed */
+        box-shadow: none;
     }
 
     header.shrink .logo-container {
@@ -1117,12 +1116,12 @@ footer.copyright{
         position:fixed;
         /*background:#f0f0f0;*/
         display:block;
-        top:75px;
+        top:85px;
         left:-100%;
         padding:100px 50px;
         width:100%;
         height:100vh;
-        border-top:1px solid #c8d9ed		;
+        border-top:1px solid #c8d9ed;
         text-align:center;
         transition:0.5s;
         -webkit-transition:0.5s;
@@ -1130,24 +1129,6 @@ footer.copyright{
         -ms-transition:0.5s;
         -o-transition:0.5s;
 }
-    header .menu.active{
-
-        position: fixed;
-        top: 38px;
-        left: 0;
-        padding: 100px 50px;
-        display: block;
-        text-align: center;
-        width: 100%;
-        height: 100vh;
-        background: #000000;
-    }
-    header ul li a{
-        font-size: 20px;
-        font-weight: 400;
-        color:#f0f0f0	;
-        margin:10px 0;
-    }
     .toggle {
         width: 40px;
         height: 40px;
@@ -1166,7 +1147,7 @@ footer.copyright{
     top: 5px; 
     left: 10px; 
     width: 40px; 
-    height: 40px; 
+    height: 60px; 
 }
     
 

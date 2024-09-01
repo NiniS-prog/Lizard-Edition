@@ -1161,7 +1161,7 @@ footer.copyright{
             transform: none; /* Remove any transformation */
             padding: 10px; /* Adjust padding as needed */
             margin: 0; /* Ensure no extra margin */
-            z-index: 3; /* Ensure it’s above other elements */
+            z-index: 10; /* Ensure it’s above other elements */
         }
     }
 

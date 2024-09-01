@@ -185,7 +185,7 @@ header .logo-container {
     display: flex;
     align-items: center;
     transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-    z-index: 1002; /* Ensure logo container is below header */
+    z-index: 1001; /* Ensure logo container is below header */
 }
 
 /* Logo image styles */
@@ -272,7 +272,7 @@ header.sticky {
         flex: 1;
         position: relative;
         transition: opacity 0.3s ease, transform 0.3s ease;
-        z-index: 1002;
+        z-index: 1001;
     }
 
     .logo img {

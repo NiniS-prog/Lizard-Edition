@@ -202,6 +202,7 @@ header .menu {
     padding: 20px;
     margin: 0;
     margin-right: auto;
+    border-top: 1px solid #c8d9ed; /* Default border-top for non-desktop view */
 }
 
 /* List item styles */
@@ -225,22 +226,6 @@ header .menu li a.active {
 }
 
 /* Hover effect */
-header .menu li a:hover {
-}
-
-/* Underline effect */
-header .menu li a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #ff6f9c;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-
 header .menu li a:hover::after,
 header .menu li a.active::after {
     transform: scaleX(1);
@@ -250,7 +235,7 @@ header .menu li a.active::after {
 header.sticky {
     background: #000000bd;
     box-shadow: 0 5px 20px #007bff;
-    z-index:15 ; /* Ensure sticky header is above other elements */
+    z-index: 15; /* Ensure sticky header is above other elements */
 }
 
 /* Mobile view adjustments */
@@ -282,11 +267,24 @@ header.sticky {
     }
 
     .toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: auto;
-        z-index: 12;
+        width: 40px;
+        height: 40px;
+        background: url(images/menu.png) center center no-repeat;
+        background-size: 25px 25px;
+        cursor: pointer;
+        transition: background-size 0.3s ease;
+        z-index: 12; /* Ensure toggle is above menu */
+        position: absolute; /* Ensure correct positioning relative to header */
+        top: 15px; /* Adjust top position as needed */
+        left: 15px; /* Adjust left position as needed */
+    }
+
+    .toggle.active {
+        background: url(images/close.png) no-repeat;
+        background-size: 25px 25px;
+        background-position: center;
+        width: 40px;
+        height: 40px; /* Ensure consistent height for active state */
     }
 
     .menu {
@@ -302,7 +300,7 @@ header.sticky {
         left: -100%;
         height: 100vh;
         background: #000000;
-        z-index: 13;
+        z-index: 13; /* Ensure menu is on top */
     }
 
     .menu.active {
@@ -314,18 +312,21 @@ header.sticky {
     }
 
     header.shrink {
-        padding: 2px 10px; /* Removed !important */
-        height: 40px; /* Adjust as needed */
+        padding: 2px 10px;
+        height: 40px;
         box-shadow: none;
     }
 
     header.shrink .logo-container {
-        opacity: 0; /* Hide logo smoothly */
+        opacity: 0;
         transform: translateY(-22px);
     }
+}
 
-    .menu-toggle:checked ~ .logo-container {
-        opacity: 0; /* Hide logo when menu is toggled */
+/* Desktop view adjustments */
+@media (min-width: 769px) {
+    header .menu {
+        border-top: none; /* Remove border-top for desktop view */
     }
 }
 
@@ -1103,67 +1104,7 @@ footer.copyright{
 }
 @media (max-width: 991px)
 {
-    header,
-    header.sticky{
-        padding:30px 60px;
-		z-index:10;
-    }
-    header .menu{
-        display:none;
-        z-index:9;
-    }
-    header .menu{
-        position:fixed;
-        /*background:#f0f0f0;*/
-        display:block;
-        top:85px;
-        left:-100%;
-        padding:100px 50px;
-        width:100%;
-        height:100vh;
-        border-top:1px solid #c8d9ed;
-        text-align:center;
-        transition:0.5s;
-        -webkit-transition:0.5s;
-        -moz-transition:0.5s;
-        -ms-transition:0.5s;
-        -o-transition:0.5s;
-}
-    .toggle {
-        width: 40px;
-        height: 40px;
-        background: url(images/menu.png) center center no-repeat;
-        background-size: 25px 25px;
-        cursor: pointer;
-        transition: background-size 0.3s ease; 
-    }
-    
-/* Active state styles for the toggle menu button */
-.toggle.active {
-    background: url(images/close.png) no-repeat;
-    background-size: 25px 25px;
-    background-position: center; 
-    position: absolute; 
-    top: 5px; 
-    left: 10px; 
-    width: 40px; 
-    height: 60px; 
-}
-    
 
-    
-    /* Mobile menu toggle adjustment */
-    @media (max-width: 768px) {
-        .toggle {
-            position: absolute; /* Ensure it’s positioned relative to the header */
-            top: 20px; /* Adjust top position as needed */
-            left: 20px; /* Set left position to move toggle to the left side */
-            transform: none; /* Remove any transformation */
-            padding: 10px; /* Adjust padding as needed */
-            margin: 0; /* Ensure no extra margin */
-            z-index: 12; /* Ensure it’s above other elements */
-        }
-    }
 
     
     section {

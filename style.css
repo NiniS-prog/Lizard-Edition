@@ -354,20 +354,30 @@ header.sticky {
 section{
     padding:80px;
 }
+/* General banner styles */
 .banner {
     position: relative;
     min-height: 100vh;
     background: #000000;
-    /*background: url(images/myPic21.png);*/
+    /* Uncomment this line if you want a background image */
+    /* background: url(images/myPic21.png); */
     background-size: cover;
-    background-position: right;
+    background-position: left; /* Align to the left on desktop */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px; 
+    padding: 100px 50px 100px;
     box-sizing: border-box;
 }
 
+/* Content aligned to the left on desktop */
+.textBx {
+    max-width: 600px; /* Set a maximum width */
+    margin-right: auto; /* Pushes content to the left on desktop */
+    text-align: left;
+}
+
+/* Banner text styles */
 .banner h2 {
     font-size: 2.5em;
     background: linear-gradient(45deg, #00f5d4, #b9a0e2, #ff6f9c);
@@ -376,34 +386,33 @@ section{
     -webkit-text-fill-color: transparent;
     font-weight: 400;
     line-height: 1.5em;
-    transition: transform 0.3s, text-shadow 0.3s; 
+    transition: transform 0.3s, text-shadow 0.3s;
+    margin-bottom: 20px;
 }
 
-.banner h2 span {
-    font-size: 1.2em;
-    font-weight: 400;
-    color: #f0f0f0;
+.banner h2:hover {
+    transform: rotate(-5deg) scale(1.1) translateY(-10px);
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .banner h3 {
     color: #f0f0f0;
     font-size: 1.5em;
     font-weight: 500;
+    margin: 10px 0;
+    text-align: left;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
-/* Rainbow gradient effect on hover */
-.banner h2:hover {
-    color: #ff7e5f; 
-    transform: rotate(-5deg) scale(1.1) translateY(-10px); 
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+.banner h3:hover {
+    color: #ff6f9c;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Button styles 
+/* Button styles */
 .btn {
-    position: relative;
-    background: rgba(200, 217, 237, 0.8); 
-    color: #4663ac; 
-    display: inline-block;
+    background: rgba(200, 217, 237, 0.8);
+    color: #4663ac;
     margin-top: 20px;
     padding: 12px 36px;
     font-size: 18px;
@@ -411,75 +420,60 @@ section{
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
-    
 
-/* Hover effect for button 
+/* Button hover effect */
 .btn:hover {
-    background: rgba(255, 111, 156, 0.8); 
+    background: rgba(255, 111, 156, 0.8);
     color: #fff;
     transform: scale(1.1) rotate(3deg);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-*/
-
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .banner {
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 20px; 
-        background-position: center; 
-        text-align: center; 
+        flex-direction: column; /* Stack content vertically */
+        padding: 150px 20px 100px;
+        background-position: center; /* Center background on mobile */
+        text-align: center; /* Center text */
+        justify-content: center; /* Center items */
+        align-items: center; /* Center items vertically */
+    }
+
+    .textBx {
+        margin: 0 auto; /* Center content */
+        text-align: center; /* Center text */
     }
 
     .banner h2 {
-        font-size: 2em; 
-        line-height: 1.2em; 
-        margin-bottom: 20px; 
+        font-size: 2em; /* Adjust font size for mobile */
+        line-height: 1.2em;
     }
 
     .banner h3 {
-        font-size: 1.5em; /* Adjust font size for mobile */
+        font-size: 1.2em; /* Adjust font size for mobile */
+        text-align: center;
     }
 
     .btn {
-        padding: 14px 30px; /* Adjust padding for mobile */
+        padding: 10px 20px; /* Adjust button padding for mobile */
         font-size: 16px; /* Adjust font size */
     }
 }
 
-    .heading h2 {
-        font-size: 2em; /* Increased font size */
+/* Smaller devices */
+@media (max-width: 480px) {
+    .banner h2 {
+        font-size: 1.5em; /* Smaller font size */
     }
 
-    .heading p {
-        font-size: 16px; /* Increased font size */
+    .banner h3 {
+        font-size: 1em;
     }
-
-    .content, .contentblog {
-        padding: 20px; /* Adjusted padding */
-        font-size: 18px; /* Increased font size */
-    }
-
-
-.banner h3 {
-    color: #f0f0f0;
-    font-size: 2em; 
-    font-weight: 500;
-    margin: 10px 0; 
-    text-align: center; 
-    transition: color 0.3s, text-shadow 0.3s; 
-}
-
-/* Hover effect for h3 */
-.banner h3:hover {
-    color: #ff6f9c; 
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
 }
 
 /* Creating About Layout */
@@ -1127,29 +1121,8 @@ footer.copyright{
     section {
         padding: 100px 30px;
     }
-    .banner{
-        padding:150px 50px 100px;
-    }
-    .banner h2{
-        font-size: 1.5em;
-    }
-    .banner h3{
-        font-size: 1em;;
-    }
-    .textBx{
-        position:relative;
-        top:170px;
-    }
-    .btn{
-        margin-top: 10px;
-        padding: 10px 20px;
-        font-size: 16px;
-        border-radius:50px;
-        -webkit-border-radius:50px;
-        -moz-border-radius:50px;
-        -ms-border-radius:50px;
-        -o-border-radius:50px;
-    }
+
+
     .content{
         flex-direction: column;
     }

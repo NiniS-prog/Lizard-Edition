@@ -730,6 +730,8 @@ img {
     padding: 20px; /* Default padding */
 }
 
+/* Media Queries for responsiveness */
+
 /* For tablets and small devices */
 @media (max-width: 768px) {
     .services .content {
@@ -741,12 +743,6 @@ img {
     .services .content .accordion-item {
         width: calc(50% - 20px);
         padding: 10px;
-    }
-
-    .services .content .servicesBx {
-        flex-basis: calc(50% - 20px);
-        max-width: calc(50% - 20px);
-        margin: 10px;
     }
 }
 
@@ -764,6 +760,7 @@ img {
         padding: 10px;
     }
 }
+
 
 /* Moving social icons under contact form in mobile view */
 @media (max-width: 768px) {

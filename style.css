@@ -343,6 +343,12 @@ header.sticky {
 }
 
 
+
+
+/* Creating Services Layout */
+section{
+    padding:80px;
+}
 /* General banner styles */
 .banner {
     position: relative;
@@ -1114,6 +1120,9 @@ footer.copyright{
     .contentBx h2{
         font-size: 20px;
         font-weight: 300;
+    }
+    .services .content .servicesBx{
+        margin:10px;
     }
     .contactInfo{
         margin:10px 0;

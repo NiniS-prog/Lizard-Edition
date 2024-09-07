@@ -345,10 +345,7 @@ header.sticky {
 
 
 
-/* Creating Services Layout */
-section{
-    padding:80px;
-}
+
 /* General banner styles */
 .banner {
     position: relative;
@@ -684,15 +681,12 @@ img {
     margin: 10px 0;
     text-align: center;
     border-radius: 20px;
-        box-shadow: 0 0 10px rgb(255, 255, 255);
-
+    box-shadow: 0 0 10px rgb(255, 255, 255);
     overflow: hidden;
     position: relative;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     border: 1px solid #007bff; /* Border around the item */
-    box-shadow: 0 0 10px rgb(255, 255, 255);
-
     background: #000000; /* Background color for the item */
 }
 
@@ -721,6 +715,8 @@ img {
     padding: 20px;
     background-color: transparent; /* Remove background color */
     color: #007bff; /* Text color */
+    gap: 10px; /* Add spacing between elements */
+
 }
 
 /* Content styling */
@@ -748,6 +744,7 @@ img {
         padding: 10px; 
     }
 }
+
 /* Make icons section responsive for phone view */
 @media (max-width: 768px) {
     .services .content {
@@ -761,25 +758,8 @@ img {
         max-width: calc(50% - 20px); 
         margin: 10px; 
     }
-    }
-    
-    
-    /* Make icons section responsive for phone view */
-    @media (max-width: 768px) {
-        .services .content {
-            flex-direction: row; 
-            flex-wrap: wrap; 
-            justify-content: space-between; 
-        }
-    
-        .services .content .servicesBx {
-            flex-basis: calc(50% - 20px);
-            max-width: calc(50% - 20px); 
-            margin: 10px; 
-        }
-    }
-    
-            
+}
+
 
 /* Moving social icons under contact form in mobile view */
 @media (max-width: 768px) {

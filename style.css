@@ -603,48 +603,7 @@ section{
     }
 
 
-/* Additional styles */
-.proPic {
-    width: 300px;
-    height: 300px;
-    border-top-left-radius: 30%;
-    border-bottom-right-radius: 30%;
-}
 
-.heading.bottom {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-}
-
-.btn.round {
-    border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
-}
-
-.info {
-    display: flex;
-    justify-content: space-between;
-}
-
-.bt {
-    margin-top: 20px;
-}
-
-/* Style for the image to make it responsive and gentle */
-img {
-    width: 100%;
-    height: auto;
-    max-height: 300px; /* Adjust this value to make the image less high */
-    object-fit: cover; /* Ensure the image covers the area gracefully */
-    border-radius: 8px; /* Optional: Add rounded corners for a softer look */
-    margin-bottom: 20px; /* Optional: Add space below the image */
-}
-    
 /* Basic styles for services section */
 .services {
     border-top: 1px solid #c8d9ed;

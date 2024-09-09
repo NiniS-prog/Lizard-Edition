@@ -662,24 +662,25 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-between; /* Ensure items spread evenly */
+    box-sizing: border-box; /* Include padding/borders in width calculation */
 }
 
 /* Styling for accordion items */
 .services .content .accordion-item {
     width: calc(33.33% - 20px); /* 3 items in a row on larger screens */
+    min-width: 250px; /* Prevent items from getting too small */
     margin: 10px 0;
     text-align: center;
     border-radius: 20px;
-        box-shadow: 0 0 10px rgb(255, 255, 255);
-
+    box-shadow: 0 0 10px rgb(255, 255, 255);
     overflow: hidden;
     position: relative;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     border: 1px solid #007bff; /* Border around the item */
-    box-shadow: 0 0 10px rgb(255, 255, 255);
-
     background: #000000; /* Background color for the item */
+    box-sizing: border-box; /* Ensure padding and borders are counted in width */
 }
 
 /* Rainbow gradient effect and zoom on hover */
@@ -723,18 +724,17 @@ img {
 /* Media Queries for responsiveness */
 @media (max-width: 624px) {
     .services .content .accordion-item {
-        width: calc(50% - 20px); 
+        width: calc(50% - 20px); /* 2 items per row on smaller screens */
         padding: 10px; 
     }
 }
 
 @media (max-width: 399px) {
     .services .content .accordion-item {
-        width: calc(100% - 20px); 
+        width: calc(100% - 20px); /* Full width on mobile */
         padding: 10px; 
     }
 }
-
             
 
 /* Moving social icons under contact form in mobile view */

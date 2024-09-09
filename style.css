@@ -354,17 +354,18 @@ header.sticky {
 section{
     padding:80px;
 }
+/* Banner styles */
 .banner {
     position: relative;
     min-height: 100vh;
     background: #000000;
-    /*background: url(images/myPic21.png);*/
+    /* background: url(images/myPic21.png); */
     background-size: cover;
     background-position: right;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px; 
+    padding: 20px 60px;
     box-sizing: border-box;
 }
 
@@ -376,7 +377,7 @@ section{
     -webkit-text-fill-color: transparent;
     font-weight: 400;
     line-height: 1.5em;
-    transition: transform 0.3s, text-shadow 0.3s; 
+    transition: transform 0.3s, text-shadow 0.3s;
 }
 
 .banner h2 span {
@@ -389,112 +390,88 @@ section{
     color: #f0f0f0;
     font-size: 1.5em;
     font-weight: 500;
+    margin: 10px 0;
+    text-align: center;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
-/* Rainbow gradient effect on hover */
+/* Hover effects */
 .banner h2:hover {
-    color: #ff7e5f; 
-    transform: rotate(-5deg) scale(1.1) translateY(-10px); 
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    color: #ff7e5f;
+    transform: rotate(-5deg) scale(1.1) translateY(-10px);
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Button styles 
-.btn {
-    position: relative;
-    background: rgba(200, 217, 237, 0.8); 
-    color: #4663ac; 
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 36px;
-    font-size: 18px;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-weight: 600;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+.banner h3:hover {
+    color: #ff6f9c;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
-    
-
-/* Hover effect for button 
-.btn:hover {
-    background: rgba(255, 111, 156, 0.8); 
-    color: #fff;
-    transform: scale(1.1) rotate(3deg);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-*/
-
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .banner {
         flex-direction: column;
         align-items: center;
-        padding: 40px 20px; 
-        background-position: center; 
-        text-align: center; 
+        padding: 40px 20px;
+        background-position: center;
+        text-align: center;
     }
 
     .banner h2 {
-        font-size: 2em; 
-        line-height: 1.2em; 
-        margin-bottom: 20px; 
+        font-size: 2em;
+        line-height: 1.2em;
+        margin-bottom: 20px;
     }
 
     .banner h3 {
-        font-size: 1.5em; /* Adjust font size for mobile */
+        font-size: 1.5em;
     }
 
     .btn {
-        padding: 14px 30px; /* Adjust padding for mobile */
-        font-size: 16px; /* Adjust font size */
+        padding: 14px 30px;
+        font-size: 16px;
     }
 }
 
-    .heading h2 {
-        font-size: 2em; /* Increased font size */
+/* Adjustments for specific screen sizes */
+@media (max-width: 991px) {
+    section {
+        padding: 100px 30px;
     }
 
-    .heading p {
-        font-size: 16px; /* Increased font size */
+    .banner {
+        padding: 150px 50px 100px;
     }
 
-    .content, .contentblog {
-        padding: 20px; /* Adjusted padding */
-        font-size: 18px; /* Increased font size */
+    .banner h2 {
+        font-size: 1.5em;
     }
 
+    .banner h3 {
+        font-size: 1em;
+    }
 
-.banner h3 {
-    color: #f0f0f0;
-    font-size: 2em; 
-    font-weight: 500;
-    margin: 10px 0; 
-    text-align: center; 
-    transition: color 0.3s, text-shadow 0.3s; 
+    .textBx {
+        position: relative;
+        top: 170px;
+    }
 }
 
-/* Hover effect for h3 */
-.banner h3:hover {
-    color: #ff6f9c; 
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
-}
-
-/* Creating About Layout */
-.content, .contentblog {
-    display: flex;
-    justify-content: left;  
-    text-align: left; /* Center text in content and contentblog */
-}
-
+/* Heading styles */
 .heading {
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
     color: #f0f0f0;
-    margin-left: auto;
+}
+
+.heading h2 {
+    font-size: 2.5em;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
 .heading p {
@@ -503,15 +480,13 @@ section{
     text-align: center;
 }
 
-/* Base styling */
-.heading h2 {
-    font-size: 2.5em; 
-    font-family: 'Poppins', sans-serif; 
-    position: relative;
-    display: inline-block; 
-    margin-bottom: 20px;
-    margin-left: 0px 0px 20px;
+/* Content and content blog styles */
+.content, .contentblog {
+    display: flex;
+    justify-content: left;
+    text-align: left;
     padding: 20px;
+    font-size: 18px;
 }
 
 /* Persistent yellow highlight with non-straight effect using ::before pseudo-element 
@@ -1126,15 +1101,6 @@ footer.copyright{
     
     section {
         padding: 100px 30px;
-    }
-    .banner{
-        padding:150px 50px 100px;
-    }
-    .banner h2{
-        font-size: 1.5em;
-    }
-    .banner h3{
-        font-size: 1em;;
     }
     .textBx{
         position:relative;

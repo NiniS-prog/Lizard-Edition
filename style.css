@@ -661,15 +661,16 @@ img {
 .services .content {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between; /* Ensure items spread evenly */
-    box-sizing: border-box; /* Include padding/borders in width calculation */
+    justify-content: space-between; /* Spread items across the row */
+    gap: 20px; /* Adds space between items */
+    box-sizing: border-box; /* Ensure padding and borders are counted */
 }
+
 
 /* Styling for accordion items */
 .services .content .accordion-item {
-    width: calc(33.33% - 20px); /* 3 items in a row on larger screens */
-    min-width: 250px; /* Prevent items from getting too small */
+    flex: 1 1 calc(33.33% - 20px); /* 3 items per row with equal width */
+    min-width: 250px; /* Ensure items do not shrink too much */
     margin: 10px 0;
     text-align: center;
     border-radius: 20px;
@@ -680,7 +681,7 @@ img {
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     border: 1px solid #007bff; /* Border around the item */
     background: #000000; /* Background color for the item */
-    box-sizing: border-box; /* Ensure padding and borders are counted in width */
+    box-sizing: border-box; /* Include padding and border in width calculation */
 }
 
 /* Rainbow gradient effect and zoom on hover */
@@ -724,14 +725,14 @@ img {
 /* Media Queries for responsiveness */
 @media (max-width: 624px) {
     .services .content .accordion-item {
-        width: calc(50% - 20px); /* 2 items per row on smaller screens */
+        flex: 1 1 calc(50% - 20px); /* 2 items per row on smaller screens */
         padding: 10px; 
     }
 }
 
 @media (max-width: 399px) {
     .services .content .accordion-item {
-        width: calc(100% - 20px); /* Full width on mobile */
+        flex: 1 1 calc(100% - 20px); /* Full width on mobile screens */
         padding: 10px; 
     }
 }

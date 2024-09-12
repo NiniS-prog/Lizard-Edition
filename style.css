@@ -609,8 +609,7 @@ li {
     text-decoration: none;
     transition: background-color 0.3s;
     margin-top: 20px; /* Space between the blockquote and the button */
-    
-    
+       
 }
 
 .btn:hover {
@@ -1220,6 +1219,15 @@ footer.copyright{
     .contactInfo{
         margin:10px 0;
     }
+    .formBx form input[type="submit"]
+     {
+        width: 100%; /* Full width button */
+        max-width: 300px; /* Ensure button doesn't grow too large */
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 12px; /* Adjust padding for smaller screens */
+    }
+
+
 }
 
 

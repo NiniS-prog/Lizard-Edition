@@ -412,7 +412,7 @@ section{
     .banner {
         flex-direction: column;
         align-items: center;
-        padding: 40px 20px;
+        padding: 20px; /* Reduced padding */
         background-position: center;
         text-align: center;
     }
@@ -436,11 +436,11 @@ section{
 /* Adjustments for specific screen sizes */
 @media (max-width: 991px) {
     section {
-        padding: 100px 30px;
+        padding: 60px 30px; /* Adjusted padding */
     }
 
     .banner {
-        padding: 150px 50px 100px;
+        padding: 80px 50px 50px; /* Adjusted padding to reduce top space */
     }
 
     .banner h2 {
@@ -453,7 +453,7 @@ section{
 
     .textBx {
         position: relative;
-        top: 170px;
+        top: 0; /* Reset top position */
     }
 }
 
@@ -533,46 +533,102 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
     width: 100%;
-    max-width: 1200px; /* Ensure it doesn’t exceed max-width */
-    margin: 0 auto; /* Center align */
+    max-width: 1200px;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
-
-/* Container for aligning video and text content */
 .about-content {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    max-width: 100%; /* Ensure it fits within its parent */
-    margin: 0 auto; /* Center align */
     gap: 20px;
     box-sizing: border-box;
 }
 
-/* Styles for video element */
-.about-video {
-    width: 100%; /* Make video responsive */
-    max-width: 400px; /* Limit maximum width of the video */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional: Add rounded corners */
-    box-shadow: 0 0 10px rgb(255, 255, 255);
-
+.contentBx {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: disc; /* Ensures bullets are shown */
 }
 
-/*  both content boxes  */
-.contentBx {
-    flex: 1; /* Allow content to grow and shrink */
+
+li {
+    margin-bottom: 10px; /* Adjust spacing between list items */
+}
+
+
+.videoBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    box-sizing: border-box; 
-    max-width: 100%; /* Ensure content does not overflow */
+    flex: 0 0 400px; /* Fixed width for the video */
+}
+
+.about-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.blockquote-section {
+    padding: 0 15px; /* Add padding to avoid edge issues */
+    text-align: center;
+    margin: 20px 0;
+}
+
+.blockquote-section blockquote {
+    color: #00c6ff;
+    padding: 15px; /* Adjust padding for mobile */
+    margin: 0 auto; /* Center the blockquote */
+    font-size: 1em; /* Responsive font size */
+    line-height: 1.4;
+    overflow-wrap: break-word; /* Ensure text wraps correctly */
+    max-width: 100%; /* Ensure it fits within the container */
+}
+
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Space between the blockquote and the button */
+    
+    
+}
+
+.btn:hover {
+    background-color: #0056b3;
 }
 
 /* Responsive styles */
+@media (max-width: 1024px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .videoBx {
+        flex: 1;
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
@@ -581,26 +637,44 @@ section{
 }
 
 @media (max-width: 480px) {
-    .contentBx {
+    .contentBx, .videoBx {
         padding: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .blockquote-section {
+            padding: 0 10px; /* Reduce padding on smaller screens */
+        }
+    
+        .blockquote-section blockquote {
+            font-size: 1em; /* Maintain responsive font size */
+            padding: 10px; /* Adjust padding for mobile */
+            width: auto; /* Ensure blockquote width adjusts automatically */
+        }
+    }
+        
+    @media (max-width: 480px) {
+        .blockquote-section {
+            padding: 0 10px; /* Reduce padding on smaller screens */
+        }
+    
+        .blockquote-section blockquote {
+            font-size: 1em; /* Maintain responsive font size */
+            padding: 10px; /* Adjust padding for mobile */
+            width: auto; /* Ensure blockquote width adjusts automatically */
+        }
+    }
+    
+
+
+
+.btn {
+        width: 100%; /* Full width button */
+        max-width: 300px; /* Ensure button doesn't grow too large */
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 12px; /* Adjust padding for smaller screens */
     }
 }
-    
-    .about-video {
-        max-width: 100%; /* Ensure video scales down on smaller screens */
-    }
-    
-
-
-@media (max-width: 480px) {
-    .contentBx {
-        padding: 10px;
-    }
-}
-
-    .contentBx1 {
-        padding: 10px;
-    }
 
 
 /* Additional styles */
@@ -680,13 +754,14 @@ img {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     border: 1px solid #007bff; /* Border around the item */
-    background: #000000; /* Background color for the item */
+    background: #00c6ff; /* Background color for the item */
     box-sizing: border-box; /* Include padding and border in width calculation */
+
 }
 
 /* Rainbow gradient effect and zoom on hover */
 .services .content .accordion-item:hover {
-    background: linear-gradient(135deg, #f7f7f7, #ff6f9c, #b9a0e2, #a588fc6f, #b9d8f24c);
+    background: linear-gradient(135deg, #00c6ff, #00c6ff, #00f5d4, #00c6ff, #00c6ff);
     background-size: 400% 400%;
     animation: rainbow-animation 3s ease infinite;
     color: #f0f0f0; /* Change text color for better contrast */
@@ -708,13 +783,15 @@ img {
     justify-content: center;
     padding: 20px;
     background-color: transparent; /* Remove background color */
-    color: #007bff; /* Text color */
+    color: #000;
 }
 
 /* Content styling */
 .services .content .accordion-content {
     padding: 20px;
-    color: #f0f4f0; /* Content text color */
+    color: #000; /* Content text color */
+    font-weight:600;
+
 }
 
 /* Base styling for the accordion items */

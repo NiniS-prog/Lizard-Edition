@@ -548,20 +548,61 @@ section{
     width: 100%;
     gap: 20px;
     box-sizing: border-box;
+
 }
 
 .contentBx {
     flex: 1;
     padding: 20px;
     box-sizing: border-box;
-}
-ul {
-    list-style-type: disc; /* Ensures bullets are shown */
+    text-align:center;
 }
 
 
-li {
-    margin-bottom: 10px; /* Adjust spacing between list items */
+/* General Styles for Lists */
+.about-content ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    text-align: center;
+}
+
+
+.about-content li {
+    position: relative; /* Needed for custom bullets and underlines */
+    margin-bottom: 10px; /* Space between list items */
+    padding-left: 30px; /* Space for custom bullet */
+    line-height: 1.6; /* Adjust line-height if needed */
+    word-wrap: break-word; /* Ensure long words wrap correctly */
+}
+
+/* Custom Bullet Points */
+.about-content li::before {
+    content: '✔'; /* Custom bullet */
+    position: absolute;
+    left: 0; /* Position on the left of the list item */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Align vertically */
+    color: black; /* Bullet color */
+    font-size: 16px; /* Adjust size as needed */
+    background: #ddd; /* Background color for the square */
+    width: 20px; /* Width of the square */
+    height: 20px; /* Height of the square */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the bullet */
+    border-radius: 3px; /* Optional: rounded corners */
+}
+
+/* Custom Underline */
+.about-content li::after {
+    content: ''; /* Empty content for the underline */
+    position: absolute;
+    left: 30px; /* Align the underline with the text */
+    bottom: 0; /* Position at the bottom of the list item */
+    width: calc(100% - 30px); /* Full width minus space for the custom bullet */
+    height: 2px; /* Thickness of the underline */
+   background-color: #000; /*Color of the underline */
 }
 
 
@@ -569,7 +610,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     flex: 0 0 400px; /* Fixed width for the video */
 }
 
@@ -587,7 +628,7 @@ li {
 }
 
 .blockquote-section blockquote {
-    color: #00c6ff;
+    color:black;
     padding: 15px; /* Adjust padding for mobile */
     margin: 0 auto; /* Center the blockquote */
     font-size: 1em; /* Responsive font size */
@@ -595,7 +636,6 @@ li {
     overflow-wrap: break-word; /* Ensure text wraps correctly */
     max-width: 100%; /* Ensure it fits within the container */
 }
-
 
 /* Button styles */
 .btn {
@@ -609,7 +649,6 @@ li {
     text-decoration: none;
     transition: background-color 0.3s;
     margin-top: 20px; /* Space between the blockquote and the button */
-       
 }
 
 .btn:hover {
@@ -629,9 +668,64 @@ li {
 }
 
 @media (max-width: 768px) {
-    .about-content {
+    .blockquote-section {
+        padding: 0 10px; /* Reduce padding on smaller screens */
+    }
+
+    .blockquote-section blockquote {
+        font-size: 1em; /* Maintain responsive font size */
+        padding: 10px; /* Adjust padding for mobile */
+        width: auto; /* Ensure blockquote width adjusts automatically */
+    }
+}
+/* General Styles */
+ul {
+    list-style-type: disc; /* Ensure bullets are shown */
+    padding-left: 20px; /* Space for bullet points */
+    margin: 0; /* Reset margin */
+}
+
+/* Centering Bullet Points on Mobile */
+@media (max-width: 768px) {
+    ul {
+        padding-left: 0; /* Remove padding for centering */
+        margin: 0 auto; /* Center the list container */
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* Center list items */
+    }
+
+    li {
+        text-align: center; /* Center text within list items */
+        margin-bottom: 10px; /* Adjust spacing between list items */
+        position: relative; /* Position bullets properly */
+    }
+
+    li::before {
+        content: '•'; /* Manually add bullet points */
+        position: absolute;
+        left: -20px; /* Adjust bullet position */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Align vertically */
+        color: black; /* Bullet point color */
+    }
+}
+
+/* Centering Headings on Mobile */
+@media (max-width: 768px) {
+    .about-content h2
+ {
+        text-align: center; /* Center all headings */
+        margin: 0 auto; /* Center the heading block */
+    }
+}
+
+
+/* Centering Headings on Mobile */
+@media (max-width: 768px) {
+    .about-content h2 {
+        text-align: center; /* Center all headings */
+        margin: 0 auto; /* Center the heading block */
     }
 }
 
@@ -640,34 +734,7 @@ li {
         padding: 10px;
     }
 
-    @media (max-width: 768px) {
-        .blockquote-section {
-            padding: 0 10px; /* Reduce padding on smaller screens */
-        }
-    
-        .blockquote-section blockquote {
-            font-size: 1em; /* Maintain responsive font size */
-            padding: 10px; /* Adjust padding for mobile */
-            width: auto; /* Ensure blockquote width adjusts automatically */
-        }
-    }
-        
-    @media (max-width: 480px) {
-        .blockquote-section {
-            padding: 0 10px; /* Reduce padding on smaller screens */
-        }
-    
-        .blockquote-section blockquote {
-            font-size: 1em; /* Maintain responsive font size */
-            padding: 10px; /* Adjust padding for mobile */
-            width: auto; /* Ensure blockquote width adjusts automatically */
-        }
-    }
-    
-
-
-
-.btn {
+    .btn {
         width: 100%; /* Full width button */
         max-width: 300px; /* Ensure button doesn't grow too large */
         font-size: 14px; /* Adjust font size for smaller screens */

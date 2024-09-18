@@ -628,7 +628,7 @@ section{
 }
 
 .blockquote-section blockquote {
-    color:black;
+    color:#00c6ff;
     padding: 15px; /* Adjust padding for mobile */
     margin: 0 auto; /* Center the blockquote */
     font-size: 1em; /* Responsive font size */
@@ -881,18 +881,8 @@ img {
 }
             
 
-/* Moving social icons under contact form in mobile view */
-@media (max-width: 768px) {
-.contactInfoBx .boxSocial {
-    padding-left: 0; 
-    margin-top: 20px; 
-}
 
-.formBx {
-    min-width: 100%; 
-}
 
-}
 
 /* Make icons section responsive for phone view */
 @media (max-width: 768px) {
@@ -1063,8 +1053,9 @@ img {
 
 .formBx {
     min-width: 60%;
+    max-width: 800px; /* Set a maximum width */
+    margin: 0 auto; /* Center the form */
     padding: 20px;
-    
 }
 
 .formBx form {
@@ -1240,7 +1231,43 @@ footer.copyright{
 }
 @media (max-width: 991px)
 {
-
+/* Moving social icons under contact form in mobile view */
+@media (max-width: 768px) {
+    .contactInfoBx .boxSocial {
+        padding-left: 0; 
+        margin-top: 20px; 
+    }
+    
+    .formBx {
+        min-width: 100%; 
+    }
+    
+    }
+    @media (min-width: 1200px) {
+        .formBx {
+            max-width: 900px; /* Customize for larger screens */
+        }
+    }
+    
+    /* Moving social icons under contact form in mobile view */
+    @media (max-width: 768px) {
+        .contactInfoBx .boxSocial {
+            padding-left: 0; 
+            margin-top: 20px; 
+        }
+        
+        .formBx {
+            min-width: 100%; 
+        }
+        
+        }
+        @media (min-width: 1200px) {
+            .formBx {
+                max-width: 900px; /* Customize for larger screens */
+            }
+        }
+        
+    
 
     
     section {

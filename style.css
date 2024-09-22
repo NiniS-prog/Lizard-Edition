@@ -368,6 +368,13 @@ section{
     padding: 20px 60px;
     box-sizing: border-box;
 }
+.textBx {
+    position: relative;
+    top: 0; /* Reset top position */
+    margin-top: 40px; /* Add space between the menu and the headings */
+
+}
+
 
 .banner h2 {
     font-size: 2.5em;
@@ -394,6 +401,7 @@ section{
     text-align: center;
     transition: color 0.3s, text-shadow 0.3s;
 }
+
 
 /* Hover effects */
 .banner h2:hover {
@@ -454,6 +462,7 @@ section{
     .textBx {
         position: relative;
         top: 0; /* Reset top position */
+        margin-top: 0px;
     }
 }
 

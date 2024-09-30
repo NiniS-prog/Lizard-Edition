@@ -31,15 +31,15 @@ body {
 }
 
 .accessibility-modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
-    z-index: 1001; /* Above the accessibility button */
+    z-index: 1001;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4); /* Black with transparency */
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .accessibility-modal-content {
@@ -83,7 +83,7 @@ body {
 
 /* Default title color */
 #accessibility-modal-title {
-    color: #000000; /* Black color for the title */
+    color: #000000;
 }
 
 /* High contrast mode */
@@ -177,20 +177,20 @@ header {
     box-sizing: border-box;
     background: transparent;
     transition: background 0.5s, padding 0.5s, box-shadow 0.5s;
-    z-index: 10; /* Ensure header is on top */
+    z-index: 10;
 }
 
 /* Logo container styles */
 header .logo-container {
     display: flex;
     align-items: center;
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-    z-index: 5; /* Ensure logo container is below header */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 5;
 }
 
 /* Logo image styles */
 header .logo img {
-    width: 120px; /* Adjust logo size as needed */
+    width: 120px;
     height: auto;
     margin-left: 25px;
 }
@@ -202,7 +202,7 @@ header .menu {
     padding: 20px;
     margin: 0;
     margin-right: auto;
-    border-top: 1px solid #c8d9ed; /* Default border-top for mobile view */
+    border-top: 1px solid #c8d9ed;
 }
 
 /* List item styles */
@@ -227,7 +227,7 @@ header .menu li a.active {
 
 /* Hover effect */
 header .menu li a:hover {
-    color: #ff6f9c; /* Change text color on hover */
+    color: #ff6f9c; 
 }
 
 /* Underline effect */
@@ -252,7 +252,7 @@ header .menu li a.active::after {
 header.sticky {
     background: #000000bd;
     box-shadow: 0 5px 20px #007bff;
-    z-index: 15; /* Ensure sticky header is above other elements */
+    z-index: 15; 
 }
 
 /* Mobile view adjustments */
@@ -278,11 +278,11 @@ header.sticky {
     }
 
     .logo img {
-        width: 80px; /* Adjust logo size for mobile */
+        width: 80px;
         height: auto;
-        content: url('images/3.png'); /* Ensure path to mobile-specific logo is correct */
+        content: url('images/3.png');
     }
-
+    
     .toggle {
         width: 40px;
         height: 40px;
@@ -290,20 +290,20 @@ header.sticky {
         background-size: 25px 25px;
         cursor: pointer;
         transition: background-size 0.3s ease;
-        z-index: 12; /* Ensure toggle is above menu */
-        position: absolute; /* Ensure correct positioning relative to header */
-        top: 15px; /* Adjust top position as needed */
-        left: 15px; /* Adjust left position as needed */
+        z-index: 12;
+        position: absolute;
+        top: 15px;
+        left: 15px;
     }
-
+    
     .toggle.active {
         background: url(images/close.png) no-repeat;
         background-size: 25px 25px;
         background-position: center;
         width: 40px;
-        height: 40px; /* Ensure consistent height for active state */
+        height: 40px;
     }
-
+    
     .menu {
         display: flex;
         flex-direction: column;
@@ -313,17 +313,17 @@ header.sticky {
         align-items: center;
         transition: opacity 0.3s ease;
         position: fixed;
-        top: 60px; /* Adjust if necessary */
+        top: 60px;
         left: -100%;
         height: 100vh;
         background: #000000;
-        z-index: 13; /* Ensure menu is on top */
+        z-index: 13;
     }
-
+    
     .menu.active {
-        left: 0; /* Slide in the menu */
+        left: 0;
     }
-
+    
     .menu li {
         margin: 5px 0;
     }
@@ -343,7 +343,7 @@ header.sticky {
 /* Desktop view adjustments */
 @media (min-width: 769px) {
     header .menu {
-        border-top: none; /* Remove border-top for desktop view */
+        border-top: none; 
     }
 }
 
@@ -370,8 +370,8 @@ section{
 }
 .textBx {
     position: relative;
-    top: 0; /* Reset top position */
-    margin-top: 40px; /* Add space between the menu and the headings */
+    top: 0; 
+    margin-top: 40px; 
 
 }
 
@@ -420,7 +420,7 @@ section{
     .banner {
         flex-direction: column;
         align-items: center;
-        padding: 20px; /* Reduced padding */
+        padding: 20px; 
         background-position: center;
         text-align: center;
     }
@@ -444,11 +444,11 @@ section{
 /* Adjustments for specific screen sizes */
 @media (max-width: 991px) {
     section {
-        padding: 60px 30px; /* Adjusted padding */
+        padding: 60px 30px; 
     }
 
     .banner {
-        padding: 80px 50px 50px; /* Adjusted padding to reduce top space */
+        padding: 80px 50px 50px; 
     }
 
     .banner h2 {
@@ -461,7 +461,7 @@ section{
 
     .textBx {
         position: relative;
-        top: 0; /* Reset top position */
+        top: 0; 
         margin-top: 0px;
     }
 }
@@ -570,57 +570,55 @@ section{
 
 /* General Styles for Lists */
 .about-content ul {
-    list-style-type: none; /* Remove default bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     text-align: center;
 }
 
-
 .about-content li {
-    position: relative; /* Needed for custom bullets and underlines */
-    margin-bottom: 10px; /* Space between list items */
-    padding-left: 30px; /* Space for custom bullet */
-    line-height: 1.6; /* Adjust line-height if needed */
-    word-wrap: break-word; /* Ensure long words wrap correctly */
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    line-height: 1.6;
+    word-wrap: break-word;
 }
 
 /* Custom Bullet Points */
 .about-content li::before {
-    content: '✔'; /* Custom bullet */
+    content: '✔';
     position: absolute;
-    left: 0; /* Position on the left of the list item */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Align vertically */
-    color: black; /* Bullet color */
-    font-size: 16px; /* Adjust size as needed */
-    background: #ddd; /* Background color for the square */
-    width: 20px; /* Width of the square */
-    height: 20px; /* Height of the square */
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 16px;
+    background: #ddd;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the bullet */
-    border-radius: 3px; /* Optional: rounded corners */
+    justify-content: center;
+    border-radius: 3px;
 }
 
 /* Custom Underline */
 .about-content li::after {
-    content: ''; /* Empty content for the underline */
+    content: '';
     position: absolute;
-    left: 30px; /* Align the underline with the text */
-    bottom: 0; /* Position at the bottom of the list item */
-    width: calc(100% - 30px); /* Full width minus space for the custom bullet */
-    height: 2px; /* Thickness of the underline */
-   background-color: #000; /*Color of the underline */
+    left: 30px;
+    bottom: 0;
+    width: calc(100% - 30px);
+    height: 2px;
+    background-color: #000;
 }
-
 
 .videoBx {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    flex: 0 0 400px; /* Fixed width for the video */
+    flex: 0 0 400px;
 }
 
 .about-video {
@@ -630,21 +628,23 @@ section{
     box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
+/* Blockquote Section */
 .blockquote-section {
-    padding: 0 15px; /* Add padding to avoid edge issues */
+    padding: 0 15px;
     text-align: center;
     margin: 20px 0;
 }
 
 .blockquote-section blockquote {
-    color:#00c6ff;
-    padding: 15px; /* Adjust padding for mobile */
-    margin: 0 auto; /* Center the blockquote */
-    font-size: 1em; /* Responsive font size */
+    color: #00c6ff;
+    padding: 15px;
+    margin: 0 auto;
+    font-size: 1em;
     line-height: 1.4;
-    overflow-wrap: break-word; /* Ensure text wraps correctly */
-    max-width: 100%; /* Ensure it fits within the container */
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
+
 
 /* Button styles */
 .btn {
@@ -657,8 +657,9 @@ section{
     color: white;
     text-decoration: none;
     transition: background-color 0.3s;
-    margin-top: 20px; /* Space between the blockquote and the button */
+    margin-top: 20px;
 }
+
 
 .btn:hover {
     background-color: #0056b3;
@@ -678,65 +679,57 @@ section{
 
 @media (max-width: 768px) {
     .blockquote-section {
-        padding: 0 10px; /* Reduce padding on smaller screens */
+        padding: 0 10px;
     }
 
     .blockquote-section blockquote {
-        font-size: 1em; /* Maintain responsive font size */
-        padding: 10px; /* Adjust padding for mobile */
-        width: auto; /* Ensure blockquote width adjusts automatically */
+        font-size: 1em;
+        padding: 10px;
+        width: auto;
     }
 }
+
 /* General Styles */
 ul {
-    list-style-type: disc; /* Ensure bullets are shown */
-    padding-left: 20px; /* Space for bullet points */
-    margin: 0; /* Reset margin */
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
 }
 
 /* Centering Bullet Points on Mobile */
 @media (max-width: 768px) {
     ul {
-        padding-left: 0; /* Remove padding for centering */
-        margin: 0 auto; /* Center the list container */
+        padding-left: 0;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center list items */
+        align-items: center;
     }
 
     li {
-        text-align: center; /* Center text within list items */
-        margin-bottom: 10px; /* Adjust spacing between list items */
-        position: relative; /* Position bullets properly */
+        text-align: center;
+        margin-bottom: 10px;
+        position: relative;
     }
 
     li::before {
-        content: '•'; /* Manually add bullet points */
+        content: '•';
         position: absolute;
-        left: -20px; /* Adjust bullet position */
-        top: 50%; /* Center vertically */
-        transform: translateY(-50%); /* Align vertically */
-        color: black; /* Bullet point color */
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: black;
     }
 }
-
-/* Centering Headings on Mobile */
-@media (max-width: 768px) {
-    .about-content h2
- {
-        text-align: center; /* Center all headings */
-        margin: 0 auto; /* Center the heading block */
-    }
-}
-
 
 /* Centering Headings on Mobile */
 @media (max-width: 768px) {
     .about-content h2 {
-        text-align: center; /* Center all headings */
-        margin: 0 auto; /* Center the heading block */
+        text-align: center;
+        margin: 0 auto;
     }
 }
+
 
 @media (max-width: 480px) {
     .contentBx, .videoBx {
@@ -744,11 +737,12 @@ ul {
     }
 
     .btn {
-        width: 100%; /* Full width button */
-        max-width: 300px; /* Ensure button doesn't grow too large */
-        font-size: 14px; /* Adjust font size for smaller screens */
-        padding: 12px; /* Adjust padding for smaller screens */
+        width: 100%;
+        max-width: 300px;
+        font-size: 14px;
+        padding: 12px;
     }
+    
 }
 
 
@@ -788,11 +782,12 @@ ul {
 img {
     width: 100%;
     height: auto;
-    max-height: 300px; /* Adjust this value to make the image less high */
-    object-fit: cover; /* Ensure the image covers the area gracefully */
-    border-radius: 8px; /* Optional: Add rounded corners for a softer look */
-    margin-bottom: 20px; /* Optional: Add space below the image */
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
+
     
 /* Basic styles for services section */
 .services {
@@ -810,16 +805,14 @@ img {
 .services .content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Spread items across the row */
-    gap: 20px; /* Adds space between items */
-    box-sizing: border-box; /* Ensure padding and borders are counted */
+    justify-content: space-between;
+    gap: 20px;
+    box-sizing: border-box;
 }
 
-
-/* Styling for accordion items */
 .services .content .accordion-item {
-    flex: 1 1 calc(33.33% - 20px); /* 3 items per row with equal width */
-    min-width: 250px; /* Ensure items do not shrink too much */
+    flex: 1 1 calc(33.33% - 20px);
+    min-width: 250px;
     margin: 10px 0;
     text-align: center;
     border-radius: 20px;
@@ -828,21 +821,20 @@ img {
     position: relative;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    border: 1px solid #007bff; /* Border around the item */
-    background: #00c6ff; /* Background color for the item */
-    box-sizing: border-box; /* Include padding and border in width calculation */
-
+    border: 1px solid #007bff;
+    background: #00c6ff;
+    box-sizing: border-box;
 }
 
-/* Rainbow gradient effect and zoom on hover */
 .services .content .accordion-item:hover {
     background: linear-gradient(135deg, #00c6ff, #00c6ff, #00f5d4, #00c6ff, #00c6ff);
     background-size: 400% 400%;
     animation: rainbow-animation 3s ease infinite;
-    color: #f0f0f0; /* Change text color for better contrast */
-    box-shadow: 0 10px 18px rgba(255, 255, 255, 0.3); /* Add shadow on hover */
-    transform: scale(1.05); /* Zoom effect */
+    color: #f0f0f0;
+    box-shadow: 0 10px 18px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
 }
+
 
 /* Rainbow animation */
 @keyframes rainbow-animation {
@@ -857,37 +849,34 @@ img {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: transparent; /* Remove background color */
+    background-color: transparent;
     color: #000;
 }
 
-/* Content styling */
 .services .content .accordion-content {
     padding: 20px;
-    color: #000; /* Content text color */
-    font-weight:600;
-
+    color: #000;
+    font-weight: 600;
 }
 
-/* Base styling for the accordion items */
 .services .content .accordion-item {
-    padding: 20px; /* Default padding */
+    padding: 20px;
 }
 
-/* Media Queries for responsiveness */
 @media (max-width: 624px) {
     .services .content .accordion-item {
-        flex: 1 1 calc(50% - 20px); /* 2 items per row on smaller screens */
-        padding: 10px; 
+        flex: 1 1 calc(50% - 20px);
+        padding: 10px;
     }
 }
 
 @media (max-width: 399px) {
     .services .content .accordion-item {
-        flex: 1 1 calc(100% - 20px); /* Full width on mobile screens */
-        padding: 10px; 
+        flex: 1 1 calc(100% - 20px);
+        padding: 10px;
     }
 }
+
             
 
 
@@ -1062,10 +1051,11 @@ img {
 
 .formBx {
     min-width: 60%;
-    max-width: 800px; /* Set a maximum width */
-    margin: 0 auto; /* Center the form */
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
 }
+
 
 .formBx form {
     display: flex;
@@ -1113,33 +1103,33 @@ img {
 /* Styled button with gradient colors */
 .formBx form input[type="submit"] {
     position: relative;
-    background: linear-gradient(45deg, #ff0099, #493240, #00c6ff, #00ff99); /* Gradient background */
-    color: #f0f0f0; /* Text color */
+    background: linear-gradient(45deg, #ff0099, #493240, #00c6ff, #00ff99);
+    color: #f0f0f0;
     display: inline-block;
-    margin-top: 20px; /* Adjusted margin */
-    padding: 12px 36px; /* Adjusted padding */
-    font-size: 18px; /* Adjusted font size */
+    margin-top: 20px;
+    padding: 12px 36px;
+    font-size: 18px;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 600;
-    border-radius: 8px; /* Adjusted border-radius */
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     cursor: pointer;
-    max-width: 200px; /* Retained original max-width */
+    max-width: 200px;
     align-self: flex-start;
-    background-size: 400% 400%; /* For gradient animation */
-    animation: gradientAnimation 3s ease infinite; /* Gradient animation */
+    background-size: 400% 400%;
+    animation: gradientAnimation 3s ease infinite;
 }
 
-/* Button hover effect */
 .formBx form input[type="submit"]:hover {
-    background: rgba(255, 111, 156, 0.8); /* Background color on hover */
-    color: #f0f0f0; /* Text color on hover */
-    transform: scale(1.1) rotate(3deg); /* Scale and rotate on hover */
+    background: rgba(255, 111, 156, 0.8);
+    color: #f0f0f0;
+    transform: scale(1.1) rotate(3deg);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
+
 
 /* Gradient animation keyframes */
 @keyframes gradientAnimation {
@@ -1206,14 +1196,15 @@ img {
 .contactInfoBx .boxSocial .fa {
     font-size: 36px;
     cursor: pointer;
-    background: linear-gradient(45deg, #007bff , #ff0099, #00c6ff, #00ff99); /* Gradient colors */
+    background: linear-gradient(45deg, #007bff, #ff0099, #00c6ff, #00ff99);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; /* Hides the default text color so gradient is visible */
+    color: transparent;
     display: inline-block;
     background-size: 400% 400%;
     animation: gradientAnimation 3s ease infinite;
 }
+
 
 /* Define the keyframes for gradient animation */
 @keyframes gradientAnimation {
@@ -1243,8 +1234,11 @@ footer.copyright{
 /* Moving social icons under contact form in mobile view */
 @media (max-width: 768px) {
     .contactInfoBx .boxSocial {
-        padding-left: 0; 
+        padding-left: 0;
         margin-top: 20px; 
+        
+
+        
     }
     
     .formBx {
@@ -1254,7 +1248,7 @@ footer.copyright{
     }
     @media (min-width: 1200px) {
         .formBx {
-            max-width: 900px; /* Customize for larger screens */
+            max-width: 900px; 
         }
     }
     
@@ -1270,7 +1264,7 @@ footer.copyright{
         }
         
         }
-        @media (min-width: 1200px) {
+        @media (min-width: 900px) {
             .formBx {
                 max-width: 900px; /* Customize for larger screens */
             }
@@ -1323,11 +1317,11 @@ footer.copyright{
         margin:10px 0;
     }
     .formBx form input[type="submit"]
-     {
-        width: 100%; /* Full width button */
-        max-width: 300px; /* Ensure button doesn't grow too large */
-        font-size: 14px; /* Adjust font size for smaller screens */
-        padding: 12px; /* Adjust padding for smaller screens */
+    {
+        width: 100%;
+        max-width: 300px;
+        font-size: 14px;
+        padding: 12px;
     }
 
 
@@ -1752,7 +1746,7 @@ footer.copyright{
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 20px 0 60px;
-    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    scrollbar-width: none; 
     scroll-snap-type: x mandatory;
 }
 
@@ -1765,20 +1759,20 @@ footer.copyright{
 .examplesbx {
     border: 1px solid #f0f4f0;
     box-shadow: 0 0 10px rgb(255, 255, 255);
-
     overflow: hidden;
     background-color: #000000;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
-    flex: 0 0 344px; /* Adjust width */
-    height: 275px; /* Maintain the aspect ratio */
+    flex: 0 0 344px;
+    height: 275px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    scroll-snap-align: center; /* Snap to the center */
-    margin-bottom: 60px; /* Adjust margin to create space for arrows */
+    scroll-snap-align: center;
+    margin-bottom: 60px;
 }
+
 
 .examplesbx img {
     width: 100%;
@@ -1840,22 +1834,23 @@ footer.copyright{
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .examplesbx {
-        flex: 0 0 90vw; /* Make each image take full viewport width */
-        height: auto; /* Adjust height for better fit */
+        flex: 0 0 90vw;
+        height: auto;
     }
 
     .examples-content {
-        padding-bottom: 60px; /* Add padding to ensure dots are visible */
+        padding-bottom: 60px;
     }
 
     .arrows {
-        display: none; /* Hide arrows on mobile view */
+        display: none;
     }
 
     .dots-container {
-        display: flex; /* Show dots on mobile view */
+        display: flex;
     }
 }
+
 
 /* General styles */
 #ordering-process {

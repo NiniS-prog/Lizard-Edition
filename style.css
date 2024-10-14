@@ -1050,7 +1050,7 @@ img {
 }
 
 .formBx {
-    min-width: 60%;
+    min-width: 45%;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -1322,6 +1322,7 @@ footer.copyright{
         max-width: 200px;
         font-size: 14px;
         padding: 12px;
+        
     }
 
 

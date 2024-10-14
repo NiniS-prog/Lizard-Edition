@@ -1319,7 +1319,7 @@ footer.copyright{
     .formBx form input[type="submit"]
     {
         width: 100%;
-        max-width: 300px;
+        max-width: 200px;
         font-size: 14px;
         padding: 12px;
     }

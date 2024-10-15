@@ -1203,6 +1203,7 @@ img {
     display: inline-block;
     background-size: 400% 400%;
     animation: gradientAnimation 3s ease infinite;
+    
 }
 
 
@@ -1235,10 +1236,7 @@ footer.copyright{
 @media (max-width: 768px) {
     .contactInfoBx .boxSocial {
         padding-left: 0;
-        margin-top: 20px; 
-        
-
-        
+        margin-top: 20px auto; 
     }
     
     .formBx {

@@ -1269,6 +1269,15 @@ footer.copyright{
         }
         
     
+/* Centering social icons under contact form in mobile view */
+@media (max-width: 768px) {
+    .contactInfoBx .boxSocial {
+        display: flex;
+        justify-content: center; /* Centers the icons horizontally */
+        padding-left: 0;
+        margin-top: 20px; /* Adjust this if needed */
+    }
+}
 
     
     section {
@@ -1314,14 +1323,17 @@ footer.copyright{
     .contactInfo{
         margin:10px 0;
     }
-    .formBx form input[type="submit"]
-    {
+/* Centering submit button on mobile view */
+@media (max-width: 768px) {
+    .formBx form input[type="submit"] {
+        display: block;
+        margin: 10px auto; /* Auto margins to center */
         width: 100%;
         max-width: 200px;
         font-size: 14px;
         padding: 12px;
-        
     }
+}
 
 
 }

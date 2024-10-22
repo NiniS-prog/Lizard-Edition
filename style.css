@@ -1056,6 +1056,7 @@ img {
     padding: 20px;
 }
 
+
 .formBx form {
     display: flex;
     flex-direction: column;
@@ -1069,7 +1070,6 @@ img {
 
 .formBx form .halfWidth {
     width: 48%;
-    max-width: 280px; /* Adjust as needed for smaller max-width */
 }
 
 .formBx form input,
@@ -1083,7 +1083,6 @@ img {
     color: #000;
     border-radius: 5px;
     margin-bottom: 20px; 
-    max-width: 100%; /* Ensures inputs don't stretch beyond their container */
 }
 
 .formBx form input:focus,

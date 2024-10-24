@@ -1066,11 +1066,14 @@ img {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    gap: 10px; /* Adjusts the space between input fields */
 }
 
 .formBx form .halfWidth {
-    width: 48%;
+    width: 100%; /* Ensure both fields fill up the space equally */
+    flex: 1; /* Ensure equal spacing */
 }
+
 
 .formBx form input,
 .formBx form textarea {

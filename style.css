@@ -379,7 +379,11 @@ section{
     margin-top: 40px; 
 
 }
+h1{
+    font-size: 2.5em;
+    font-weight: 400;
 
+}
 
 .banner h2 {
     font-size: 2.5em;

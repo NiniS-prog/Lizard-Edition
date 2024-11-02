@@ -385,7 +385,7 @@ h1{
 
 }
 
-.banner h2 {
+.banner h1 {
     font-size: 2.5em;
     background: linear-gradient(45deg, #00f5d4, #b9a0e2, #ff6f9c);
     background-clip: text;
@@ -396,7 +396,7 @@ h1{
     transition: transform 0.3s, text-shadow 0.3s;
 }
 
-.banner h2 span {
+.banner h1 span {
     font-size: 1.2em;
     font-weight: 400;
     color: #f0f0f0;
@@ -413,7 +413,7 @@ h1{
 
 
 /* Hover effects */
-.banner h2:hover {
+.banner h1:hover {
     color: #ff7e5f;
     transform: rotate(-5deg) scale(1.1) translateY(-10px);
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);

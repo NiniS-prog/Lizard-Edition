@@ -29,8 +29,12 @@
 
     <!-- Creating Menu Tabs & Logo at Top Using HTML -->
     <header>
-        <a href="#" class="logo"></a>
-        <div class="toggle" onclick="toggleMenu();"></div>
+        <div class="logo-container">
+            <a href="#home" class="logo">
+                <img src="images/LOGOME.png" alt="Logo">
+            </a>
+        </div>
+            <div class="toggle" onclick="toggleMenu();"></div>
         <ul class="menu">
             <li><a href="index.html#home" onclick="toggleMenu();">Home</a></li>
 
@@ -46,9 +50,10 @@
 
     </header>
     
-    <section class="post" id="post">
+    <section style="margin-top:40px ;"  class="post" id="post">
         <div>
             <img src="images/post10_ecommerce.png" alt="Cart"> 
+
         </div>
         <div class="heading">
             <h1 style="font-size:24px;">Ultimate E-Commerce Checklist for Success & SEO</h1>
@@ -58,7 +63,7 @@
             <button class="no-print" onclick="window.print()">Print Checklist</button>
         </div>
     
-        <div class="checklist-content">
+        <div class="checklist-content" style="margin-top:40px ; background-color: #d2deeb;">
             <div class="contentblog">
                 <div class="contentBx1">
                     <p>This checklist guides you through essential steps for building and maintaining a successful e-commerce business. From setting up a user-friendly, SEO-optimized website to creating engaging content and managing operations, this checklist ensures you're covering all key areas. While comprehensive, each business is unique, so consult professionals for legal, tax, and regulatory advice specific to your location and industry.</p>

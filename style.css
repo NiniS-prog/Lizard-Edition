@@ -2021,3 +2021,9 @@ footer.copyright{
     }
 }
 
+@media (max-width: 600px) {
+    .checklist-content {
+        padding: 10px;
+        margin: 5px;
+    }
+}

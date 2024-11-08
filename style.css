@@ -506,6 +506,13 @@ h1{
     padding: 20px;
     font-size: 14px;
 }
+@media (max-width: 600px) {
+    .content, .contentblog {
+        padding: 10px;
+        margin: 5px;
+    }
+}
+
 
 /* Persistent yellow highlight with non-straight effect using ::before pseudo-element 
 .heading h2::before {
@@ -1740,6 +1747,7 @@ footer.copyright{
     }
 }
 
+
 /* Creating Examples Layout in CSS */
 /* General styles */
 .examples {
@@ -2021,9 +2029,3 @@ footer.copyright{
     }
 }
 
-@media (max-width: 600px) {
-    .checklist-content {
-        padding: 10px;
-        margin: 5px;
-    }
-}

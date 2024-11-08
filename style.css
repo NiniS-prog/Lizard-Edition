@@ -507,7 +507,7 @@ h1{
     font-size: 14px;
 }
 @media (max-width: 600px) {
-    .content, .contentblog {
+    .contentblog {
         padding: 10px;
         margin: 5px;
     }

@@ -509,7 +509,7 @@ h1{
 @media (max-width: 600px) {
     .contentblog {
         padding: 20px;
-        margin: 60px 20px;
+        margin: 40px auto;
     }
 }
 

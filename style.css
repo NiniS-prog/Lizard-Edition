@@ -503,12 +503,12 @@ h1{
     display: flex;
     justify-content: left;
     text-align: left;
-    padding: 20px;
+    padding: 40px;
     font-size: 16px;
 }
 @media (max-width: 600px) {
     .contentblog {
-        padding: 4px;
+        padding: 20px;
         margin: 5px;
     }
 }
@@ -1722,12 +1722,10 @@ footer.copyright{
     max-width: 100%;
 }*/
 
-/* Style for the div within the section */
 .section-post .post-center {
     text-align: center;
 }
 
-/* Style for the image to make it responsive */
 .section-post img {
     width: 100%;
     height: auto;

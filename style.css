@@ -497,9 +497,18 @@ h1{
     font-size: 14px;
     text-align: center;
 }
+/* Content and content blog styles */
+.content {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    padding: 20px;
+    font-size: 16px;
+}
+
 
 /* Content and content blog styles */
-.content, .contentblog {
+.contentblog {
     display: flex;
     justify-content: left;
     text-align: left;

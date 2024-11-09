@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body>
-<!-- Accessibility Button -->
+<body style="color: black; background-color:#d2deeb;">
+    <!-- Accessibility Button -->
 <div id="accessibility-button" class="accessibility-button" aria-label="Accessibility Options" role="button" tabindex="0">
     <img src="images/ariab.png" alt="Accessibility Options">
 </div>
@@ -27,7 +27,7 @@
 </div>
 
     <!-- Creating Menu Tabs & Logo at Top Using HTML -->
-    <header>
+    <header style="background-color: rgba(0, 0, 0, 0.882);">
         <div class="logo-container">
             <a href="#home" class="logo">
                 <img src="images/LOGOME.png" alt="Logo">
@@ -49,12 +49,12 @@
 
     </header>
     
-    <section class="post" id="post">
+    <section style="margin-top: 50px;" class="post" id="post">
         <div>
             <img src="images/post9.png" alt="Make Money Online"> 
         </div>
         <div class="heading">
-            <h1 style="font-size:22px;">Shopify VS WooCommerce</h1>
+            <h1 style="font-size:22px; color: black;">Shopify VS WooCommerce</h1>
         </div>
         <div style="background-color: #d2deeb; color: #000;" class="contentblog">
             <div class="contentBx1">
@@ -185,9 +185,109 @@
     
     
     <section class="back-to-blog" style="text-align: center; margin-top: 20px;">
-        <p><a href="blog.html" style="text-decoration: underline; color: #f0f0f0	;">Back to blog</a></p>
+        <p><a href="blog.html" style="text-decoration: underline; color: #000000	;">Back to blog</a></p>
     </section>
+    <!-- Creating Blog Layout in HTML -->
+<section style="background-color: #000000; border-top:1px;     box-shadow: 0 0 10px #007bff;
+" class="blog" id="blog">
+    <div class="heading">
+    </div>
+    <div class="blog-container">
+        <div class="arrow left-arrow">&#9664;</div>
+        <div class="blog-content">
+            <div class="blogBx">
+                <a href="post9_woocommercevssgopify.html" target="_blank">
+                    <img src="images/post9.png" alt="">
+                    <p>Shopify vs WooCommerce
+                    </p>
+                </a>
+            </div>
+            <div class="blogBx">
+                <a href="post10_ecommerce checklist.html" target="_blank">
+                    <img src="images/post10_ecommerce.png" alt="">
+                    <p>Ultimate E-Commerce Checklist for Success & SEO
+                    </p>
+                </a>
+            </div>
 
+
+            <div class="blogBx">
+                <a href="post8_bestecommerceplatforms.html" target="_blank">
+                    <img src="images/post8.png" alt="">
+                    <p>Best E-commerce Platforms to Start Your Online Business
+                    </p>
+                </a>
+            </div>
+
+            <div class="blogBx">
+                <a href="post1cart_abandonment.html" target="_blank">
+                    <img src="images/cart.png" alt="">
+                    <p>Cart Abandonment</p>
+                </a>
+            </div>
+            <div class="blogBx">
+                <a href="post2Customer_Relationships.html" target="_blank">
+                    <img src="images/customer.png" alt="">
+                    <p>Building Lasting Customer Relationships</p>
+                </a>
+            </div>
+            <div class="blogBx">
+                <a href="post3DMS.html" target="_blank">
+                    <img src="images/smm.png" alt="">
+                    <p>Navigating the Digital Marketing Landscape</p>
+                </a>
+            </div>
+            <div class="blogBx">
+                <a href="post4_Email_Marketing.html" target="_blank">
+                    <img src="images/email.png" alt="">
+                    <p>Email Marketing</p>
+                </a>
+            </div>
+            <div class="blogBx">
+                <a href="post5_googleAds.html" target="_blank">
+                    <img src="images/GAds.png" alt="">
+                    <p>Google Ads</p>
+                </a>
+            </div>
+            <div class="blogBx">
+                <a href="post6_Google_analytics.html" target="_blank">
+                    <img src="images/gAnalaytics.png" alt="">
+                    <p>Google Analytics</p>
+                </a>
+            </div>
+            <div class="blogBx">
+                <a href="post7_11 Proven Ways to Make Money Online.html" target="_blank">
+                    <img src="images/online-money.png" alt="">
+                    <p>11 Proven Ways to Make Money Online
+                    </p>
+                </a>
+            </div>
+
+        </div>
+        <div class="arrow right-arrow">&#9654;</div>
+    </div>
+</section>
+<script>        // Arrow navigation script for blog
+    const leftArrowBlog = document.querySelector('.blog .left-arrow');
+    const rightArrowBlog = document.querySelector('.blog .right-arrow');
+    const blogContent = document.querySelector('.blog .blog-content');
+
+    if (leftArrowBlog && rightArrowBlog && blogContent) {
+        leftArrowBlog.addEventListener('click', function() {
+            blogContent.scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            });
+        });
+
+        rightArrowBlog.addEventListener('click', function() {
+            blogContent.scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+        });
+    }
+</script>
 <!-- Creating Contact Layout in HTML -->
 <section class="contact" id="contact">
     <div class="heading white">

@@ -503,7 +503,7 @@ h1{
     display: flex;
     justify-content: left;
     text-align: left;
-    padding: 40px;
+    padding: 10px;
     font-size: 16px;
 }
 @media (max-width: 600px) {

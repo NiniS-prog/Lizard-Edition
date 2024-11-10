@@ -26,28 +26,35 @@
     </div>
 </div>
 
-    <!-- Creating Menu Tabs & Logo at Top Using HTML -->
-    <header style="background-color: rgba(0, 0, 0, 0.882);">
-        <div class="logo-container">
-            <a href="#home" class="logo">
-                <img src="images/LOGOME.png" alt="Logo">
-            </a>
-        </div>
-        <div class="toggle" onclick="toggleMenu();"></div>
-        <ul class="menu">
-            <li><a href="index.html#home" onclick="toggleMenu();">Home</a></li>
+<!-- Creating Menu Tabs & Logo at Top Using HTML -->
+<header style="background-color: rgba(0, 0, 0, 0.882);">
+    <div class="logo-container">
+        <a href="#home" class="logo">
+            <img src="images/LOGOME.png" alt="Logo">
+        </a>
+    </div>
+    <div class="toggle" onclick="toggleMenu();"></div>
+    <ul class="menu">
+        <li><a href="index.html#home" onclick="toggleMenu();">Home</a></li>
+        <li><a href="index.html#about" onclick="toggleMenu();">Why Choose Us</a></li>
+        <li><a href="index.html#services" onclick="toggleMenu();">Services</a></li>
+        <li><a href="index.html#ordering-process" onclick="toggleMenu();">Workflow Overview</a></li>
+        
+        <!-- Dropdown Menu for Insights & News -->
+        <li class="dropdown">
+            <a href="blog.html#blog" class="active" onclick="toggleMenu();">Insights & News</a>
+            <ul class="dropdown-menu">
+                <li><a href="post10_ecommerce checklist.html" onclick="toggleMenu();">E-Commerce Checklist 1</a></li>
+                <li><a href="ecommerce blog.html" onclick="toggleMenu();">E-Commerce</a></li>
+                <li><a href="marketing blog.html" onclick="toggleMenu();">Marketing</a></li>
+                <li><a href="blog all.html" onclick="toggleMenu();">View All</a></li>
+            </ul>
+        </li>
 
+        <li><a href="index.html#contact" onclick="toggleMenu();">Contact</a></li>
+    </ul>
+</header> 
 
-            <li><a href="index.html#about" onclick="toggleMenu();">Why Choose Us</a></li>
-            <li><a href="index.html#services" onclick="toggleMenu();">Services</a></li>
-            <li><a href="index.html#ordering-process" onclick="toggleMenu();">Workflow Overview</a></li>
-            <li><a href="blog.html#blog" onclick="toggleMenu();">Insights & News</a></li>
-
-            <li><a href="index.html#contact" onclick="toggleMenu();">Contact</a></li>
-            
-        </ul>
-
-    </header>
     <section style="margin-top: 50px;" class="post" id="post">
         <div class="post" style="text-align: center;">
             <img src="images/GAds.png" alt="Cart" style="width: 100%; height: 300px;">

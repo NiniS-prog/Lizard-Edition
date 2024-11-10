@@ -363,7 +363,7 @@ header.sticky {
     top: 100%;
     left: 50%; /* Start centering */
     transform: translateX(-50%); /* Center the dropdown */
-    background-color: rgba(0, 0, 0, 0.701);
+    background-color: rgba(0, 0, 0, 0.703);
     padding: 10px 0;
     list-style: none;
     min-width: 200px; /* Ensures enough width for dropdown */

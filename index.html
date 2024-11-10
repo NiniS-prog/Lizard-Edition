@@ -48,10 +48,20 @@
         <li><a href="#about" onclick="toggleMenu();">Why Choose Us</a></li>
         <li><a href="#services" onclick="toggleMenu();">Services</a></li>
         <li><a href="#ordering-process" onclick="toggleMenu();">Workflow Overview</a></li>
-        <li><a href="blog.html" onclick="toggleMenu();">Insights & News</a></li>
-        <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+        <!-- Dropdown Menu for Insights & News -->
+        <li class="dropdown">
+            <a href="blog.html#blog"  onclick="toggleMenu();" >Insights & News</a>
+            <ul class="dropdown-menu">
+                <li><a href="post10_ecommerce checklist.html" onclick="toggleMenu();">E-Commerce Checklist 1</a></li>
+                <li><a href="ecommerce blog.html" onclick="toggleMenu();">E-Commerce</a></li>
+                <li><a href="marketing blog.html" onclick="toggleMenu();">Marketing</a></li>
+                <li><a href="blog all.html" onclick="toggleMenu();">View All</a></li>
+            </ul>
+        </li>
+
+        <li><a href="index.html#contact" onclick="toggleMenu();">Contact</a></li>
     </ul>
-</header>
+</header> 
 
     <!-- Creating Banner Layout in HTML -->
     <section class="banner" id="home">

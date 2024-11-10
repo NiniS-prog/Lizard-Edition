@@ -352,6 +352,33 @@ header.sticky {
     }
 }
 
+/* Centered Dropdown Styles */
+.menu .dropdown {
+    position: relative;
+}
+
+.menu .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%; /* Start centering */
+    transform: translateX(-50%); /* Center the dropdown */
+    background-color: rgba(0, 0, 0, 0.701);
+    padding: 10px 0;
+    list-style: none;
+    min-width: 200px; /* Ensures enough width for dropdown */
+}
+
+.menu .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.menu .dropdown-menu li a {
+    padding: 10px 15px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
 
 
 

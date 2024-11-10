@@ -1,14 +1,23 @@
-// ext.js
+// Scroll listener to make header sticky
 window.addEventListener("scroll", function() {
     var header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
 });
 
+// Function to toggle the menu (both main menu and dropdown)
 function toggleMenu() {
     var menuToggle = document.querySelector(".toggle");
     var menu = document.querySelector(".menu");
+    var insightsLink = document.querySelector('.dropdown > a'); // Target Insights & News link
+
+    // Toggle active state for menu and toggle button
     menuToggle.classList.toggle("active");
     menu.classList.toggle("active");
+
+    // Toggle active class on "Insights & News" link to show dropdown
+    if (insightsLink) {
+        insightsLink.classList.toggle("active");
+    }
 }
 
 // Update active menu item based on scroll position
@@ -22,8 +31,15 @@ function updateActiveMenu() {
         if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
             menuItems.forEach(item => {
                 item.classList.remove("active");
-                if (item.getAttribute("href") === `#${section.id}`) {
+
+                // Check if the item matches the section, or if it's a dropdown item
+                if (item.getAttribute("href") === `#${section.id}` || 
+                    item.closest('.dropdown-menu') && item.closest('.dropdown-menu').previousElementSibling.classList.contains("active")) {
                     item.classList.add("active");
+                    // Make sure dropdown menu link is active
+                    if (item.closest('.dropdown-menu')) {
+                        item.closest('.dropdown-menu').previousElementSibling.classList.add("active");
+                    }
                 }
             });
         }
@@ -34,6 +50,7 @@ function updateActiveMenu() {
 window.addEventListener("scroll", updateActiveMenu);
 window.addEventListener("load", updateActiveMenu);
 
+// Accessibility features (if any are present)
 document.addEventListener('DOMContentLoaded', function() {
     const button = document.getElementById('accessibility-button');
     const modal = document.getElementById('accessibility-modal');

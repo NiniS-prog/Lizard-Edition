@@ -32,7 +32,7 @@
 
 
 <!-- Creating Menu Tabs & Logo at Top Using HTML -->
-<header style="background-color: rgba(0, 0, 0, 0.882);">
+<header>
     <div class="logo-container">
         <a href="#home" class="logo">
             <img src="images/LOGOME.png" alt="Logo">
@@ -40,14 +40,13 @@
     </div>
     <div class="toggle" onclick="toggleMenu();"></div>
     <ul class="menu">
-        <li><a href="index.html#home" onclick="toggleMenu();">Home</a></li>
-        <li><a href="index.html#about" onclick="toggleMenu();">Why Choose Us</a></li>
-        <li><a href="index.html#services" onclick="toggleMenu();">Services</a></li>
-        <li><a href="index.html#ordering-process" onclick="toggleMenu();">Workflow Overview</a></li>
-        
+        <li><a href="#home" onclick="toggleMenu();" class="active">Home</a></li>
+        <li><a href="#about" onclick="toggleMenu();">Why Choose Us</a></li>
+        <li><a href="#services" onclick="toggleMenu();">Services</a></li>
+        <li><a href="#ordering-process" onclick="toggleMenu();">Workflow Overview</a></li>
         <!-- Dropdown Menu for Insights & News -->
         <li class="dropdown">
-            <a href="blog categories.html" class="active" onclick="toggleMenu();">Insights & News</a>
+            <a href="blog.html#blog"  onclick="toggleMenu();" >Insights & News</a>
             <ul class="dropdown-menu">
                 <li><a href="post10_ecommerce checklist.html" onclick="toggleMenu();">E-Commerce Checklist 1</a></li>
                 <li><a href="ecommerce blog.html" onclick="toggleMenu();">E-Commerce</a></li>

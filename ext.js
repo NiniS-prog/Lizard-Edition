@@ -4,9 +4,10 @@ window.addEventListener("scroll", function() {
     header.classList.toggle("sticky", window.scrollY > 0);
 });
 
+// Toggle the menu visibility
 function toggleMenu() {
-    var menuToggle = document.querySelector(".toggle");
-    var menu = document.querySelector(".menu");
+    const menuToggle = document.querySelector(".toggle");
+    const menu = document.querySelector(".menu");
     menuToggle.classList.toggle("active");
     menu.classList.toggle("active");
 }
@@ -16,16 +17,21 @@ function updateActiveMenu() {
     const sections = document.querySelectorAll("section");
     const menuItems = document.querySelectorAll("header .menu li a");
 
+    let currentSectionId = '';
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
+
         if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
-            menuItems.forEach(item => {
-                item.classList.remove("active");
-                if (item.getAttribute("href") === `#${section.id}`) {
-                    item.classList.add("active");
-                }
-            });
+            currentSectionId = section.id;
+        }
+    });
+
+    menuItems.forEach(item => {
+        item.classList.remove("active");
+        if (item.getAttribute("href").includes(`#${currentSectionId}`)) {
+            item.classList.add("active");
         }
     });
 }
@@ -33,6 +39,9 @@ function updateActiveMenu() {
 // Event listeners for scroll and load to update active menu item
 window.addEventListener("scroll", updateActiveMenu);
 window.addEventListener("load", updateActiveMenu);
+
+// Optional: Trigger toggleMenu if needed, for example, on mobile interaction
+document.querySelector(".toggle").addEventListener("click", toggleMenu);
 
 document.addEventListener('DOMContentLoaded', function() {
     const button = document.getElementById('accessibility-button');

@@ -1274,13 +1274,40 @@ img {
 .contactInfoBx .boxSocial .fa:hover {
     transform: scale(1.1);
 }
-footer.copyright{
-    background: #000;		;
-    color:#f0f0f0	;
-    text-align: center;
-    padding:10px;
-    font-size: 12px;
+footer.copyright {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background: #000;
+    color: #f0f0f0;
+    padding: 12px;
 }
+
+footer.copyright p {
+    font-size: 13px;
+    margin: 0 10px; 
+}
+
+footer.copyright .copy-text {
+    text-align: center; 
+}
+
+footer.copyright .privacy-link {
+    text-align: center; 
+    margin-left: 10px; 
+}
+
+footer.copyright a {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+footer.copyright a:hover {
+    text-decoration: underline; 
+}
+
+
+
 @media (max-width: 991px)
 {
 /* Moving social icons under contact form in mobile view */
@@ -2064,3 +2091,30 @@ footer.copyright{
     }
 }
 
+#cookie-consent-banner {
+    display: none; /* Initially hidden until consent is checked */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.cookie-btn {
+    margin: 0 5px;
+    padding: 5px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.cookie-btn:hover {
+    background-color: #0056b3;
+}

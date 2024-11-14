@@ -11,7 +11,7 @@
 body {
     background-color: #000000;
     color: #f0f0f0;
-    cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNSIgZmlsbD0iI0I5OUFFNCIgLz48L3N2Zz4='), auto;
+    cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNSIgZmlsbD0iIzAwN2JmZiIgLz48L3N2Zz4='), auto;
 }
 
 
@@ -227,12 +227,12 @@ header .menu li a {
 
 /* Active menu item */
 header .menu li a.active {
-    color: #ff6f9c;
+    color: #007bff;
 }
 
 /* Hover effect */
 header .menu li a:hover {
-    color: #ff6f9c; 
+    color: #007bff; 
 }
 
 /* Underline effect */
@@ -243,7 +243,7 @@ header .menu li a::after {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #ff6f9c;
+    background-color: #007bff;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
@@ -285,7 +285,7 @@ header.sticky {
     .logo img {
         width: 80px;
         height: auto;
-        content: url('images/3.png');
+        content: url('images/logo2.png');
     }
     
     .toggle {
@@ -392,7 +392,7 @@ section{
     position: relative;
     min-height: 100vh;
     background: #000000;
-    /* background: url(images/myPic21.png); */
+    background: url(images/bg.png);
     background-size: cover;
     background-position: right;
     display: flex;
@@ -415,7 +415,7 @@ h1{
 
 .banner h1 {
     font-size: 2.5em;
-    background: linear-gradient(45deg, #00f5d4, #b9a0e2, #ff6f9c);
+    background: linear-gradient(45deg, #007bff, #ccc860);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -448,7 +448,7 @@ h1{
 }
 
 .banner h3:hover {
-    color: #ff6f9c;
+    color: #ccc860;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -1160,8 +1160,8 @@ img {
 /* Styled button with gradient colors */
 .formBx form input[type="submit"] {
     position: relative;
-    background: linear-gradient(45deg, #ff0099, #493240, #00c6ff, #00ff99);
-    color: #f0f0f0;
+    background: linear-gradient(45deg, #007bff, #ffffff, #00c6ff);
+    color: #000000;
     display: inline-block;
     margin-top: 20px;
     padding: 12px 36px;
@@ -1178,6 +1178,13 @@ img {
     align-self: flex-start;
     background-size: 400% 400%;
     animation: gradientAnimation 3s ease infinite;
+}
+
+.formBx form input[type="submit"]:hover {
+    background: #007bff;
+    color: #f0f4f0;
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -1247,7 +1254,7 @@ img {
 .contactInfoBx .boxSocial .fa {
     font-size: 36px;
     cursor: pointer;
-    background: linear-gradient(45deg, #007bff, #ff0099, #00c6ff, #00ff99);
+    background: linear-gradient(45deg, #007bff, #ffffff, #00c6ff, #00ff99);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -1534,7 +1541,7 @@ footer.copyright a:hover {
 .marquee-item {
     padding: 0 2rem;
     font-size: 2rem;
-    background: linear-gradient(45deg, #00f5d4, #b9a0e2, #ff6f9c); /* Gradient */
+    background: linear-gradient(45deg, #00f5d4, #007bff, #ff6f9c); /* Gradient */
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -2002,8 +2009,8 @@ footer.copyright a:hover {
 /* Button styles */
 .btn {
     position: relative;
-    background: linear-gradient(45deg, #ff0099, #493240, #00c6ff, #00ff99);
-    color: #f0f0f0;
+    background: linear-gradient(45deg, #007bff, #ffffff, #00c6ff);
+    color: #000000;
     display: inline-block;
     margin-top: 20px;
     padding: 12px 36px;
@@ -2021,7 +2028,7 @@ footer.copyright a:hover {
 
 /* Button hover effect */
 .btn:hover {
-    background: rgba(255, 111, 156, 0.8);
+    background: #007bff;
     color: #f0f4f0;
     transform: scale(1.1) rotate(3deg);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);

@@ -638,7 +638,7 @@ web development, design, and SEO optimization strategies.</h3>
 
             function updateDots() {
                 const scrollLeft = examplesContent.scrollLeft;
-                const itemWidth = examples[0].offsetWidth + 20; // Including gap
+                const itemWidth = examples[0].offsetWidth + 20; 
                 const index = Math.round(scrollLeft / itemWidth);
                 dots.forEach(dot => dot.classList.remove('active'));
                 if (dots[index]) {

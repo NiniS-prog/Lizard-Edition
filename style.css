@@ -175,7 +175,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 30px;
+    padding: 30px 30px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -195,9 +195,11 @@ header .logo-container {
 
 /* Logo image styles */
 header .logo img {
-    width: 120px;
+    margin-right: 40px;
+
+    width: 140px;
     height: auto;
-    margin-left: 25px;
+    margin-left: 6px;
 }
 
 /* Menu container styles */
@@ -232,8 +234,9 @@ header .menu li a.active {
 
 /* Hover effect */
 header .menu li a:hover {
-    color: #007bff; 
+    color: #007bff;   
 }
+
 
 /* Underline effect */
 header .menu li a::after {
@@ -242,7 +245,7 @@ header .menu li a::after {
     bottom: -2px;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 1.5px;
     background-color: #007bff;
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
@@ -251,6 +254,7 @@ header .menu li a::after {
 header .menu li a:hover::after,
 header .menu li a.active::after {
     transform: scaleX(1);
+    
 }
 
 /* Sticky Header styles */
@@ -265,7 +269,7 @@ header.sticky {
     header {
         flex-direction: row;
         align-items: center;
-        padding: 10px 20px;
+        padding: 30px 20px 20px;
         height: 80px;
         box-shadow: none;
         transition: height 0.3s ease, padding 0.3s ease;
@@ -274,12 +278,13 @@ header.sticky {
     .logo-container {
         margin-right: 15px;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: left;
+        justify-content: left;
         flex: 1;
         position: relative;
         transition: opacity 0.3s ease, transform 0.3s ease;
         z-index: 5;
+        
     }
 
     .logo img {
@@ -298,7 +303,7 @@ header.sticky {
         z-index: 12;
         position: absolute;
         top: 15px;
-        left: 15px;
+        right: 18px;
     }
     
     .toggle.active {
@@ -415,7 +420,7 @@ h1{
 
 .banner h1 {
     font-size: 2.5em;
-    background: linear-gradient(45deg, #007bff, #ccc860);
+    background: linear-gradient(45deg, #ffffff, #00c6ff);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -448,7 +453,7 @@ h1{
 }
 
 .banner h3:hover {
-    color: #ccc860;
+    color: #00c6ff;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -1160,7 +1165,7 @@ img {
 /* Styled button with gradient colors */
 .formBx form input[type="submit"] {
     position: relative;
-    background: linear-gradient(45deg, #007bff, #ffffff, #00c6ff);
+    background: linear-gradient(to bottom, #007bff, #66b2ff, #ffffff, #66e0ff, #00c6ff);
     color: #000000;
     display: inline-block;
     margin-top: 20px;
@@ -1541,7 +1546,7 @@ footer.copyright a:hover {
 .marquee-item {
     padding: 0 2rem;
     font-size: 2rem;
-    background: linear-gradient(45deg, #00f5d4, #007bff, #ff6f9c); /* Gradient */
+    background: linear-gradient(45deg, #007bff, #66b2ff, #ffffff, #66e0ff, #00c6ff); /* Gradient */
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -2009,7 +2014,7 @@ footer.copyright a:hover {
 /* Button styles */
 .btn {
     position: relative;
-    background: linear-gradient(45deg, #007bff, #ffffff, #00c6ff);
+    background: linear-gradient(to bottom, #007bff, #66b2ff, #ffffff, #66e0ff, #00c6ff);
     color: #000000;
     display: inline-block;
     margin-top: 20px;

@@ -397,7 +397,7 @@ section{
     position: relative;
     min-height: 100vh;
     background: #000000;
-   /* background: url(images/bg.png);*/
+    background: url(images/bg.png);
     background-size: cover;
     background-position: right;
     display: flex;

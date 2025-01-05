@@ -468,13 +468,13 @@ h1{
     }
 
     .banner h1 {
-        font-size: 2em;
+        font-size: 1.8em;
         line-height: 1.2em;
         margin-bottom: 20px;
     }
 
     .banner h3 {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     .btn {
@@ -494,11 +494,11 @@ h1{
     }
 
     .banner h1 {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     .banner h3 {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     .textBx {

@@ -440,7 +440,7 @@ h1{
     font-size: 1.5em;
     font-weight: 500;
     margin: 10px 0;
-    text-align: center;
+    text-align: left;
     transition: color 0.3s, text-shadow 0.3s;
 }
 
@@ -475,6 +475,7 @@ h1{
 
     .banner h3 {
         font-size: 1.5em;
+        text-align: center;
     }
 
     .btn {
@@ -499,6 +500,7 @@ h1{
 
     .banner h3 {
         font-size: 1em;
+        text-align: center;
     }
 
     .textBx {

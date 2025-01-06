@@ -804,8 +804,8 @@ ul {
     }
     
     .btn1 {
-        width: 100%; /* Change width to 100% for this specific button */
-        max-width: none; /* Ensure no max-width restrictions */
+        width: 100%; 
+        max-width: none; 
     }
 }
 

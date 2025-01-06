@@ -220,7 +220,7 @@ header .menu li {
 /* Link styles */
 header .menu li a {
     display: inline-block;
-    padding: 8px 15px;
+    padding: 12px 15px;
     color: #f0f0f0;
     text-decoration: none;
     transition: color 0.3s, background 0.3s;
@@ -334,8 +334,10 @@ header.sticky {
         left: 0;
     }
     
-    .menu li {
+    .menu li a {
         margin: 5px 0;
+        font-size: 18px;
+        
     }
 
     header.shrink {
